@@ -9,7 +9,7 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<h2 class="site-title"><a href="/">{SITE_TITLE}</a></h2>
+		<h1 class="site-title"><a href="/" class="site-title-link">{SITE_TITLE}</a></h1>
 	</nav>
 </header>
 
@@ -38,5 +38,15 @@ import { SITE_TITLE } from '../consts';
 	.site-title {
 		margin: 0;
 		text-align: center;
+		font-variation-settings: 'wght' 900;
+	}
+
+	header .site-title .site-title-link {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	header .site-title .site-title-link:hover {
+		text-decoration: none;
 	}
 </style>
