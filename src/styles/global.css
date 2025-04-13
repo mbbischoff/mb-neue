@@ -25,14 +25,15 @@
   --theme-border: oklch(0.5% 0.15 0);
   --underline-opacity: 0.3;
 
-  /* Typography - Clean but readable */
-  font-size: 18px;
-  --font-size-small: 0.9rem;
-  --font-size-large: 1.1rem;
-  --font-size-larger: 1.3rem;
-  --font-size-h1: 2.5rem;
-  --font-size-massive: 3rem;
-  --font-size-huge: 6rem;
+  /* Typography - Utopia Fluid Type Scale */
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 
   /* Spacing - Balanced */
   --space-3xs: 0.25rem;
@@ -46,7 +47,7 @@
   --space-3xl: 8rem;
 
   /* Layout */
-  --max-width: 750px;
+  --max-width: clamp(45ch, 50vw, 75ch);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,7 +74,7 @@
 body {
   font-family: 'Berkeley Mono', monospace;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0;
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -83,6 +84,10 @@ body {
   color: var(--theme-text);
   width: 100%;
   background: var(--theme-bg);
+}
+
+.container {
+  padding: 0 1rem;
 }
 
 main {
@@ -139,7 +144,7 @@ a:hover {
 }
 
 small {
-  font-size: var(--font-size-small);
+  font-size: var(--step--1);
   color: var(--theme-secondary);
 }
 
