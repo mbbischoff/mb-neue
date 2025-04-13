@@ -7,7 +7,4 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://mb-neue.vercel.app',
 	integrations: [mdx(), sitemap()],
-	experimental: {
-		contentCollections: true,
-	},
 });
