@@ -47,7 +47,7 @@
   --space-3xl: 8rem;
 
   /* Layout */
-  --max-width: clamp(45ch, 50vw, 75ch);
+  --max-width: clamp(44ch, 56vw, 64ch);
 }
 
 @media (prefers-color-scheme: dark) {

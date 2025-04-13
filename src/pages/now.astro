@@ -1,16 +1,65 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageTitle from '../components/PageTitle.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const title = "Now";
+const date = new Date("2024-04-01T16:32:00-04:00");
+
+const place = "NYC";
+const image = "/uploads/Photo%20on%203-31-24%20at%201.25%E2%80%AFPM%20%233.jpg";
+const description = "This now page covers the things I'm thinking, feeling, and working on, well, right now.";
 ---
 
-<BaseLayout title="Now" description="What I'm doing now">
+<BaseLayout title={title} description={description}>
   <article>
-    <PageTitle title="Now" />
+    <p class="meta">
+      <FormattedDate date={date} /> • {place}
+    </span>
+    
+    <PageTitle title={title} />
+    
+    <!-- <Image 
+      src={image}
+      alt="Latest Selfie"
+      width={1024}
+      height={768}
+    /> -->
+
     <p>
-      This is a <a href="https://nownownow.com/about">now page</a>, and if you have your own site, <a
-        href="https://nownownow.com/about">you should make one</a
-      >, too.
+      This <a href="https://nownownow.com/about">now page</a> is <a href="https://sivers.org/nowff">inspired by Derek Sivers</a>. It details the things I'm thinking, feeling, and working on <em>right now</em>.
     </p>
+
+    <hr />
+
+    <p>
+      Right now, I'm vibing.
+    </p>
+
+    <section>
+      <h2>
+        Watching
+      </h2>
+
+      <div id="letterboxd-embed-wrapper-tc">Loading...</div>
+      <script>
+        const element = document.getElementById('letterboxd-embed-wrapper-tc');
+        if (element) {
+          fetch('https://lb-embed-content.bokonon.dev?username=mbbischoff')
+            .then(response => response.text())
+            .then(data => {
+              element.innerHTML = data;
+            });
+        }
+      </script>
+    </section>
   </article>
 </BaseLayout>
 
+<style>
+  .meta {
+    font-size: var(--step--2);
+    color: var(--theme-secondary);
+    margin-bottom: var(--space-3xs);
+  }
+</style>
