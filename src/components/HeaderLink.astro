@@ -10,12 +10,9 @@ const subpath = pathname.match(/[^/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 
 const navItem = navigation.find(item => item.href === href);
-// Uncomment if icon support is added later
-// const icon = navItem?.icon || 'fa-link';
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
-  <!-- <i class={`fas ${icon}`}></i> -->
   <slot />
 </a>
 

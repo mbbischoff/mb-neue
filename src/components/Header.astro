@@ -12,7 +12,7 @@ const { minimalLayout = false } = Astro.props;
 ---
 
 <header role="banner">
-  <div class="nav-container">
+  <div class="header-container">
     <nav class="internal-links" aria-label="Main navigation">
       {navigation.map(item => (
         <HeaderLink
@@ -24,8 +24,7 @@ const { minimalLayout = false } = Astro.props;
         </HeaderLink>
       ))}
     </nav>
-  </div>
-  <div class="nav-container">
+
     <div class="title-container">
       <h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
         <a href="/">{SITE_TITLE_SHORT}</a>
@@ -34,7 +33,7 @@ const { minimalLayout = false } = Astro.props;
       {
         !minimalLayout && (
           <p class="site-description">
-            <strong>mb bischoff</strong> <small>(she/they)</small> makes <a href="https://lickability.com">software</a>, <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
+            <strong>mb <span class="last-name">bischoff</span></strong> <small class="pronouns">(she/they)</small> makes <a href="https://lickability.com">software</a>, <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
           </p>
         )
       }
@@ -47,11 +46,11 @@ const { minimalLayout = false } = Astro.props;
     padding: var(--space-xs) 0;
   }
 
-  .nav-container {
+  .header-container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--space-s);
-	font-size: var(--font-size-larger);
+    box-sizing: border-box;
   }
 
   .internal-links {
@@ -59,6 +58,7 @@ const { minimalLayout = false } = Astro.props;
     justify-content: space-between;
     width: 100%;
     text-transform: lowercase;
+    text-align: center;
   }
 
   .title-container {
@@ -77,8 +77,38 @@ const { minimalLayout = false } = Astro.props;
     text-decoration: none;
   }
 
+  .site-title a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: none;
+    padding-bottom: 0;
+    display: inline-block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-out;
+  }
+
+  .site-title a:hover {
+    animation: hoverPulse 1s ease-in-out infinite;
+  }
+
+  @keyframes hoverPulse {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
   .site-title.minimal {
     color: var(--theme-secondary);
+  }
+
+  .site-title.minimal a:hover {
+    color: var(--theme-accent);
   }
 
   .site-title a {
@@ -90,8 +120,33 @@ const { minimalLayout = false } = Astro.props;
 
   .site-description {
     text-align: center;
-    margin: 0;
-    font-size: var(--font-size-large);
+    margin-bottom: var(--space-s);
+    font-size: clamp(0.8rem, 2vw, var(--font-size-large));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .first-name {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .first-name:hover {
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   .site-description a {
@@ -110,6 +165,11 @@ const { minimalLayout = false } = Astro.props;
   :global(.nav-link) {
     border-bottom: none;
     padding-bottom: 0;
+    margin-right: var(--space-s);
+  }
+
+  :global(.nav-link:last-child) {
+    margin-right: 0;
   }
 
   :global(.nav-link:hover) {
@@ -128,9 +188,9 @@ const { minimalLayout = false } = Astro.props;
     color: var(--theme-secondary);
   }
 
-  .header-container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 var(--space-s);
+  @media (max-width: 600px) {
+    .pronouns {
+      display: none;
+    }
   }
 </style>

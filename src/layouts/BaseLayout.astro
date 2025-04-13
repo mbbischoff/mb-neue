@@ -1,39 +1,53 @@
 ---
+import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import BaseHead from '../components/BaseHead.astro';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
+  image?: string;
   minimalLayout?: boolean;
 }
 
-const { title, description = '', minimalLayout = false } = Astro.props;
+const { title, description, image, minimalLayout = false } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} image={image} />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      main {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--space-s);
+        box-sizing: border-box;
+      }
+
+      .content {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--space-s);
+        box-sizing: border-box;
+      }
+    </style>
+    <slot name="styles" />
   </head>
   <body>
-    <div id="page-container">
-      <Header minimalLayout={minimalLayout} />
-      <main id="content">
-        <slot />
-      </main>
-      {!minimalLayout && <Footer />}
-    </div>
-  </body><style>
-    #page-container {
-      display: flex;
-      flex-direction: column;
-      min-height: calc(100vh - var(--space-xs) - var(--space-s));
-    }
-
-    main {
-      flex: 1;
-    }
-  </style>
+    <Header minimalLayout={minimalLayout} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>

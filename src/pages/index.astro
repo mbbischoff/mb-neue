@@ -1,7 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
@@ -39,190 +37,176 @@ function estimateReadingTime(content: string) {
 }
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      .posts {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-	  
-      .posts {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      article {
-        margin-bottom: 3rem;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 1.5rem;
-        align-items: start;
-        position: relative;
-      }
-
-      article .post-content {
-        grid-column: 1;
-      }
-
-      article .hero-image {
-        grid-column: 2;
-        width: 200px;
-        height: 133px;
-        object-fit: cover;
-        border-radius: 4px;
-        position: relative;
-        transition: transform 0.3s ease;
-        transform: rotate(0deg);
-      }
-
-      article a:has(.hero-image) {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-
-      article a:has(.hero-image):hover {
-        border-bottom: none;
-      }
-
-      article:nth-child(3n + 1) .hero-image:hover {
-        transform: rotate(-2deg) scale(1.02);
-      }
-
-      article:nth-child(3n + 2) .hero-image:hover {
-        transform: rotate(3deg) scale(1.02);
-      }
-
-      article:nth-child(3n + 3) .hero-image:hover {
-        transform: rotate(-1deg) scale(1.02);
-      }
-
-      article .post-meta {
-        display: flex;
-        align-items: center;
-        gap: var(--space-2xs);
-		font-size: var(--font-size-small);
-      }
-
-      article time,
-      article .reading-time {
-        color: var(--theme-secondary);
-      }
-
-      article h2 {
-        margin: 0 0 var(--space-2xs) 0;
-      }
-
-      article h2 a {
-        text-decoration: none;
-        color: inherit;
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-
-      article h2 a:hover {
-        color: var(--theme-accent);
-        border-bottom: none;
-      }
-
-      article .content {
-        margin: var(--space-2xs) 0;
-      }
-
-      article .content :global(p) {
-        margin: var(--space-2xs) 0;
-      }
-
-      article .content :global(p:first-child) {
-        margin-top: 0;
-      }
-
-      article .meta {
-        display: flex;
-        align-items: center;
-        gap: var(--space-xs);
-        margin-top: var(--space-2xs);
-        color: var(--theme-secondary);
-        font-size: var(--font-size-small);
-        line-height: 1.4;
-      }
-
-      article .meta em {
-        font-style: italic;
-        color: var(--theme-secondary);
-      }
-
-      article .read-more {
-        display: inline-flex;
-        align-items: center;
-        color: var(--theme-accent);
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-
-      article .read-more:hover {
-        text-decoration: none;
-        border-bottom: none;
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <div class="posts">
-        {
-          posts.map(async post => {
-            const Preview = await getPostPreview(post);
-            const readingTime = estimateReadingTime(post.body || '');
-            return (
-              <article>
-                <div class="post-content">
-                  <div class="post-meta">
-                    <time
-                      datetime={post.data.pubDate.toISOString()}
-                      class="flex items-center gap-1"
-                    >
-                      <FormattedDate date={post.data.pubDate} />
-                    </time>
-                    <span class="reading-time"> • {readingTime} min
-                    </span>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="posts">
+    {
+      posts.map(async post => {
+        const Preview = await getPostPreview(post);
+        const readingTime = estimateReadingTime(post.body || '');
+        return (
+          <article>
+            <div class="post-content">
+              <div class="post-meta">
+                <time
+                  datetime={post.data.pubDate.toISOString()}
+                  class="flex items-center gap-1"
+                >
+                  <FormattedDate date={post.data.pubDate} />
+                </time>
+                <span class="reading-time"> • {readingTime} min
+                </span>
+              </div>
+              <h2>
+                <a href={`/${post.id}`}>{post.data.title}</a>
+              </h2>
+              {post.body && (
+                <>
+                  <div class="content">
+                    {typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
                   </div>
-                  <h2>
-                    <a href={`/${post.id}`}>{post.data.title}</a>
-                  </h2>
-                  {post.body && (
-                    <>
-                      <div class="content">
-                        {typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
-                      </div>
-                      <div class="meta">
-                        <em>{post.data.description}</em>
-                      </div>
-                    </>
-                  )}
-                </div>
-                {post.data.heroImage && (
-                  <a href={`/${post.id}`} class="no-underline">
-                    <Image
-                      src={post.data.heroImage}
-                      alt={post.data.title}
-                      width={200}
-                      height={133}
-                      class="hero-image"
-                      loading="eager"
-                    />
-                  </a>
-                )}
-              </article>
-            );
-          })
-        }
-      </div>
-    </main>
-    <Footer />
-  </body>
-</html>
+                  <div class="meta">
+                    <em>{post.data.description}</em>
+                  </div>
+                </>
+              )}
+            </div>
+            {post.data.heroImage && (
+              <a href={`/${post.id}`} class="no-underline">
+                <Image
+                  src={post.data.heroImage}
+                  alt={post.data.title}
+                  width={200}
+                  height={133}
+                  class="hero-image"
+                  loading="eager"
+                />
+              </a>
+            )}
+          </article>
+        );
+      })
+    }
+  </div>
+
+  <style>
+    .posts {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    article {
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: start;
+      position: relative;
+    }
+
+    article .post-content {
+      grid-column: 1;
+    }
+
+    article .hero-image {
+      grid-column: 2;
+      width: 200px;
+      height: 133px;
+      object-fit: cover;
+      border-radius: 4px;
+      position: relative;
+      transition: transform 0.3s ease;
+      transform: rotate(0deg);
+    }
+
+    article a:has(.hero-image) {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    article a:has(.hero-image):hover {
+      border-bottom: none;
+    }
+
+    article:nth-child(3n + 1) .hero-image:hover {
+      transform: rotate(-2deg) scale(1.02);
+    }
+
+    article:nth-child(3n + 2) .hero-image:hover {
+      transform: rotate(3deg) scale(1.02);
+    }
+
+    article:nth-child(3n + 3) .hero-image:hover {
+      transform: rotate(-1deg) scale(1.02);
+    }
+
+    article .post-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2xs);
+      font-size: var(--font-size-small);
+    }
+
+    article time,
+    article .reading-time {
+      color: var(--theme-secondary);
+    }
+
+    article h2 {
+      margin: 0 0 var(--space-2xs) 0;
+    }
+
+    article h2 a {
+      text-decoration: none;
+      color: inherit;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    article h2 a:hover {
+      color: var(--theme-accent);
+      border-bottom: none;
+    }
+
+    article .content {
+      margin: var(--space-2xs) 0;
+    }
+
+    article .content :global(p) {
+      margin: var(--space-2xs) 0;
+    }
+
+    article .content :global(p:first-child) {
+      margin-top: 0;
+    }
+
+    article .meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      margin-top: var(--space-2xs);
+      color: var(--theme-secondary);
+      font-size: var(--font-size-small);
+      line-height: 1.4;
+    }
+
+    article .meta em {
+      font-style: italic;
+      color: var(--theme-secondary);
+    }
+
+    article .read-more {
+      display: inline-flex;
+      align-items: center;
+      color: var(--theme-accent);
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    article .read-more:hover {
+      text-decoration: none;
+      border-bottom: none;
+    }
+  </style>
+</BaseLayout>

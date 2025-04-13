@@ -21,27 +21,30 @@ import { SITE_TITLE, navigation } from '../config';
       </div>
       <div class="social-links">
         <nav aria-label="Social links">
-          <a href="https://twitter.com/yourusername" rel="me" target="_blank" aria-label="X (Twitter)">𝕏︎ twitter</a>
-          <a href="https://mastodon.social/@yourusername" rel="me" target="_blank" aria-label="Mastodon">⌘︎ mastodon</a>
-          <a href="https://letterboxd.com/yourusername" target="_blank" aria-label="Letterboxd">⌖︎ letterboxd</a>
-          <a href="https://www.goodreads.com/yourusername" target="_blank" aria-label="Goodreads">⌗︎ goodreads</a>
-          <a href="https://bsky.app/profile/yourusername" rel="me" target="_blank" aria-label="Bluesky">⌨︎ bluesky</a>
+          <a href="https://twitter.com/yourusername" rel="me" target="_blank" aria-label="X (Twitter)">twitter</a>
+          <a href="https://bsky.app/profile/yourusername" rel="me" target="_blank" aria-label="Bluesky">bluesky</a>
+          <a href="https://mastodon.social/@yourusername" rel="me" target="_blank" aria-label="Mastodon">mastodon</a>
+          <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">instagram</a>
+          <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">github</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">linkedin</a>
         </nav>
       </div>
     </div>
     <p class="footer-text">
-      <span aria-hidden="true">©︎</span>
-      <span aria-label="Copyright">{new Date().getFullYear()}</span>
-      <strong>{SITE_TITLE}</strong>.
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license"
-        >Some rights reserved</a
-      >. Made in NY.
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" class="no-underline">
+        <span aria-hidden="true">©︎</span>
+        <span aria-label="copyright">{new Date().getFullYear()}</span>
+        <strong>{SITE_TITLE}</strong>
+      </a><br />
+      <em>there is still time</em><br />
+      <a href="https://diyhrt.wiki" target="_blank" rel="noopener noreferrer" class="no-underline"><span class="fleuron">❦</span></a>
     </p>
   </div>
 </footer>
 
 <style>
   footer {
+	font-size: var(--font-size-small);
     padding: var(--space-l) 0;
     border-top: 0.5px solid var(--theme-tertiary);
     margin: 0 calc(-1 * var(--space-s));
@@ -89,6 +92,7 @@ import { SITE_TITLE, navigation } from '../config';
     display: flex;
     align-items: center;
     transition: color 0.2s ease-in-out;
+    font-size: var(--font-size-large);
   }
 
   .footer-links a:hover,
@@ -98,17 +102,26 @@ import { SITE_TITLE, navigation } from '../config';
     border-bottom: none;
   }
 
-  .social-links i {
-    font-size: 1.2rem;
-  }
-
   .footer-text {
     color: var(--theme-secondary);
+    text-align: center;
   }
-  
+
   .footer-text a {
+    font-size: inherit;
   }
 
   .footer-text a:hover {
+    color: var(--theme-accent);
+  }
+
+  .footer-text a:has(.fleuron) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .footer-text a:has(.fleuron):hover {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 </style>
