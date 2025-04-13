@@ -3,8 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 
 interface Props {
-	title: string;
-	description?: string;
+  title: string;
+  description?: string;
 }
 
 const { title, description = '' } = Astro.props;
@@ -12,15 +12,15 @@ const { title, description = '' } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
-	<body>
-		<div id="page-container">
-			<Header hideNav={true} />
-			<main>
-				<slot />
-			</main>
-		</div>
-	</body>
-</html> 
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <div id="page-container">
+      <Header hideNav={true} />
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

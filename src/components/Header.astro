@@ -4,111 +4,114 @@ import { SITE_TITLE } from '../consts';
 import { SITE_TITLE_SHORT, navigation } from '../config';
 
 interface Props {
-	hideNav?: boolean;
-	minimalLayout?: boolean;
+  hideNav?: boolean;
+  minimalLayout?: boolean;
 }
 
 const { minimalLayout = false } = Astro.props;
 ---
 
-<header>
-	<div class="nav-container">
-		{!minimalLayout && (
-			<nav class="internal-links">
-				{navigation.map((item) => (
-					<HeaderLink href={item.href} class="nav-link">{item.label}</HeaderLink>
-				))}
-			</nav>
-		)}
-	</div>
-	<div class="border-container">
-		<div class="nav-container">
-			<div class="title-container">
-				<h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
-					<a href="/">{SITE_TITLE_SHORT}</a>
-				</h1>
+<header role="banner">
+  <div class="nav-container">
+    <nav class="internal-links" aria-label="Main navigation">
+      {navigation.map(item => (
+        <HeaderLink
+          href={item.href}
+          class={`nav-link ${minimalLayout ? 'minimal' : ''}`}
+          aria-current={Astro.url.pathname === item.href ? 'page' : undefined}
+        >
+          {item.label}
+        </HeaderLink>
+      ))}
+    </nav>
+  </div>
+  <div class="nav-container">
+    <div class="title-container">
+      <h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
+        <a href="/">{SITE_TITLE_SHORT}</a>
+      </h1>
 
-				{!minimalLayout && (
-				<p class="site-description"><strong>mb bischoff</strong> makes <a href="https://lickability.com"><i class="fas fa-mobile-alt"></i> apps</a>, <a href="/archive"><i class="fas fa-pen"></i> posts</a>, & <a href="https://absolutelycrushed.com"><i class="fas fa-microphone"></i> podcasts</a>.</p>
-				)}
-			</div>
-		</div>
-	</div>
+      {
+        !minimalLayout && (
+          <p class="site-description">
+            <strong>mb bischoff</strong> makes <a href="https://lickability.com">software</a>,{' '}
+            <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
+          </p>
+        )
+      }
+    </div>
+  </div>
 </header>
 
 <style>
-	header {
-		padding: var(--space-xs) 0;
-	}
+  header {
+    padding: var(--space-xs) 0;
+  }
 
-	.nav-container {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 0 var(--space-s);
-	}
+  .nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-s);
+  }
 
-	.border-container {
-		border-top: 1px solid var(--theme-tertiary);
-		width: 100vw;
-		position: relative;
-		left: 50%;
-		right: 50%;
-		margin-left: -50vw;
-		margin-right: -50vw;
-	}
+  .internal-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: var(--space-s);
+    font-size: var(--font-size-large);
+    text-transform: lowercase;
+  }
 
-	.border-container .nav-container {
-		padding: 0 var(--space-s);
-	}
+  .title-container {
+    text-align: left;
+    padding-top: var(--space-xs);
+  }
 
-	.internal-links {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		margin-bottom: var(--space-s);
-		font-size: 1.25rem;
-	}
+  .site-title {
+    font-size: 6.5rem;
+    line-height: 1;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+  }
 
-	.title-container {
-		text-align: left;
-		padding-top: var(--space-xs);
-	}
+  .site-title.minimal {
+    color: var(--theme-secondary);
+    font-size: 3.5rem;
+  }
 
-	.site-title {
-		font-size: 7rem;
-		line-height: 1;
-		margin: 0;
-		font-weight: 600;
-		letter-spacing: -0.03em;
-		text-decoration: none;
-	}
+  .site-title a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-	.site-title.minimal {
-		color: var(--theme-secondary);
-	}
+  .site-description {
+    margin: 0;
+    font-size: 1.2rem;
+  }
 
-	.site-title a {
-		text-decoration: none;
-		color: inherit;
-	}
+  .site-description a {
+    color: var(--theme-accent);
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-	.site-description {
-		margin: 0;
-		font-size: 1.1rem;
-	}
+  .site-description a:hover {
+    color: var(--theme-secondary-hover);
+    text-decoration: underline;
+  }
 
-	.site-description a {
-		color: var(--theme-accent);
-		text-decoration: none;
-		font-weight: bold;
-	}
+  :global(.nav-link.minimal) {
+    color: var(--theme-secondary);
+  }
 
-	.site-description a i {
-		margin-right: -0.3em;
-	}
+  :global(.nav-link.minimal:hover) {
+    color: var(--theme-secondary-hover);
+  }
 
-	.site-description a:hover {
-		color: var(--theme-secondary-hover);
-		text-decoration: underline;
-	}
+  :global(.nav-link.minimal.active) {
+    color: var(--theme-secondary);
+  }
 </style>

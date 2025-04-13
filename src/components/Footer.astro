@@ -2,78 +2,88 @@
 import { SITE_TITLE, navigation } from '../config';
 ---
 
-<footer>
-	<div class="footer-container">
-		<div class="footer-content">
-			<div class="footer-links">
-				<nav>
-					{navigation.map((item) => (
-						<a href={item.href}>
-							{item.label}
-						</a>
-					))}
-				</nav>
-			</div>
-		</div>
-		<p class="footer-text">
-			<i class="fab fa-creative-commons"></i> {new Date().getFullYear()} <strong>{SITE_TITLE}</strong>. 
-			<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">Some rights reserved</a>. Made in NY.
-		</p>
-	</div>
+<footer role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-links">
+        <nav aria-label="Footer navigation">
+          {
+            navigation.map(item => (
+              <a
+                href={item.href}
+                aria-current={Astro.url.pathname === item.href ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </div>
+    <p class="footer-text">
+      <i class="fab fa-creative-commons" aria-hidden="true"></i>
+      <span aria-label="Copyright">{new Date().getFullYear()}</span>
+      <strong>{SITE_TITLE}</strong>.
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license"
+        >Some rights reserved</a
+      >. Made in NY.
+    </p>
+  </div>
 </footer>
 
 <style>
-	footer {
-		padding: var(--space-s) 0;
-		border-top: 1px solid var(--theme-tertiary);
-		margin: 0 calc(-1 * var(--space-s));
-	}
+  footer {
+    padding: var(--space-l) 0;
+    border-top: 0.5px solid var(--theme-tertiary);
+    margin: 0 calc(-1 * var(--space-s));
+  }
 
-	.footer-container {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 0 var(--space-s);
-	}
+  .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-s);
+  }
 
-	.footer-content {
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		margin-bottom: var(--space-l);
-	}
+  .footer-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: var(--space-l);
+  }
 
-	.footer-links {
-		flex: 1;
-	}
+  .footer-links {
+    flex: 1;
+  }
 
-	.footer-links nav {
-		display: grid;
-		grid-template-columns: repeat(2, auto);
-		row-gap: var(--space-s);
-		column-gap: var(--space-l);
-		width: fit-content;
-		font-size: var(--font-size-small);
-	}
+  .footer-links nav {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: var(--space-s);
+    column-gap: var(--space-l);
+    width: fit-content;
+    font-size: var(--font-size-small);
+    text-transform: lowercase;
+  }
 
-	.footer-links a {
-		color: inherit;
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-		transition: color 0.2s ease-in-out;
-	}
+  .footer-links a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+  }
 
-	.footer-links a:hover {
-		text-decoration: none;
-		color: var(--theme-accent);
-	}
+  .footer-links a:hover {
+    text-decoration: none;
+    color: var(--theme-accent);
+  }
 
-	.footer-text {
-		color: var(--theme-secondary);
-		font-size: var(--font-size-small);
-	}
+  .footer-text {
+    color: var(--theme-secondary);
+    font-size: var(--font-size-small);
+  }
 
-	.footer-text strong {
-		font-weight: 500;
-	}
+  .footer-text strong {
+    font-weight: 500;
+  }
 </style>

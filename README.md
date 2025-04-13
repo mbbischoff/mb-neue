@@ -1,25 +1,18 @@
-# Astro Starter Kit: Blog
+# MB Neue - Personal Website
 
-```sh
-npm create astro@latest -- --template blog
-```
+A modern, accessible personal website built with Astro.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+## Features:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
+- ✅ Minimal, clean design
+- ✅ Fully responsive layout
+- ✅ Excellent accessibility (WCAG compliant)
+- ✅ Dark/light mode support
+- ✅ Optimized font loading
 - ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
 - ✅ RSS Feed support
-- ✅ Markdown & MDX support
+- ✅ Markdown & MDX support for blog posts and poems
+- ✅ Code quality tools (ESLint, TypeScript, Prettier)
 
 ## 🚀 Project Structure
 
@@ -56,13 +49,36 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run lint`            | Runs ESLint to check code quality                |
+| `npm run typecheck`       | Runs TypeScript type checking                    |
+| `npm run format`          | Formats code with Prettier                       |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🔍 Accessibility Features
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project includes several accessibility enhancements:
 
-## Credit
+- Skip-to-content link for keyboard navigation
+- Proper ARIA attributes for navigation elements
+- Semantic HTML structure
+- Color contrast that meets WCAG standards
+- Focus styles for keyboard navigation
+- Proper alt text for images
+- Responsive design for all screen sizes
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+## 🛠️ Development
+
+The project uses several tools to ensure code quality:
+
+- **ESLint**: Linting for JavaScript/TypeScript
+- **TypeScript**: Static type checking
+- **Prettier**: Code formatting
+
+## 📄 License
+
+This project is licensed under Creative Commons Attribution-ShareAlike 4.0.
+
+## Credits
+
+Originally built with the Astro Blog template.

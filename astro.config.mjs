@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://mb-neue.vercel.app',
-	integrations: [mdx(), sitemap()],
+  site: 'https://mb-neue.vercel.app',
+  integrations: [mdx(), sitemap()],
 });

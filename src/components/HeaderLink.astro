@@ -6,49 +6,52 @@ type Props = HTMLAttributes<'a'>;
 
 const { href, class: className, ...props } = Astro.props;
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
-const subpath = pathname.match(/[^\/]+/g);
+const subpath = pathname.match(/[^/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 
 const navItem = navigation.find(item => item.href === href);
-const icon = navItem?.icon || 'fa-link';
+// Uncomment if icon support is added later
+// const icon = navItem?.icon || 'fa-link';
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
-	<!-- <i class={`fas ${icon}`}></i> -->
-	<slot />
+  <!-- <i class={`fas ${icon}`}></i> -->
+  <slot />
 </a>
 
 <style>
-	a {
-		text-decoration: none;
-		color: inherit;
-		display: flex;
-		align-items: center;
-		gap: var(--space-2xs);
-		color: var(--theme-secondary);
-	}
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    color: var(--theme-secondary);
+  }
 
-	a:hover {
-		color: var(--theme-accent);
-		text-decoration: none;
-	}
+  a:hover {
+    color: var(--theme-accent);
+    text-decoration: none;
+  }
 
-	/* Style for navigation links */
-	:global(.nav-link) {
-		color: inherit;
-		display: flex;
-		align-items: center;
-		gap: var(--space-2xs);
-		transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-		transform-origin: left center;
-	}
+  /* Style for navigation links */
+  :global(.nav-link) {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    transition:
+      transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: left center;
+    text-decoration: none;
+  }
 
-	:global(.nav-link:hover) {
-		color: var(--theme-accent);
-		transform: scale(1.05);
-	}
+  :global(.nav-link:hover) {
+    color: var(--theme-accent);
+  }
 
-	:global(.nav-link.active) {
-		color: var(--theme-accent);
-	}
+  :global(.nav-link.active) {
+    color: var(--theme-accent);
+  }
 </style>

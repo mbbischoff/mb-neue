@@ -6,204 +6,204 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 import { render } from 'astro:content';
+import { Image } from 'astro:assets';
 
 const posts = (await getCollection('posts')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 async function getPostPreview(post: any) {
-	const content = post.body;
-	const readMoreIndex = content.indexOf('<!-- more -->');
-	const preview = readMoreIndex === -1 ? content : content.slice(0, readMoreIndex);
-	
-	try {
-		const { Content } = await render({
-			collection: 'posts',
-			id: post.id,
-			body: preview,
-			data: post.data
-		});
-		return Content;
-	} catch (error) {
-		console.error('Error rendering preview:', error);
-		return preview;
-	}
+  const content = post.body;
+  const readMoreIndex = content.indexOf('<!-- more -->');
+  const preview = readMoreIndex === -1 ? content : content.slice(0, readMoreIndex);
+
+  try {
+    const { Content } = await render({
+      collection: 'posts',
+      id: post.id,
+      body: preview,
+      data: post.data,
+    });
+    return Content;
+  } catch (error) {
+    console.error('Error rendering preview:', error);
+    return preview;
+  }
 }
 
 function estimateReadingTime(content: string) {
-	const wordsPerMinute = 200;
-	const words = content.trim().split(/\s+/).length;
-	const minutes = Math.ceil(words / wordsPerMinute);
-	return minutes;
+  const wordsPerMinute = 200;
+  const words = content.trim().split(/\s+/).length;
+  const minutes = Math.ceil(words / wordsPerMinute);
+  return minutes;
 }
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.posts {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-			}
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .posts {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+	  
+      .posts {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-			html {
-				background: 
-					radial-gradient(circle at 0% 0%, var(--gradient-color-1) 0%, transparent 50%),
-					radial-gradient(circle at 100% 100%, var(--gradient-color-2) 0%, transparent 50%),
-					linear-gradient(45deg, var(--gradient-color-3), transparent);
-				background-attachment: fixed;
-			}
+      article {
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rem;
+        align-items: start;
+        position: relative;
+      }
 
-			.posts {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-			}
+      article .post-content {
+        grid-column: 1;
+      }
 
-			article {
-				margin-bottom: 4rem;
-				display: grid;
-				grid-template-columns: 1fr auto;
-				gap: 2rem;
-				align-items: start;
-				position: relative;
-			}
+      article .hero-image {
+        grid-column: 2;
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        position: relative;
+        transition: transform 0.3s ease;
+        transform: rotate(0deg);
+      }
 
-			article .post-content {
-				grid-column: 1;
-			}
+      article:nth-child(3n + 1) .hero-image:hover {
+        transform: rotate(-2deg) scale(1.02);
+      }
 
-			article .hero-image {
-				grid-column: 2;
-				width: 300px;
-				height: 200px;
-				object-fit: cover;
-				border-radius: 8px;
-				position: relative;
-				transition: transform 0.3s ease;
-				transform: rotate(0deg);
-			}
+      article:nth-child(3n + 2) .hero-image:hover {
+        transform: rotate(3deg) scale(1.02);
+      }
 
-			article:nth-child(3n+1) .hero-image:hover {
-				transform: rotate(-2deg) scale(1.02);
-			}
+      article:nth-child(3n + 3) .hero-image:hover {
+        transform: rotate(-1deg) scale(1.02);
+      }
 
-			article:nth-child(3n+2) .hero-image:hover {
-				transform: rotate(3deg) scale(1.02);
-			}
+      article .post-meta {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+      }
 
-			article:nth-child(3n+3) .hero-image:hover {
-				transform: rotate(-1deg) scale(1.02);
-			}
+      article time,
+      article .reading-time {
+        color: var(--theme-secondary);
+        font-size: var(--font-size-small);
+      }
 
-			article .post-meta {
-				display: flex;
-				align-items: center;
-				gap: var(--space-xs);
-			}
+      article h2 {
+        margin: 0 0 var(--space-s) 0;
+      }
 
-			article time,
-			article .reading-time {
-				color: var(--theme-secondary);
-				font-size: var(--font-size-small);
-			}
+      article h2 a {
+        text-decoration: none;
+        color: inherit;
+      }
 
-			article h2 {
-				margin: 0 0 var(--space-s) 0;
-			}
+      article h2 a:hover {
+        color: var(--theme-accent);
+      }
 
-			article h2 a {
-				text-decoration: none;
-				color: inherit;
-			}
+      article .content {
+        margin: var(--space-s) 0;
+      }
 
-			article h2 a:hover {
-				color: var(--theme-accent);
-			}
+      article .content :global(p) {
+        margin: var(--space-s) 0;
+      }
 
-			article .content {
-				margin: var(--space-s) 0;
-			}
+      article .content :global(p:first-child) {
+        margin-top: 0;
+      }
 
-			article .content :global(p) {
-				margin: var(--space-s) 0;
-			}
+      article .meta {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        margin-top: var(--space-s);
+      }
 
-			article .content :global(p:first-child) {
-				margin-top: 0;
-			}
+      article .read-more {
+        display: inline-flex;
+        align-items: center;
+        color: var(--theme-accent);
+      }
 
-			article .meta {
-				display: flex;
-				align-items: center;
-				gap: var(--space-xs);
-				margin-top: var(--space-s);
-			}
-
-			article .read-more {
-				display: inline-flex;
-				align-items: center;
-				color: var(--theme-accent);
-			}
-
-			article .read-more:hover {
-				text-decoration: underline;
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<div class="posts">
-				{posts.map(async (post) => {
-					const Preview = await getPostPreview(post);
-					const readingTime = estimateReadingTime(post.body || '');
-					return (
-						<article>
-							<div class="post-content">
-								<div class="post-meta">
-									<time datetime={post.data.pubDate.toISOString()} class="flex items-center gap-1">
-										<i class="fas fa-calendar"></i>
-										<FormattedDate date={post.data.pubDate} />
-									</time>
-									<span class="reading-time">
-										<i class="fas fa-clock"></i>
-										{readingTime} min
-									</span>
-								</div>
-								<h2>
-									<a href={`/${post.id}`}>{post.data.title}</a>
-								</h2>
-								{post.body && (
-									<>
-										<div class="content">
-											{typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
-										</div>
-										<div class="meta">
-											<a href={`/${post.id}`} class="read-more">
-												Read more <i class="fas fa-arrow-right"></i>
-											</a>
-										</div>
-									</>
-								)}
-							</div>
-							{post.data.heroImage && (
-								<a href={`/${post.id}`}>
-									<img 
-										src={post.data.heroImage} 
-										alt={post.data.title} 
-										class="hero-image"
-									/>
-								</a>
-							)}
-						</article>
-					);
-				})}
-			</div>
-		</main>
-		<Footer />
-	</body>
+      article .read-more:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="posts">
+        {
+          posts.map(async post => {
+            const Preview = await getPostPreview(post);
+            const readingTime = estimateReadingTime(post.body || '');
+            return (
+              <article>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <time
+                      datetime={post.data.pubDate.toISOString()}
+                      class="flex items-center gap-1"
+                    >
+                      <FormattedDate date={post.data.pubDate} />
+                    </time>
+                    <span class="reading-time">
+                      •
+                      {readingTime} min
+                    </span>
+                  </div>
+                  <h2>
+                    <a href={`/${post.id}`}>{post.data.title}</a>
+                  </h2>
+                  {post.body && (
+                    <>
+                      <div class="content">
+                        {typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
+                      </div>
+                      <div class="meta">
+                        <a href={`/${post.id}`} class="read-more">
+                          Read more →
+                        </a>
+                      </div>
+                    </>
+                  )}
+                </div>
+                {post.data.heroImage && (
+                  <a href={`/${post.id}`}>
+                    <Image
+                      src={post.data.heroImage}
+                      alt={post.data.title}
+                      width={300}
+                      height={200}
+                      class="hero-image"
+                      loading="eager"
+                    />
+                  </a>
+                )}
+              </article>
+            );
+          })
+        }
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>

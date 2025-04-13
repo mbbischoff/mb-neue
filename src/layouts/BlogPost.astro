@@ -13,169 +13,168 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} image={heroImage} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 800px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: var(--space-l) var(--space-s);
-				color: var(--theme-text);
-			}
-			.title {
-				margin-bottom: var(--space-l);
-			}
-			.title time {
-				color: var(--theme-secondary);
-				display: block;
-				margin-bottom: 0.5rem;
-				font-size: 0.9em;
-			}
-			.title h1 {
-				margin: 0;
-				font-size: 2.5rem;
-				font-variation-settings: 'wght' 900;
-			}
-			.date {
-				margin-bottom: 0.5em;
-			}
-			.date time {
-				color: rgb(var(--gray));
-			}
-			.updated {
-				font-size: 0.8em;
-				color: rgb(var(--gray));
-			}
-			.updated time {
-				color: rgb(var(--gray));
-			}
-			.tags {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.5em;
-				margin: 1em 0;
-			}
-			.tags a {
-				display: inline-block;
-				padding: 0.25em 0.5em;
-				border-radius: 0.25em;
-				background-color: rgb(var(--gray-light));
-				color: rgb(var(--gray-dark));
-				text-decoration: none;
-				font-size: 0.8em;
-			}
-			.tags a:hover {
-				background-color: rgb(var(--gray));
-				color: rgb(var(--gray-light));
-			}
-			.content {
-				margin-top: 2em;
-			}
-			.content :global(h1) {
-				margin-top: 2em;
-				margin-bottom: 1em;
-			}
-			.content :global(h2) {
-				margin-top: 1.5em;
-				margin-bottom: 1em;
-			}
-			.content :global(h3) {
-				margin-top: 1.5em;
-				margin-bottom: 1em;
-			}
-			.content :global(p) {
-				margin-bottom: 1.5em;
-			}
-			.content :global(ul) {
-				margin-bottom: 1.5em;
-			}
-			.content :global(ol) {
-				margin-bottom: 1.5em;
-			}
-			.content :global(li) {
-				margin-bottom: 0.5em;
-			}
-			.content :global(blockquote) {
-				margin: 1.5em 0;
-				padding: 0.5em 1em;
-				border-left: 0.25em solid rgb(var(--gray));
-				background-color: rgb(var(--gray-light));
-			}
-			.content :global(code) {
-				background-color: rgb(var(--gray-light));
-				padding: 0.2em 0.4em;
-				border-radius: 0.25em;
-				font-size: 0.9em;
-			}
-			.content :global(pre) {
-				margin: 1.5em 0;
-				padding: 1em;
-				background-color: rgb(var(--gray-light));
-				border-radius: 0.25em;
-				overflow-x: auto;
-			}
-			.content :global(pre code) {
-				background-color: transparent;
-				padding: 0;
-				border-radius: 0;
-				font-size: 1em;
-			}
-			.content :global(img) {
-				display: block;
-				margin: 1.5em auto;
-				max-width: 100%;
-				height: auto;
-				border-radius: 0.25em;
-			}
-			.content :global(table) {
-				width: 100%;
-				margin: 1.5em 0;
-				border-collapse: collapse;
-			}
-			.content :global(th) {
-				background-color: rgb(var(--gray-light));
-				padding: 0.5em;
-				text-align: left;
-			}
-			.content :global(td) {
-				padding: 0.5em;
-				border-bottom: 1px solid rgb(var(--gray));
-			}
-			.content :global(hr) {
-				margin: 2em 0;
-				border: none;
-				border-top: 1px solid rgb(var(--gray));
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<article class="prose">
-				<div class="title">
-					<time datetime={pubDate.toISOString()}>
-						<FormattedDate date={pubDate} />
-					</time>
-					<h1>{title}</h1>
-				</div>
-				<slot />
-			</article>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={title} description={description} image={heroImage} />
+    <style>
+      main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0;
+      }
+      .hero-image {
+        width: 100%;
+      }
+      .hero-image img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+      }
+      .prose {
+        width: 800px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        color: var(--theme-text);
+      }
+      .title {
+        margin-bottom: var(--space-l);
+      }
+      .title time {
+        color: var(--theme-secondary);
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9em;
+      }
+      .title h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-variation-settings: 'wght' 900;
+      }
+      .date {
+        margin-bottom: 0.5em;
+      }
+      .date time {
+        color: rgb(var(--gray));
+      }
+      .updated {
+        font-size: 0.8em;
+        color: rgb(var(--gray));
+      }
+      .updated time {
+        color: rgb(var(--gray));
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        margin: 1em 0;
+      }
+      .tags a {
+        display: inline-block;
+        padding: 0.25em 0.5em;
+        border-radius: 0.25em;
+        background-color: rgb(var(--gray-light));
+        color: rgb(var(--gray-dark));
+        text-decoration: none;
+        font-size: 0.8em;
+      }
+      .tags a:hover {
+        background-color: rgb(var(--gray));
+        color: rgb(var(--gray-light));
+      }
+      .content {
+        margin-top: 2em;
+      }
+      .content :global(h1) {
+        margin-top: 2em;
+        margin-bottom: 1em;
+      }
+      .content :global(h2) {
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+      }
+      .content :global(h3) {
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+      }
+      .content :global(p) {
+        margin-bottom: 1.5em;
+      }
+      .content :global(ul) {
+        margin-bottom: 1.5em;
+      }
+      .content :global(ol) {
+        margin-bottom: 1.5em;
+      }
+      .content :global(li) {
+        margin-bottom: 0.5em;
+      }
+      .content :global(blockquote) {
+        margin: 1.5em 0;
+        padding: 0.5em 1em;
+        border-left: 0.25em solid rgb(var(--gray));
+        background-color: rgb(var(--gray-light));
+      }
+      .content :global(code) {
+        background-color: rgb(var(--gray-light));
+        padding: 0.2em 0.4em;
+        border-radius: 0.25em;
+        font-size: 0.9em;
+      }
+      .content :global(pre) {
+        margin: 1.5em 0;
+        padding: 1em;
+        background-color: rgb(var(--gray-light));
+        border-radius: 0.25em;
+        overflow-x: auto;
+      }
+      .content :global(pre code) {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+        font-size: 1em;
+      }
+      .content :global(img) {
+        display: block;
+        margin: 1.5em auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.25em;
+      }
+      .content :global(table) {
+        width: 100%;
+        margin: 1.5em 0;
+        border-collapse: collapse;
+      }
+      .content :global(th) {
+        background-color: rgb(var(--gray-light));
+        padding: 0.5em;
+        text-align: left;
+      }
+      .content :global(td) {
+        padding: 0.5em;
+        border-bottom: 1px solid rgb(var(--gray));
+      }
+      .content :global(hr) {
+        margin: 2em 0;
+        border: none;
+        border-top: 1px solid rgb(var(--gray));
+      }
+    </style>
+  </head>
+  <body>
+    <Header minimalLayout={true} />
+    <main>
+      <article class="prose">
+        <div class="title">
+          <time datetime={pubDate.toISOString()}>
+            <FormattedDate date={pubDate} />
+          </time>
+          <h1>{title}</h1>
+        </div>
+        <slot />
+      </article>
+    </main>
+    <Footer />
+  </body>
 </html>

@@ -1,96 +1,102 @@
 @font-face {
-	font-family: 'Berkeley Mono';
-	src: url('/fonts/BerkeleyMonoVariable.woff2') format('woff2');
-	font-weight: 100 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'Berkeley Mono';
+  src: url('/fonts/BerkeleyMonoVariable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 :root {
-	/* Theme Colors */
-	--theme-bg: #ffffff;
-	--theme-text: black;
-	--theme-border: black;
-	--theme-accent: oklch(60.72% 0.267 23.1);
-	--theme-accent-hover: black;
-	--theme-secondary: gray;
-	--theme-secondary-hover: lightgray;
-	--theme-tertiary: #e0e0e0;
-	--dot-color: rgba(0, 0, 0, 0.1);
+  /* Theme Colors */
+  --theme-bg: oklch(98% 0.005 23.1);
+  --theme-text: oklch(0% 0 0);
+  --theme-border: oklch(20% 0 0);
+  --theme-accent: oklch(60.72% 0.267 23.1);
+  --theme-accent-hover: oklch(30% 0.267 23.1);
+  --theme-secondary: oklch(60% 0.02 23.1);
+  --theme-secondary-hover: oklch(70% 0.02 23.1);
+  --theme-tertiary: oklch(80% 0.01 23.1);
 
-	/* Typography */
-	--font-size-small: 0.9em;
+  /* Typography */
+  font-size: 18px;
+  --font-size-small: 0.9rem;
+  --font-size-large: 1.1rem;
 
-	/* Utopia Spacing System */
-	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
-	--space-2xs: clamp(0.5rem, calc(0.48rem + 0.11vw), 0.56rem);
-	--space-xs: clamp(0.75rem, calc(0.71rem + 0.19vw), 0.88rem);
-	--space-s: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
-	--space-m: clamp(1.5rem, calc(1.43rem + 0.38vw), 1.75rem);
-	--space-l: clamp(2rem, calc(1.91rem + 0.38vw), 2.25rem);
-	--space-xl: clamp(3rem, calc(2.86rem + 0.75vw), 3.5rem);
-	--space-2xl: clamp(4rem, calc(3.82rem + 0.75vw), 4.5rem);
-	--space-3xl: clamp(6rem, calc(5.73rem + 1.13vw), 6.75rem);
+  /* Utopia Spacing System */
+  --space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
+  --space-2xs: clamp(0.5rem, calc(0.48rem + 0.11vw), 0.56rem);
+  --space-xs: clamp(0.75rem, calc(0.71rem + 0.19vw), 0.88rem);
+  --space-s: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
+  --space-m: clamp(1.5rem, calc(1.43rem + 0.38vw), 1.75rem);
+  --space-l: clamp(2rem, calc(1.91rem + 0.38vw), 2.25rem);
+  --space-xl: clamp(3rem, calc(2.86rem + 0.75vw), 3.5rem);
+  --space-2xl: clamp(4rem, calc(3.82rem + 0.75vw), 4.5rem);
+  --space-3xl: clamp(6rem, calc(5.73rem + 1.13vw), 6.75rem);
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--theme-bg: #000000;
-		--theme-text: #ffffff;
-		--theme-border: #333333;
-		--theme-accent: oklch(65.11% 0.224 14.62);
-		--theme-accent-hover: #ffffff;
-		--theme-secondary: #999999;
-		--theme-secondary-hover: #cccccc;
-		--theme-tertiary: #333333;
-		--dot-color: rgba(255, 68, 68, 0.1);
-	}
+  :root {
+    --theme-bg: oklch(5% 0.005 14.62);
+    --theme-text: oklch(100% 0 0);
+    --theme-border: oklch(20% 0.02 14.62);
+    --theme-accent: oklch(65.11% 0.224 14.62);
+    --theme-accent-hover: oklch(80% 0.224 14.62);
+    --theme-secondary: oklch(60% 0.02 14.62);
+    --theme-secondary-hover: oklch(80% 0.02 14.62);
+    --theme-tertiary: oklch(30% 0.01 14.62);
+  }
 }
 
 @keyframes fadeInScale {
-	0% {
-		opacity: 0;
-		transform: scale(0.98);
-	}
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 body {
-	font-family: 'Berkeley Mono', monospace;
-	margin: 0;
-	padding: 0 1em;
-	text-align: left;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	font-size: 18px;
-	line-height: 1.6;
-	font-weight: 400;
-	color: var(--theme-text);
-	width: 100%;
-	background: var(--theme-bg);
+  font-family: 'Berkeley Mono', monospace;
+  margin: 0;
+  padding: 0 1em;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--theme-text);
+  width: 100%;
+  background: var(--theme-bg);
 }
 
 main {
-	width: 800px;
-	max-width: calc(100% - 2em);
-	margin: 0 auto;
-	padding: var(--space-l) var(--space-s);
+  width: 800px;
+  max-width: calc(100% - 2em);
+  margin: 0 auto;
+  padding: var(--space-l) var(--space-s);
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-variation-settings: 'wght' 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variation-settings: 'wght' 700;
 }
 
 a {
-	color: var(--theme-accent);
-	text-decoration: none;
-	transition: color 0.2s ease, text-decoration 0.2s ease;
+  color: var(--theme-accent);
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    text-decoration 0.2s ease;
 }
 
 a:hover {
-	color: var(--theme-accent-hover);
-	text-decoration: underline;
-} 
+  color: var(--theme-accent-hover);
+  text-decoration: underline;
+}

@@ -8,82 +8,88 @@ import FormattedDate from '../components/FormattedDate.astro';
 import PageTitle from '../components/PageTitle.astro';
 
 const posts = (await getCollection('posts')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 // Group posts by year
-const postsByYear = posts.reduce((acc, post) => {
-	const year = post.data.pubDate.getFullYear();
-	if (!acc[year]) {
-		acc[year] = [];
-	}
-	acc[year].push(post);
-	return acc;
-}, {} as Record<number, typeof posts>);
+const postsByYear = posts.reduce(
+  (acc, post) => {
+    const year = post.data.pubDate.getFullYear();
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(post);
+    return acc;
+  },
+  {} as Record<number, typeof posts>
+);
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={`Archive - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
-		<style>
-			.year-group {
-				margin-bottom: var(--space-xl);
-			}
+  <head>
+    <BaseHead title={`Archive - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <style>
+      .year-group {
+        margin-bottom: var(--space-xl);
+      }
 
-			.year-group h2 {
-				color: var(--theme-secondary);
-				margin-bottom: var(--space-m);
-			}
+      .year-group h2 {
+        color: var(--theme-secondary);
+        margin-bottom: var(--space-m);
+      }
 
-			.post-list {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-			}
+      .post-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-			.post-item {
-				display: flex;
-				justify-content: space-between;
-				align-items: baseline;
-				margin-bottom: var(--space-s);
-			}
+      .post-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: var(--space-s);
+      }
 
-			.post-item a {
-				color: var(--theme-text);
-				text-decoration: none;
-			}
+      .post-item a {
+        color: var(--theme-text);
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-			.post-item a:hover {
-				color: var(--theme-accent);
-			}
+      .post-item a:hover {
+        color: var(--theme-accent);
+      }
 
-			.post-date {
-				color: var(--theme-secondary);
-				font-size: 0.9em;
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<PageTitle title="Archive" />
-			{Object.entries(postsByYear).map(([year, yearPosts]) => (
-				<div class="year-group">
-					<h2>{year}</h2>
-					<ul class="post-list">
-						{yearPosts.map((post) => (
-							<li class="post-item">
-								<a href={`/${post.id}`}>{post.data.title}</a>
-								<time datetime={post.data.pubDate.toISOString()} class="post-date">
-									<FormattedDate date={post.data.pubDate} />
-								</time>
-							</li>
-						))}
-					</ul>
-				</div>
-			))}
-		</main>
-		<Footer />
-	</body>
-</html> 
+      .post-date {
+        color: var(--theme-secondary);
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <PageTitle title="Archive" />
+      {
+        Object.entries(postsByYear).map(([year, yearPosts]) => (
+          <div class="year-group">
+            <h2>{year}</h2>
+            <ul class="post-list">
+              {yearPosts.map(post => (
+                <li class="post-item">
+                  <a href={`/${post.id}`}>{post.data.title}</a>
+                  <time datetime={post.data.pubDate.toISOString()} class="post-date">
+                    <FormattedDate date={post.data.pubDate} />
+                  </time>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </main>
+    <Footer />
+  </body>
+</html>

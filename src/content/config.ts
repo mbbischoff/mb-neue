@@ -19,7 +19,6 @@ const poems = defineCollection({
     pubDate: z.date(),
     updatedDate: z.date().optional(),
   }),
-  extensions: ['.md', '.mdx'],
 });
 
 export const collections = {
@@ -27,4 +26,4 @@ export const collections = {
   poems,
 } as const;
 
-export type Collections = typeof collections; 
+export type Collections = typeof collections;

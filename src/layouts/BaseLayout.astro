@@ -4,9 +4,9 @@ import Footer from '../components/Footer.astro';
 import BaseHead from '../components/BaseHead.astro';
 
 interface Props {
-	title: string;
-	description?: string;
-	minimalLayout?: boolean;
+  title: string;
+  description?: string;
+  minimalLayout?: boolean;
 }
 
 const { title, description = '', minimalLayout = false } = Astro.props;
@@ -14,28 +14,26 @@ const { title, description = '', minimalLayout = false } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
-	<body>
-		<div id="page-container">
-			<Header minimalLayout={minimalLayout} />
-			<main>
-				<slot />
-			</main>
-			{!minimalLayout && <Footer />}
-		</div>
-	</body>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <div id="page-container">
+      <Header minimalLayout={minimalLayout} />
+      <main id="content">
+        <slot />
+      </main>
+      {!minimalLayout && <Footer />}
+    </div>
+  </body><style>
+    #page-container {
+      display: flex;
+      flex-direction: column;
+      min-height: calc(100vh - var(--space-xs) - var(--space-s));
+    }
+
+    main {
+      flex: 1;
+    }
+  </style>
 </html>
-
-<style>
-	#page-container {
-		display: flex;
-		flex-direction: column;
-		min-height: calc(100vh - var(--space-xs) - var(--space-s));
-	}
-
-	main {
-		flex: 1;
-	}
-</style>
