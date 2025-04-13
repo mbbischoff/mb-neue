@@ -1,13 +1,28 @@
 ---
-interface Props {
-  date: Date;
+enum DateFormat {
+  Long = 'long',
+  Short = 'short'
 }
 
-const { date } = Astro.props;
+interface Props {
+  date: Date;
+  format?: DateFormat;
+}
+
+const { date, format = DateFormat.Long } = Astro.props;
+
+const parts = new Intl.DateTimeFormat('en-US', {
+  year: format === DateFormat.Long ? 'numeric' : undefined,
+  month: '2-digit',
+  day: '2-digit'
+}).formatToParts(date);
+
+const formattedDate = parts
+  .filter(part => part.type !== 'literal')
+  .map(part => part.value)
+  .join('·');
 ---
 
 <time datetime={date.toISOString()}>
-  {date.getFullYear()}·{String(date.getMonth() + 1).padStart(2, '0')}·{
-    String(date.getDate()).padStart(2, '0')
-  }
+  {formattedDate}
 </time>

@@ -26,60 +26,68 @@ const postsByYear = posts.reduce(
 
 <BaseLayout title={`Archive - ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
   <style>
-    .year-group {
-      margin-bottom: var(--space-xl);
+    .archive-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: var(--space-l);
     }
 
-    .year-group h2 {
+    .year-header {
       color: var(--theme-secondary);
-      margin-bottom: var(--space-m);
+      text-align: left;
+      padding: var(--space-s) 0;
+      font-size: var(--step-1);
+      font-weight: var(--font-weight-bold);
     }
 
-    .post-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .post-row {
     }
 
-    .post-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: var(--space-s);
+    .post-title {
+      padding: var(--space-3xs) 0;
     }
 
-    .post-item a {
+    .post-title a {
       color: var(--theme-text);
       text-decoration: none;
       font-weight: bold;
     }
 
-    .post-item a:hover {
+    .post-title a:hover {
       color: var(--theme-accent);
     }
 
     .post-date {
       color: var(--theme-secondary);
-      font-size: 0.9em;
+      font-size: var(--step--1);
+      text-align: right;
+      padding: var(--space-3xs) 0;
+      white-space: nowrap;
     }
   </style>
 
   <PageTitle title="Archive" />
-  {
-    Object.entries(postsByYear).map(([year, yearPosts]) => (
-      <div class="year-group">
-        <h2>{year}</h2>
-        <ul class="post-list">
+  <table class="archive-table">
+    {
+      Object.entries(postsByYear).map(([year, yearPosts]) => (
+        <>
+          <tr>
+            <td colspan="2" class="year-header">
+              <h3>{year}</h3>
+            </td>
+          </tr>
           {yearPosts.map(post => (
-            <li class="post-item">
-              <a href={`/${post.id}`} class="title-link mono no-underline">{post.data.title}</a>
-              <small class="mono secondary">
-                <FormattedDate date={post.data.pubDate} />
-              </small>
-            </li>
+            <tr class="post-row">
+              <td class="post-title">
+                <a href={`/${post.id}`} class="mono no-underline">{post.data.title}</a>
+              </td>
+              <td class="post-date mono secondary">
+                <FormattedDate date={post.data.pubDate} format="MM • d" />
+              </td>
+            </tr>
           ))}
-        </ul>
-      </div>
-    ))
-  }
+        </>
+      ))
+    }
+  </table>
 </BaseLayout>

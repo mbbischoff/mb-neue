@@ -1,5 +1,5 @@
 ---
-title: 'Jorge Quinteros: FaceTime Shoots Are Not as Bad as I Thought'
+title: 'FaceTime Shoots Are Not as Bad as I Thought'
 pubDate: '2020-05-11'
 description: Absolutely gorgeous portraiture from my friend Jorge, shot entirely over
   FaceTime. Another perfect example of constraints breeding creativity.
