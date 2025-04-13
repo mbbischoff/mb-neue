@@ -1,0 +1,142 @@
+---
+// Component props interface
+interface Props {
+  minimalLayout?: boolean; // Whether to use minimal styling
+  title: string;          // The title text to display
+}
+
+const { minimalLayout = false, title } = Astro.props;
+---
+
+<div class="title-container" id="title-container">
+  <h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
+    <a href="/">{title}</a>
+  </h1>
+
+  {
+    !minimalLayout && (
+      <p class="site-description">
+        <strong>mb <span class="last-name">bischoff</span></strong> <small class="pronouns">(she/they)</small> makes <a href="https://lickability.com">software</a>, <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
+      </p>
+    )
+  }
+</div>
+
+<script>
+  // Get references to the container and title elements
+  const container = document.getElementById('title-container');
+  const title = container?.querySelector('.site-title');
+  
+  if (!container || !title) {
+    console.error('Could not find title container or title element');
+  } else {
+    // Base values for font variations when mouse is far from title
+    const baseCasl = 1;    // Casual axis: 0 = monospace, 1 = casual
+    const baseWght = 976;  // Weight axis: 300-1000, higher = bolder
+    const baseSlnt = -10;  // Slant axis: -15 to 0, lower = more slanted
+    const baseCrsv = 1;    // Cursive axis: 0 = linear, 1 = cursive
+    
+    // Maximum range of variation from base values
+    const caslRange = 0.5;  // How much less casual it can get
+    const wghtRange = 400;  // How much lighter it can get
+    const slntRange = 10;   // How much less slanted it can get
+    const crsvRange = 1;  // How much less cursive it can get
+    
+    container.addEventListener('mousemove', (e) => {
+      // Get dimensions of container and title
+      const rect = container.getBoundingClientRect();
+      const titleRect = title.getBoundingClientRect();
+      
+      // Calculate distance from mouse to title center
+      const titleCenterX = titleRect.left + titleRect.width / 2;
+      const titleCenterY = titleRect.top + titleRect.height / 2;
+      const distanceX = Math.abs(e.clientX - titleCenterX);
+      const distanceY = Math.abs(e.clientY - titleCenterY);
+      
+      // Normalize distances to 0-1 range, where:
+      // 0 = mouse is closest to title
+      // 1 = mouse is at maximum distance
+      const normalizedDistanceX = Math.min(distanceX / (window.innerWidth / 2), 1);
+      const normalizedDistanceY = Math.min(distanceY / (rect.height / 2), 1);
+      
+      // Calculate font variations based on distance
+      // When mouse is closer (normalizedDistance closer to 0):
+      // - Font becomes thinner (lower weight)
+      // - Less casual (more monospace)
+      // - More slanted
+      const casl = baseCasl - (1 - normalizedDistanceX) * caslRange;
+      const wght = baseWght - (1 - normalizedDistanceY) * wghtRange;
+      const slnt = baseSlnt + (1 - normalizedDistanceX) * slntRange;
+      const crsv = baseCrsv + (1 - normalizedDistanceY) * crsvRange;
+      
+      // Apply variations with smooth transition
+      (title as HTMLElement).style.transition = 'font-variation-settings 0.1s ease-out';
+      (title as HTMLElement).style.fontVariationSettings = `"CASL" ${casl}, "wght" ${wght}, "slnt" ${slnt}, "CRSV" ${crsv}`;
+    });
+    
+    // When mouse leaves, smoothly animate back to base values
+    container.addEventListener('mouseleave', () => {
+      (title as HTMLElement).style.transition = 'font-variation-settings 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+      (title as HTMLElement).style.fontVariationSettings = `"CASL" ${baseCasl}, "wght" ${baseWght}, "slnt" ${baseSlnt}, "CRSV" ${baseCrsv}`;
+    });
+  }
+</script>
+
+<style>
+  /* Container that spans full viewport width */
+  .title-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-m);
+    transition: none;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  /* Base title styling with Recursive font */
+  .site-title {
+    font-size: var(--step-5);
+    line-height: 1;
+    margin: 0 0 var(--space-m) 0;
+    text-align: center;
+    font-weight: var(--font-weight-black);
+    text-decoration: none;
+    font-family: 'Recursive', sans-serif;
+    font-variation-settings: "CASL" 1, "wght" var(--font-weight-black), "slnt" var(--name-slant), "CRSV" 1;
+    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Title link styling */
+  .site-title a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: none;
+    padding-bottom: 0;
+    display: inline-block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-out;
+  }
+
+  /* Title container hover effect */
+  .title-container:hover .site-title {
+    color: var(--theme-accent);
+  }
+
+  /* Minimal layout styling */
+  .site-title.minimal {
+    color: var(--theme-text);
+  }
+
+  /* Description text styling */
+  .site-description {
+    text-align: center;
+    margin-bottom: var(--space-s);
+    text-wrap: balance;
+  }
+</style> 

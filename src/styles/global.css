@@ -12,6 +12,10 @@
   --theme-background-offset: oklch(97% 0.03 23.1);
   --theme-tertiary: oklch(80% 0.02 0);
 
+  /* Font variables */
+  --font-weight-black: 900;
+  --name-slant: -10;
+
   /* Text colors */
   --theme-text: oklch(3% 0.1 0);
   --theme-secondary: oklch(35% 0.05 0);

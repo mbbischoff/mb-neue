@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import InteractiveTitle from './InteractiveTitle.astro';
 import { SITE_TITLE } from '../consts';
 import { SITE_TITLE_SHORT, navigation } from '../config';
 
@@ -25,19 +26,7 @@ const { minimalLayout = false } = Astro.props;
       ))}
     </nav>
 
-    <div class="title-container">
-      <h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
-        <a href="/">{SITE_TITLE_SHORT}</a>
-      </h1>
-
-      {
-        !minimalLayout && (
-          <p class="site-description">
-            <strong>mb <span class="last-name">bischoff</span></strong> <small class="pronouns">(she/they)</small> makes <a href="https://lickability.com">software</a>, <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
-          </p>
-        )
-      }
-    </div>
+    <InteractiveTitle minimalLayout={minimalLayout} title={SITE_TITLE_SHORT} />
   </div>
 </header>
 
@@ -68,90 +57,6 @@ const { minimalLayout = false } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .site-title {
-    font-size: var(--step-5);
-    line-height: 1;
-    margin: 0 0 var(--space-m) 0;
-    text-align: center;
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    text-decoration: none;
-  }
-
-  .site-title a {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: none;
-    padding-bottom: 0;
-    display: inline-block;
-    transform-origin: center center;
-    transition: transform 0.3s ease-out;
-  }
-
-  .site-title a:hover {
-    animation: hoverPulse 1s ease-in-out infinite;
-  }
-
-  @keyframes hoverPulse {
-    0% {
-      transform: scale(1) rotate(0deg);
-    }
-    50% {
-      transform: scale(1.2) rotate(10deg);
-    }
-    100% {
-      transform: scale(1) rotate(0deg);
-    }
-  }
-
-  .site-title.minimal {
-    color: var(--theme-text);
-  }
-
-  .site-title.minimal a:hover {
-    color: var(--theme-accent);
-  }
-
-  .site-description {
-    text-align: center;
-    margin-bottom: var(--space-s);
-	text-wrap: balance;
-  }
-
-  .first-name {
-    display: inline-block;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .first-name:hover {
-    animation: pulse 1s infinite;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  .site-description a {
-    color: var(--theme-accent);
-    text-decoration: none;
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .site-description a:hover {
-    color: var(--theme-secondary-hover);
-    text-decoration: none;
-    border-bottom: none;
   }
 
   :global(.nav-link) {
