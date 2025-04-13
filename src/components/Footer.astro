@@ -21,12 +21,12 @@ import { SITE_TITLE, navigation } from '../config';
       </div>
       <div class="social-links">
         <nav aria-label="Social links">
-          <a href="https://twitter.com/yourusername" rel="me" target="_blank" aria-label="X (Twitter)">twitter</a>
-          <a href="https://bsky.app/profile/yourusername" rel="me" target="_blank" aria-label="Bluesky">bluesky</a>
-          <a href="https://mastodon.social/@yourusername" rel="me" target="_blank" aria-label="Mastodon">mastodon</a>
-          <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">instagram</a>
-          <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">github</a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">linkedin</a>
+          <a href="https://twitter.com/yourusername" rel="me" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">twitter</a>
+          <a href="https://bsky.app/profile/yourusername" rel="me" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">bluesky</a>
+          <a href="https://mastodon.social/@yourusername" rel="me" target="_blank" rel="noopener noreferrer" aria-label="Mastodon">mastodon</a>
+          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram">instagram</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">github</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">linkedin</a>
         </nav>
       </div>
     </div>
@@ -45,18 +45,21 @@ import { SITE_TITLE, navigation } from '../config';
 <style>
   footer {
     font-size: var(--step--1);
-    padding: var(--space-m) 0;
     border-top: 0.5px solid var(--theme-tertiary);
     margin: 0;
     width: 100%;
-    }
+    position: relative;
+    left: 0;
+    right: 0;
+  }
 
   .footer-container {
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
-    padding: 0;
     box-sizing: border-box;
+    position: relative;
+    padding: var(--space-l) var(--space-s);
   }
 
   .footer-content {
@@ -66,6 +69,7 @@ import { SITE_TITLE, navigation } from '../config';
     margin-bottom: var(--space-l);
     align-items: center;
     width: 100%;
+    position: relative;
   }
 
   .footer-links {
@@ -121,7 +125,7 @@ import { SITE_TITLE, navigation } from '../config';
     display: flex;
     align-items: center;
     transition: color 0.2s ease-in-out;
-    font-size: var(--font-size-large);
+    font-size: var(--step--1);
   }
 
   .footer-links a:hover,
@@ -134,6 +138,7 @@ import { SITE_TITLE, navigation } from '../config';
   .footer-text {
     color: var(--theme-secondary);
     text-align: center;
+    margin: 0;
   }
 
   .footer-text a {
