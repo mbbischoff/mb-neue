@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# CSS
+
+- Use `font-weight` over `font-variation-setings`.
