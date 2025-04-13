@@ -2,20 +2,33 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { SITE_TITLE_SHORT, navigation } from '../config';
+
+interface Props {
+	hideNav?: boolean;
+	minimalLayout?: boolean;
+}
+
+const { minimalLayout = false } = Astro.props;
 ---
 
 <header>
 	<div class="nav-container">
-		<nav class="internal-links">
-			{navigation.map((item) => (
-				<HeaderLink href={item.href} class="nav-link">{item.label}</HeaderLink>
-			))}
-		</nav>
+		{!minimalLayout && (
+			<nav class="internal-links">
+				{navigation.map((item) => (
+					<HeaderLink href={item.href} class="nav-link">{item.label}</HeaderLink>
+				))}
+			</nav>
+		)}
 		<div class="title-container">
-			<h1 class="site-title">
+			<h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
 				<a href="/">{SITE_TITLE_SHORT}</a>
 			</h1>
+
+			{!minimalLayout && (
 			<p class="site-description"><strong>mb bischoff</strong> <small>(she/they)</small> makes <a href="https://lickability.com"><i class="fas fa-mobile-alt"></i> apps</a>, <a href="/archive"><i class="fas fa-pen"></i> posts</a>, & <a href="https://absolutelycrushed.com"><i class="fas fa-microphone"></i> podcasts</a>.</p>
+			)}
+
 		</div>
 	</div>
 </header>
@@ -47,9 +60,13 @@ import { SITE_TITLE_SHORT, navigation } from '../config';
 		font-size: 7rem;
 		line-height: 1;
 		margin: 0;
-		font-weight: 900;
+		font-weight: 600;
 		letter-spacing: -0.03em;
 		text-decoration: none;
+	}
+
+	.site-title.minimal {
+		color: var(--theme-secondary);
 	}
 
 	.site-title a {

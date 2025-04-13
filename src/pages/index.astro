@@ -49,8 +49,55 @@ function estimateReadingTime(content: string) {
 				margin: 0;
 			}
 
+			html {
+				background: 
+					radial-gradient(circle at 0% 0%, var(--gradient-color-1) 0%, transparent 50%),
+					radial-gradient(circle at 100% 100%, var(--gradient-color-2) 0%, transparent 50%),
+					linear-gradient(45deg, var(--gradient-color-3), transparent);
+				background-attachment: fixed;
+				min-height: 100vh;
+			}
+
+			.posts {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
 			article {
 				margin-bottom: 4rem;
+				display: grid;
+				grid-template-columns: 1fr auto;
+				gap: 2rem;
+				align-items: start;
+				position: relative;
+			}
+
+			article .post-content {
+				grid-column: 1;
+			}
+
+			article .hero-image {
+				grid-column: 2;
+				width: 300px;
+				height: 200px;
+				object-fit: cover;
+				border-radius: 8px;
+				position: relative;
+				transition: transform 0.3s ease;
+				transform: rotate(0deg);
+			}
+
+			article:nth-child(3n+1) .hero-image:hover {
+				transform: rotate(-2deg) scale(1.02);
+			}
+
+			article:nth-child(3n+2) .hero-image:hover {
+				transform: rotate(3deg) scale(1.02);
+			}
+
+			article:nth-child(3n+3) .hero-image:hover {
+				transform: rotate(-1deg) scale(1.02);
 			}
 
 			article .post-meta {
@@ -118,30 +165,41 @@ function estimateReadingTime(content: string) {
 					const readingTime = estimateReadingTime(post.body || '');
 					return (
 						<article>
-							<div class="post-meta">
-								<time datetime={post.data.pubDate.toISOString()} class="flex items-center gap-1">
-									<i class="fas fa-calendar"></i>
-									<FormattedDate date={post.data.pubDate} />
-								</time>
-								<span class="reading-time">
-									<i class="fas fa-clock"></i>
-									{readingTime} min
-								</span>
+							<div class="post-content">
+								<div class="post-meta">
+									<time datetime={post.data.pubDate.toISOString()} class="flex items-center gap-1">
+										<i class="fas fa-calendar"></i>
+										<FormattedDate date={post.data.pubDate} />
+									</time>
+									<span class="reading-time">
+										<i class="fas fa-clock"></i>
+										{readingTime} min
+									</span>
+								</div>
+								<h2>
+									<a href={`/${post.id}`}>{post.data.title}</a>
+								</h2>
+								{post.body && (
+									<>
+										<div class="content">
+											{typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
+										</div>
+										<div class="meta">
+											<a href={`/${post.id}`} class="read-more">
+												Read more <i class="fas fa-arrow-right"></i>
+											</a>
+										</div>
+									</>
+								)}
 							</div>
-							<h2>
-								<a href={`/${post.id}`}>{post.data.title}</a>
-							</h2>
-							{post.body && (
-								<>
-									<div class="content">
-										{typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
-									</div>
-									<div class="meta">
-										<a href={`/${post.id}`} class="read-more">
-											Read more <i class="fas fa-arrow-right"></i>
-										</a>
-									</div>
-								</>
+							{post.data.heroImage && (
+								<a href={`/${post.id}`}>
+									<img 
+										src={post.data.heroImage} 
+										alt={post.data.title} 
+										class="hero-image"
+									/>
+								</a>
 							)}
 						</article>
 					);

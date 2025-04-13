@@ -11,10 +11,11 @@
 	--theme-bg: #ffffff;
 	--theme-text: black;
 	--theme-border: black;
-	--theme-accent: red;
+	--theme-accent: oklch(60.72% 0.267 23.1);
 	--theme-accent-hover: black;
 	--theme-secondary: gray;
 	--theme-secondary-hover: lightgray;
+	--theme-tertiary: #e0e0e0;
 	--dot-color: rgba(0, 0, 0, 0.1);
 
 	/* Typography */
@@ -36,12 +37,13 @@
 	:root {
 		--theme-bg: #000000;
 		--theme-text: #ffffff;
-		--theme-border: #1f2937;
-		--theme-accent: #fb7185;
-		--theme-accent-hover: #f43f5e;
-		--theme-secondary: #22d3ee;
-		--theme-secondary-hover: #06b6d4;
-		--dot-color: rgba(251, 113, 133, 0.1);
+		--theme-border: #333333;
+		--theme-accent: oklch(65.11% 0.224 14.62);
+		--theme-accent-hover: #ffffff;
+		--theme-secondary: #999999;
+		--theme-secondary-hover: #cccccc;
+		--theme-tertiary: #333333;
+		--dot-color: rgba(255, 68, 68, 0.1);
 	}
 }
 
@@ -56,10 +58,14 @@
 	}
 }
 
+html {
+	min-height: 100vh;
+}
+
 body {
 	font-family: 'Berkeley Mono', monospace;
 	margin: 0;
-	padding: 0;
+	padding: 0 1em;
 	text-align: left;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -67,7 +73,7 @@ body {
 	line-height: 1.6;
 	font-weight: 400;
 	color: var(--theme-text);
-	width: calc(100% - 2em);
+	width: 100%;
 	background: var(--theme-bg);
 }
 

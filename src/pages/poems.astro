@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import PageTitle from '../components/PageTitle.astro';
+
+const poems = await getCollection('poems');
+poems.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout title="Poems">
+	<style>
+		.poem-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.poem-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: var(--space-s);
+		}
+
+		.poem-item a {
+			color: var(--theme-text);
+			text-decoration: none;
+		}
+
+		.poem-item a:hover {
+			color: var(--theme-accent);
+		}
+
+		.poem-date {
+			color: var(--theme-secondary);
+			font-size: 0.9em;
+		}
+	</style>
+	<PageTitle title="Poems" />
+	<ul class="poem-list">
+		{poems.map((poem) => (
+			<li class="poem-item">
+				<a href={`/poems/${poem.id}`}>{poem.data.title}</a>
+				<time datetime={poem.data.pubDate.toISOString()} class="poem-date">
+					<FormattedDate date={poem.data.pubDate} />
+				</time>
+			</li>
+		))}
+	</ul>
+</BaseLayout> 

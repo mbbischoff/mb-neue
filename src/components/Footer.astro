@@ -9,7 +9,6 @@ import { SITE_TITLE, navigation } from '../config';
 				<nav>
 					{navigation.map((item) => (
 						<a href={item.href}>
-							<i class={`fas ${item.icon}`}></i>
 							{item.label}
 						</a>
 					))}
@@ -26,17 +25,15 @@ import { SITE_TITLE, navigation } from '../config';
 <style>
 	footer {
 		padding: var(--space-s) 0;
-		border-top: 1px solid var(--theme-accent);
-		max-width: 800px;
-		margin-left: auto;
-		margin-right: auto;
+		border-top: 1px solid var(--theme-tertiary);
+		width: 100%;
 		color: var(--theme-text);
 	}
 
 	.footer-container {
 		max-width: 800px;
 		margin: 0 auto;
-		padding: 0;
+		padding: 0 var(--space-s);
 	}
 
 	.footer-content {
@@ -53,8 +50,10 @@ import { SITE_TITLE, navigation } from '../config';
 	.footer-links nav {
 		display: grid;
 		grid-template-columns: repeat(2, auto);
-		gap: var(--space-s);
+		row-gap: var(--space-s);
+		column-gap: var(--space-l);
 		width: fit-content;
+		font-size: var(--font-size-small);
 	}
 
 	.footer-links a {
@@ -62,7 +61,6 @@ import { SITE_TITLE, navigation } from '../config';
 		text-decoration: none;
 		display: flex;
 		align-items: center;
-		gap: var(--space-2xs);
 		transition: color 0.2s ease-in-out;
 	}
 

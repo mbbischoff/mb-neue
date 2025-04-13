@@ -1,15 +1,13 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
 
 interface Props {
 	title: string;
 	description?: string;
-	minimalLayout?: boolean;
 }
 
-const { title, description = '', minimalLayout = false } = Astro.props;
+const { title, description = '' } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,11 +17,10 @@ const { title, description = '', minimalLayout = false } = Astro.props;
 	</head>
 	<body>
 		<div id="page-container">
-			<Header minimalLayout={minimalLayout} />
+			<Header hideNav={true} />
 			<main>
 				<slot />
 			</main>
-			{!minimalLayout && <Footer />}
 		</div>
 	</body>
-</html>
+</html> 
