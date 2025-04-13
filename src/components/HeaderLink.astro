@@ -32,23 +32,26 @@ const navItem = navigation.find(item => item.href === href);
   }
 
   /* Style for navigation links */
-  :global(.nav-link) {
+  .nav-link {
     color: inherit;
     display: flex;
     align-items: center;
     gap: var(--space-2xs);
     transition:
       transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-      color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+      border-bottom 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: left center;
     text-decoration: none;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
-  :global(.nav-link:hover) {
+  .nav-link:hover {
     color: var(--theme-accent);
   }
 
-  :global(.nav-link.active) {
+  .nav-link.active {
     color: var(--theme-accent);
   }
 </style>

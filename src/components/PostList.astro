@@ -1,0 +1,85 @@
+---
+import FormattedDate, { DateFormat } from './FormattedDate.astro';
+
+interface Props {
+  posts: {
+    id: string;
+    data: {
+      title: string;
+      pubDate: Date;
+    };
+  }[];
+  basePath?: string;
+  dateFormat?: DateFormat;
+  year: string;
+}
+
+const { posts, basePath = '', dateFormat = DateFormat.Full, year } = Astro.props;
+---
+
+<style>
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: var(--space-3xs) 0;
+  }
+
+  .post-item:last-child {
+    border-bottom: none;
+  }
+
+  .post-item a {
+    font-size: var(--step-0);
+    font-weight: 600;
+  }
+
+  .post-item a:hover {
+    color: var(--theme-accent);
+  }
+
+  .post-date {
+    color: var(--theme-secondary);
+    font-size: var(--step--2);
+  }
+
+  .year-group {
+    margin-bottom: var(--space-xl);
+  }
+
+  .year-group h3 {
+    color: var(--theme-tertiary);
+    margin-bottom: var(--space-3xs);
+  }
+
+  table {
+    width: 100%;
+  }
+</style>
+
+<div class="year-group">
+  <h3>{year}</h3>
+  <table class="post-list">
+    <tbody>
+      {posts.map((post) => (
+        <tr class="post-item">
+          <td>
+            <a href={`${basePath}/${post.id}`} class="title-link mono no-underline">{post.data.title}</a>
+          </td>
+          <td class="post-date">
+            <time datetime={post.data.pubDate.toISOString()}>
+              <FormattedDate date={post.data.pubDate} format={DateFormat.Short} />
+            </time>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

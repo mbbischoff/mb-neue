@@ -30,7 +30,7 @@
   --theme-accent-hover: oklch(45% 0.267 23.1);
 
   /* Border colors */
-  --theme-border: oklch(0.5% 0.15 0);
+  --theme-border: var(--theme-tertiary);
   --underline-opacity: 0.3;
 
   /* Layout */
@@ -141,6 +141,7 @@ a {
   color: var(--theme-text);
   text-decoration: none;
   border-bottom: 1px solid var(--theme-border);
+  font-weight: 500;
   padding-bottom: 1px;
   transition: all 0.2s ease;
 }

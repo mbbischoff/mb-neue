@@ -1,56 +1,32 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import PageTitle from '../components/PageTitle.astro';
+import PostList from '../components/PostList.astro';
 
 const poems = await getCollection('poems');
 poems.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+type PoemsByYear = Record<string, typeof poems>;
+
+const poemsByYear = poems.reduce<PoemsByYear>((acc, poem) => {
+	const year = poem.data.pubDate.getFullYear().toString();
+	if (!acc[year]) {
+		acc[year] = [];
+	}
+	acc[year].push(poem);
+	return acc;
+}, {});
+
+const sortedYears = Object.entries(poemsByYear)
+	.sort(([yearA], [yearB]) => Number(yearB) - Number(yearA));
 ---
 
 <BaseLayout title="Poems">
-	<style>
-		.poem-list {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-
-		.poem-item {
-			display: flex;
-			justify-content: space-between;
-			align-items: baseline;
-			padding: var(--space-xs) 0;
-			border-bottom: 1px solid var(--theme-border);
-		}
-
-		.poem-item:last-child {
-			border-bottom: none;
-		}
-
-		.poem-item a {
-			font-size: var(--step-0);
-			font-weight: 600;
-		}
-
-		.poem-item a:hover {
-			color: var(--theme-accent);
-		}
-
-		.poem-date {
-			color: var(--theme-secondary);
-			font-size: var(--step--2);
-		}
-	</style>
 	<PageTitle title="Poems" />
-	<ul class="poem-list">
-		{poems.map((poem) => (
-			<li class="poem-item">
-				<a href={`/poems/${poem.id}`} class="title-link mono no-underline">{poem.data.title}</a>
-				<time datetime={poem.data.pubDate.toISOString()} class="poem-date">
-					<FormattedDate date={poem.data.pubDate} />
-				</time>
-			</li>
-		))}
-	</ul>
-</BaseLayout> 
+	{
+		sortedYears.map(([year, yearPoems]) => (
+			<PostList posts={yearPoems} basePath="/poems" year={year} />
+		))
+	}
+</BaseLayout>

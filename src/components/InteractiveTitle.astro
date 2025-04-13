@@ -92,4 +92,14 @@ const { minimalLayout = false, title } = Astro.props;
     margin-bottom: var(--space-s);
     text-wrap: balance;
   }
+
+  /* Description link styling */
+  .site-description a {
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  }
+
+  .site-description a:hover {
+    color: var(--theme-accent);
+    border-bottom-color: var(--theme-accent);
+  }
 </style> 

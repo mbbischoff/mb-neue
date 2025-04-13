@@ -2,10 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
 import PageTitle from '../components/PageTitle.astro';
-import Metadata from '../components/Metadata.astro';
-
+import PostList from '../components/PostList.astro';
+import FormattedDate, { DateFormat } from '../components/FormattedDate.astro';
 const posts = (await getCollection('posts')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
@@ -25,69 +24,13 @@ const postsByYear = posts.reduce(
 ---
 
 <BaseLayout title={`Archive - ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
-  <style>
-    .archive-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: var(--space-l);
-    }
 
-    .year-header {
-      color: var(--theme-secondary);
-      text-align: left;
-      padding: var(--space-s) 0;
-      font-size: var(--step-1);
-      font-weight: var(--font-weight-bold);
-    }
 
-    .post-row {
-    }
-
-    .post-title {
-      padding: var(--space-3xs) 0;
-    }
-
-    .post-title a {
-      color: var(--theme-text);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .post-title a:hover {
-      color: var(--theme-accent);
-    }
-
-    .post-date {
-      color: var(--theme-secondary);
-      font-size: var(--step--1);
-      text-align: right;
-      padding: var(--space-3xs) 0;
-      white-space: nowrap;
-    }
-  </style>
 
   <PageTitle title="Archive" />
-  <table class="archive-table">
-    {
-      Object.entries(postsByYear).map(([year, yearPosts]) => (
-        <>
-          <tr>
-            <td colspan="2" class="year-header">
-              <h3>{year}</h3>
-            </td>
-          </tr>
-          {yearPosts.map(post => (
-            <tr class="post-row">
-              <td class="post-title">
-                <a href={`/${post.id}`} class="mono no-underline">{post.data.title}</a>
-              </td>
-              <td class="post-date mono secondary">
-                <FormattedDate date={post.data.pubDate} format="MM • d" />
-              </td>
-            </tr>
-          ))}
-        </>
-      ))
-    }
-  </table>
+  {
+    Object.entries(postsByYear).map(([year, yearPosts]) => (
+      <PostList posts={yearPosts} year={year} />
+    ))
+  }
 </BaseLayout>

@@ -1,26 +1,22 @@
 ---
-enum DateFormat {
-  Long = 'long',
-  Short = 'short'
+export enum DateFormat {
+  Full,
+  Short
 }
 
 interface Props {
   date: Date;
   format?: DateFormat;
 }
+const { date, format = DateFormat.Full } = Astro.props;
 
-const { date, format = DateFormat.Long } = Astro.props;
-
-const parts = new Intl.DateTimeFormat('en-US', {
-  year: format === DateFormat.Long ? 'numeric' : undefined,
+const formatter = new Intl.DateTimeFormat('en-US', {
+  year: format === DateFormat.Full ? 'numeric' : undefined,
   month: '2-digit',
   day: '2-digit'
-}).formatToParts(date);
+});
 
-const formattedDate = parts
-  .filter(part => part.type !== 'literal')
-  .map(part => part.value)
-  .join('·');
+const formattedDate = formatter.format(date).replace(/\//g, format === DateFormat.Full ? '·' : ' • ');
 ---
 
 <time datetime={date.toISOString()}>
