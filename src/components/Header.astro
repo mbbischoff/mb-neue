@@ -2,7 +2,6 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { SITE_TITLE_SHORT, navigation } from '../config';
-import { Image } from 'astro:assets';
 
 interface Props {
   hideNav?: boolean;
@@ -27,15 +26,6 @@ const { minimalLayout = false } = Astro.props;
     </nav>
 
     <div class="title-container">
-      <div class="avatar-container">
-        <Image
-          src="/images/avatar.jpg"
-          alt="mb bischoff against a colorful graffiti wall"
-          width={120}
-          height={120}
-          class="avatar"
-        />
-      </div>
       <h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
         <a href="/">{SITE_TITLE_SHORT}</a>
       </h1>
@@ -77,22 +67,6 @@ const { minimalLayout = false } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .avatar-container {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    margin-bottom: var(--space-m);
-    border-radius: 50%;
-    overflow: hidden;
-  }
-
-  .avatar {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
   }
 
   .site-title {
@@ -138,13 +112,6 @@ const { minimalLayout = false } = Astro.props;
 
   .site-title.minimal a:hover {
     color: var(--theme-accent);
-  }
-
-  .site-title a {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: none;
-    padding-bottom: 0;
   }
 
   .site-description {
@@ -229,21 +196,5 @@ const { minimalLayout = false } = Astro.props;
     align-items: center;
     justify-content: center;
     gap: var(--space-m);
-  }
-
-  .avatar:hover {
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 600px) {
-    .avatar-container {
-      width: 80px;
-      height: 80px;
-    }
-
-    .avatar {
-      width: 80px;
-      height: 80px;
-    }
   }
 </style>
