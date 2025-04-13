@@ -25,15 +25,15 @@
   --theme-border: oklch(0.5% 0.15 0);
   --underline-opacity: 0.3;
 
-  /* Typography - Utopia Fluid Type Scale */
-  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-  --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --step--2: clamp(0.64rem, 0.6179rem + 0.1104vw, 0.7035rem);
+  --step--1: clamp(0.8rem, 0.7521rem + 0.2395vw, 0.9377rem);
+  --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  --step-1: clamp(1.25rem, 1.1052rem + 0.7239vw, 1.6663rem);
+  --step-2: clamp(1.5625rem, 1.3334rem + 1.1454vw, 2.2211rem);
+  --step-3: clamp(1.9531rem, 1.6026rem + 1.7524vw, 2.9607rem);
+  --step-4: clamp(2.4414rem, 1.9178rem + 2.6178vw, 3.9467rem);
+  --step-5: clamp(3.0518rem, 2.2834rem + 3.842vw, 5.2609rem);
 
   /* Spacing - Balanced */
   --space-3xs: 0.25rem;
@@ -78,7 +78,7 @@ body {
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 16px;
+  font-size: var(--step--0);
   line-height: 1.3;
   font-weight: 400;
   color: var(--theme-text);
