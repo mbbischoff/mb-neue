@@ -23,6 +23,7 @@ const { posts, basePath = '', dateFormat = DateFormat.Full, year } = Astro.props
     padding: 0;
     margin: 0;
     width: 100%;
+    border-collapse: collapse;
   }
 
   .post-item {
@@ -48,6 +49,10 @@ const { posts, basePath = '', dateFormat = DateFormat.Full, year } = Astro.props
   .post-date {
     color: var(--theme-secondary);
     font-size: var(--step--2);
+    text-align: right;
+    white-space: nowrap;
+    padding-left: var(--space-m);
+    min-width: max-content;
   }
 
   .year-group {
