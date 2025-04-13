@@ -14,7 +14,7 @@ const { minimalLayout = false } = Astro.props;
 <header role="banner">
   <div class="header-container">
     <nav class="internal-links" aria-label="Main navigation">
-      {navigation.map(item => (
+      {navigation.filter(item => !item.hideInHeader).map(item => (
         <HeaderLink
           href={item.href}
           class={`nav-link ${minimalLayout ? 'minimal' : ''}`}
