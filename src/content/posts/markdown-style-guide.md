@@ -4,8 +4,6 @@ description: 'This is a guide to writing markdown in Astro.'
 pubDate: '2022-07-05'
 ---
 
-# Markdown Style Guide
-
 Here's a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
 ## Headings
