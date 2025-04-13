@@ -1,7 +1,7 @@
 ---
 title: Gender Update
 pubDate: '2024-07-14'
-description: 🏳️‍⚧️ Today marks 5 years since I came out as trans on the internet.
+description: Today marks 5 years since I came out as trans on the internet.
   Time for a little ✨ gender update ✨.
 image: /uploads/Gender%20Update-cbdbb0.png
 tags:
