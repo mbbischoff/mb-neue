@@ -1,24 +1,25 @@
 ---
-import { AUTHOR_NAME } from '../consts';
-const today = new Date();
+import { SITE_TITLE } from '../consts';
 ---
 
 <footer>
 	<div class="footer-container">
-		&copy; {today.getFullYear()} {AUTHOR_NAME}. All rights reserved.
+		<p>
+			© {new Date().getFullYear()} {SITE_TITLE}. All content is licensed under{' '}
+			<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>.
+		</p>
 	</div>
 </footer>
 
 <style>
 	footer {
-		width: 100%;
 		background-color: var(--theme-bg);
 		border-top: 1px solid var(--theme-border);
 		padding: var(--space-s) 0;
 	}
 
 	.footer-container {
-		max-width: 70rem;
+		max-width: 800px;
 		margin: 0 auto;
 		padding: 0 var(--space-s);
 		text-align: center;

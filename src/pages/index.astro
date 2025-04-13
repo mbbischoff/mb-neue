@@ -12,16 +12,29 @@ const posts = (await getCollection('posts')).sort(
 );
 
 async function getPostPreview(post: any) {
+	const content = post.body;
+	const readMoreIndex = content.indexOf('<!-- more -->');
+	const preview = readMoreIndex === -1 ? content : content.slice(0, readMoreIndex);
+	
 	try {
-		const { Content } = await render(post);
+		const { Content } = await render({
+			collection: 'posts',
+			id: post.id,
+			body: preview,
+			data: post.data
+		});
 		return Content;
 	} catch (error) {
-		// If rendering fails, return a simple text preview
-		const content = post.body;
-		const readMoreIndex = content.indexOf('<!-- more -->');
-		const preview = readMoreIndex === -1 ? content : content.slice(0, readMoreIndex);
+		console.error('Error rendering preview:', error);
 		return preview;
 	}
+}
+
+function estimateReadingTime(content: string) {
+	const wordsPerMinute = 200;
+	const words = content.trim().split(/\s+/).length;
+	const minutes = Math.ceil(words / wordsPerMinute);
+	return minutes;
 }
 ---
 
@@ -31,10 +44,10 @@ async function getPostPreview(post: any) {
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			main {
-				width: 720px;
-				max-width: 100%;
+				width: 800px;
+				max-width: calc(100% - 2em);
 				margin: 0 auto;
-				padding: 2rem;
+				padding: var(--space-l) var(--space-s);
 			}
 			ul {
 				list-style: none;
@@ -44,26 +57,51 @@ async function getPostPreview(post: any) {
 			li {
 				margin-bottom: 4rem;
 			}
-			li a {
+			li time {
+				color: var(--theme-secondary);
+				display: block;
+				margin-bottom: 0.5rem;
+				font-size: 0.9em;
+			}
+			li h2 {
+				margin: 0 0 0.5rem 0;
+			}
+			li h2 a {
 				text-decoration: none;
 				color: inherit;
 			}
-			.title {
-				margin: 0;
-				font-size: 1.5rem;
+			li h2 a:hover {
+				color: var(--theme-accent);
 			}
-			.date {
-				margin: 0.5rem 0 0 0;
-				color: #666;
-			}
-			.content {
+			li .content {
 				margin: 1rem 0 0 0;
 			}
-			.content p {
+			li .content :global(p) {
 				margin: 1rem 0;
 			}
-			.content p:first-child {
+			li .content :global(p:first-child) {
 				margin-top: 0;
+			}
+			li .meta {
+				display: flex;
+				align-items: center;
+				gap: var(--space-s);
+				margin-top: var(--space-s);
+			}
+			li .reading-time {
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+			}
+			li .read-more {
+				display: inline-flex;
+				align-items: center;
+				gap: var(--space-2xs);
+				color: var(--theme-accent);
+				text-decoration: none;
+				font-weight: bold;
+			}
+			li .read-more:hover {
+				text-decoration: underline;
 			}
 		</style>
 	</head>
@@ -71,26 +109,33 @@ async function getPostPreview(post: any) {
 		<Header />
 		<main>
 			<ul>
-				{
-					posts.map(async (post) => {
-						const Preview = await getPostPreview(post);
-						return (
-							<li>
-								<a href={`/${post.id}/`}>
-									<h2 class="title">{post.data.title}</h2>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-									{post.body && (
-										<div class="content">
-											{typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
-										</div>
-									)}
-								</a>
-							</li>
-						);
-					})
-				}
+				{posts.map(async (post) => {
+					const Preview = await getPostPreview(post);
+					const readingTime = estimateReadingTime(post.body || '');
+					return (
+						<li>
+							<time datetime={post.data.pubDate.toISOString()}>
+								<FormattedDate date={post.data.pubDate} />
+							</time>
+							<h2>
+								<a href={`/${post.id}`}>{post.data.title}</a>
+							</h2>
+							{post.body && (
+								<>
+									<div class="content">
+										{typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
+									</div>
+									<div class="meta">
+										<span class="reading-time">{readingTime} min read</span>
+										<a href={`/${post.id}`} class="read-more">
+											Read more <i class="fas fa-arrow-right"></i>
+										</a>
+									</div>
+								</>
+							)}
+						</li>
+					);
+				})}
 			</ul>
 		</main>
 		<Footer />

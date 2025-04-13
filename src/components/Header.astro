@@ -7,47 +7,49 @@ import { SITE_TITLE } from '../consts';
 	<nav class="nav-container">
 		<div class="internal-links">
 			<HeaderLink href="/" class="nav-link">Home</HeaderLink>
+			<HeaderLink href="/now" class="nav-link">Now</HeaderLink>
+			<HeaderLink href="/archive" class="nav-link">Archive</HeaderLink>
 			<HeaderLink href="/about" class="nav-link">About</HeaderLink>
+			<HeaderLink href="/contact" class="nav-link">Contact</HeaderLink>
 		</div>
-		<h1 class="site-title"><a href="/" class="site-title-link">{SITE_TITLE}</a></h1>
+		<h1 class="site-title">
+			<a href="/">{SITE_TITLE}</a>
+		</h1>
 	</nav>
 </header>
 
 <style>
 	header {
-		width: 100%;
 		background-color: var(--theme-bg);
 		border-bottom: 1px solid var(--theme-border);
+		padding: var(--space-m) 0;
 	}
 
 	.nav-container {
-		max-width: 70rem;
+		max-width: 800px;
 		margin: 0 auto;
-		padding: var(--space-s);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: var(--space-s);
+		gap: var(--space-m);
+		padding: 0 var(--space-s);
 	}
 
 	.internal-links {
 		display: flex;
-		gap: var(--space-s);
+		justify-content: space-between;
+		width: 100%;
+		font-size: 1.25rem;
 	}
 
 	.site-title {
-		margin: 0;
-		text-align: center;
-		font-variation-settings: 'wght' 900;
 		font-size: 2.5rem;
+		margin: 0;
+		font-variation-settings: 'wght' 700;
 	}
 
-	header .site-title .site-title-link {
+	.site-title a {
 		text-decoration: none;
 		color: inherit;
-	}
-
-	header .site-title .site-title-link:hover {
-		text-decoration: none;
 	}
 </style>

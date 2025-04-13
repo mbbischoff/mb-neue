@@ -7,7 +7,26 @@ const { href, class: className, ...props } = Astro.props;
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
-const icon = href === '/' ? 'fa-home' : 'fa-user';
+
+// Get icon based on the link destination
+const getIcon = (href: string) => {
+	switch (href) {
+		case '/':
+			return 'fa-home';
+		case '/now':
+			return 'fa-clock';
+		case '/archive':
+			return 'fa-box-archive';
+		case '/about':
+			return 'fa-user';
+		case '/contact':
+			return 'fa-envelope';
+		default:
+			return 'fa-link';
+	}
+};
+
+const icon = getIcon(href as string);
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
