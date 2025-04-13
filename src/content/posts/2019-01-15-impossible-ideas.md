@@ -1,8 +1,7 @@
 ---
 title: Impossible Ideas
 pubDate: '2019-01-15'
-description: The talk I show to every software engineer who says it’s impossible to
-  build something.
+description: Why software engineers should embrace creative thinking and stop dismissing ideas as impossible.
 image: /uploads/cleese.jpg
 tags:
 - creativity
@@ -13,8 +12,7 @@ categories:
 - longer
 original_jekyll:
   date: 2019-01-15 00:00:00-05:00
-  description: The talk I show to every software engineer who says it’s impossible
-    to build something.
+  description: Why software engineers should embrace creative thinking and stop dismissing ideas as impossible.
 ---
 
 ![John Cleese](/uploads/cleese.jpg)

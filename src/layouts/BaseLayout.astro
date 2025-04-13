@@ -47,13 +47,6 @@ const { title, description, image, minimalLayout = false } = Astro.props;
         padding: 0 var(--space-s);
         box-sizing: border-box;
       }
-
-      .content :global(p),
-      .content :global(ul),
-      .content :global(ol),
-      .content :global(blockquote) {
-        line-height: 1.6;
-      }
     </style>
     <slot name="styles" />
   </head>
