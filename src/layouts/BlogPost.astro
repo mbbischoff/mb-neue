@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
+import Metadata from '../components/Metadata.astro';
 
 type Props = CollectionEntry<'posts'>['data'];
 
@@ -11,9 +11,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <BaseLayout title={title} description={description} image={heroImage} minimalLayout={true}>
   <article class="prose">
     <div class="title">
-      <time datetime={pubDate.toISOString()}>
-        <FormattedDate date={pubDate} />
-      </time>
+      <Metadata 
+        date={pubDate} 
+        readingTime={Math.ceil((await Astro.slots.render('default')).length / 1000)}
+      />
+
       <h1>{title}</h1>
     </div>
     <slot />
@@ -39,15 +41,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       color: var(--theme-text);
     }
 
-    .title time {
-      color: var(--theme-secondary);
-      display: block;
-      font-size: var(--step--2);
-    }
     .title h1 {
       margin-top: 0;
       margin-bottom: var(--space-l);
-      font-size: var(--step-3);
+      font-size: var(--step-2);
       line-height: 1;
     }
     .date {
@@ -84,8 +81,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     }
     .content {
       margin-top: 1em;
-      line-height: 1.6;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: var(--font-family-system);
     }
     .content :global(h1) {
       margin-top: 2em;

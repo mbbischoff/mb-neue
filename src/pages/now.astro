@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageTitle from '../components/PageTitle.astro';
-import FormattedDate from '../components/FormattedDate.astro';
+import Metadata from '../components/Metadata.astro';
 
 const title = "Now";
 const date = new Date("2024-04-01T16:32:00-04:00");
@@ -13,10 +13,7 @@ const description = "This now page covers the things I'm thinking, feeling, and 
 
 <BaseLayout title={title} description={description}>
   <article>
-    <p class="meta">
-      <FormattedDate date={date} /> • {place}
-    </span>
-    
+    <Metadata date={date} place={place} />
     <PageTitle title={title} />
     
     <!-- <Image 
@@ -55,11 +52,3 @@ const description = "This now page covers the things I'm thinking, feeling, and 
     </section>
   </article>
 </BaseLayout>
-
-<style>
-  .meta {
-    font-size: var(--step--2);
-    color: var(--theme-secondary);
-    margin-bottom: var(--space-3xs);
-  }
-</style>

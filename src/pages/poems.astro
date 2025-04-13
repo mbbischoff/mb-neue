@@ -46,7 +46,7 @@ poems.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 	<ul class="poem-list">
 		{poems.map((poem) => (
 			<li class="poem-item">
-				<a href={`/poems/${poem.id}`} class="no-underline">{poem.data.title}</a>
+				<a href={`/poems/${poem.id}`} class="title-link mono no-underline">{poem.data.title}</a>
 				<time datetime={poem.data.pubDate.toISOString()} class="poem-date">
 					<FormattedDate date={poem.data.pubDate} />
 				</time>

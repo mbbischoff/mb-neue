@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @font-face {
   font-family: 'Berkeley Mono';
-  src: url('/fonts/BerkeleyMonoVariable.woff2') format('woff2');
+  src: url('/fonts/Berkeley Mono Variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
 }
@@ -13,6 +15,8 @@
   --theme-tertiary: oklch(80% 0.02 0);
 
   /* Font variables */
+  --font-family-mono: 'Berkeley Mono', monospace;
+  --font-family-system: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-weight-black: 900;
   --name-slant: -10;
 
@@ -29,7 +33,13 @@
   --theme-border: oklch(0.5% 0.15 0);
   --underline-opacity: 0.3;
 
+  /* Layout */
+  --max-width: clamp(44ch, 56vw, 64ch);
+}
+
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
   --step--2: clamp(0.64rem, 0.6179rem + 0.1104vw, 0.7035rem);
   --step--1: clamp(0.8rem, 0.7521rem + 0.2395vw, 0.9377rem);
   --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
@@ -38,20 +48,33 @@
   --step-3: clamp(1.9531rem, 1.6026rem + 1.7524vw, 2.9607rem);
   --step-4: clamp(2.4414rem, 1.9178rem + 2.6178vw, 3.9467rem);
   --step-5: clamp(3.0518rem, 2.2834rem + 3.842vw, 5.2609rem);
+}
 
-  /* Spacing - Balanced */
-  --space-3xs: 0.25rem;
-  --space-2xs: 0.5rem;
-  --space-xs: 1rem;
-  --space-s: 1.5rem;
-  --space-m: 2rem;
-  --space-l: 3rem;
-  --space-xl: 4rem;
-  --space-2xl: 6rem;
-  --space-3xl: 8rem;
+/* @link https://utopia.fyi/space/calculator?c=320,18,1.25,1240,22,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-  /* Layout */
-  --max-width: clamp(44ch, 56vw, 64ch);
+:root {
+  --space-3xs: clamp(0.3125rem, 0.2908rem + 0.1087vw, 0.375rem);
+  --space-2xs: clamp(0.5625rem, 0.519rem + 0.2174vw, 0.6875rem);
+  --space-xs: clamp(0.875rem, 0.8098rem + 0.3261vw, 1.0625rem);
+  --space-s: clamp(1.125rem, 1.038rem + 0.4348vw, 1.375rem);
+  --space-m: clamp(1.6875rem, 1.5571rem + 0.6522vw, 2.0625rem);
+  --space-l: clamp(2.25rem, 2.0761rem + 0.8696vw, 2.75rem);
+  --space-xl: clamp(3.375rem, 3.1141rem + 1.3043vw, 4.125rem);
+  --space-2xl: clamp(4.5rem, 4.1522rem + 1.7391vw, 5.5rem);
+  --space-3xl: clamp(6.75rem, 6.2283rem + 2.6087vw, 8.25rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.3125rem, 0.1821rem + 0.6522vw, 0.6875rem);
+  --space-2xs-xs: clamp(0.5625rem, 0.3886rem + 0.8696vw, 1.0625rem);
+  --space-xs-s: clamp(0.875rem, 0.7011rem + 0.8696vw, 1.375rem);
+  --space-s-m: clamp(1.125rem, 0.7989rem + 1.6304vw, 2.0625rem);
+  --space-m-l: clamp(1.6875rem, 1.3179rem + 1.8478vw, 2.75rem);
+  --space-l-xl: clamp(2.25rem, 1.5978rem + 3.2609vw, 4.125rem);
+  --space-xl-2xl: clamp(3.375rem, 2.6359rem + 3.6957vw, 5.5rem);
+  --space-2xl-3xl: clamp(4.5rem, 3.1957rem + 6.5217vw, 8.25rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.125rem, 0.5598rem + 2.8261vw, 2.75rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -76,15 +99,15 @@
 }
 
 body {
-  font-family: 'Berkeley Mono', monospace;
+  font-family:  var(--font-family-system);
   margin: 0;
   padding: 0;
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: var(--step--0);
+  overflow-x: hidden;
+  font-size: var(--step-0);
   line-height: 1.5;
-  font-weight: 400;
   color: var(--theme-text);
   width: 100%;
   background: var(--theme-bg);
@@ -108,6 +131,8 @@ h3,
 h4,
 h5,
 h6 {
+  line-height: 1;
+  font-family: var(--font-family-mono);
   font-weight: 700;
   margin-bottom: var(--space-s);
 }
@@ -150,18 +175,6 @@ a:hover {
 small {
   font-size: 0.8em;
   color: var(--theme-secondary);
-}
-
-@keyframes weightPulse {
-  0% { font-weight: 400; }
-  50% { font-weight: 100; }
-  100% { font-weight: 400; }
-}
-
-@keyframes stylePulse {
-  0% { font-style: normal; }
-  50% { font-style: italic; }
-  100% { font-style: normal; }
 }
 
 .site-title a {
@@ -207,4 +220,45 @@ footer a {
 
 footer a:hover {
   border-bottom: 1px solid var(--theme-border);
+}
+
+/* List styles */
+ul {
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+  margin-block: var(--space-s);
+}
+
+li {
+  margin-block: 0.75em;
+}
+
+.mono {
+  font-family: var(--font-family-mono);
+}
+
+.metadata {
+  font-family: var(--font-family-mono);
+  font-size: var(--step--2);
+  color: var(--theme-secondary);
+  margin-bottom: var(--space-3xs);
+  font-weight: 400;
+}
+
+.title-link {
+  font-weight: bold;
+  color: var(--theme-text);
+  text-decoration: none;
+}
+
+.title-link:hover {
+  color: var(--theme-accent);
+}
+
+ul li,
+ol li {
+  padding: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }

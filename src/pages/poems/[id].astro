@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
+import Metadata from '../../components/Metadata.astro';
 
 export async function getStaticPaths() {
   const poems = await getCollection('poems');
@@ -16,11 +16,7 @@ const { poem } = Astro.props;
 
 <BaseLayout title={poem.data.title} description={poem.data.description} minimalLayout={true}>
   <article>
-    <div class="post-meta">
-      <time datetime={poem.data.pubDate.toISOString()}>
-        <FormattedDate date={poem.data.pubDate} />
-      </time>
-    </div>
+    <Metadata date={poem.data.pubDate} />
     <h1>{poem.data.title}</h1>
     <pre class="poem-content">{poem.body}</pre>
     <p class="poem-description">{poem.data.description}</p>
@@ -32,7 +28,6 @@ const { poem } = Astro.props;
     color: var(--theme-secondary);
     font-size: var(--step--2);
     margin-top: var(--space-l);
-
     font-style: italic;
   }
 
@@ -46,11 +41,6 @@ const { poem } = Astro.props;
     font-size: var(--step-0);
     margin-bottom: var(--space-l);
     margin-top: 0;
-  }
-
-  time {
-    font-size: var(--step--1);
-    color: var(--theme-secondary);
   }
 </style>
 

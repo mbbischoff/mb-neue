@@ -4,6 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 import PageTitle from '../components/PageTitle.astro';
+import Metadata from '../components/Metadata.astro';
 
 const posts = (await getCollection('posts')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -71,10 +72,10 @@ const postsByYear = posts.reduce(
         <ul class="post-list">
           {yearPosts.map(post => (
             <li class="post-item">
-              <a href={`/${post.id}`} class="no-underline">{post.data.title}</a>
-              <time datetime={post.data.pubDate.toISOString()} class="post-date">
+              <a href={`/${post.id}`} class="title-link mono no-underline">{post.data.title}</a>
+              <small class="mono secondary">
                 <FormattedDate date={post.data.pubDate} />
-              </time>
+              </small>
             </li>
           ))}
         </ul>
