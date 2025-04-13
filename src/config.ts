@@ -5,14 +5,14 @@ export const SITE_DESCRIPTION = 'mb bischoff (she/they) makes apps, posts, & pod
 export interface NavItem {
   href: string;
   label: string;
-  icon: string;
+  icon?: string;
 }
 
 export const navigation: NavItem[] = [
-  { href: '/', label: 'Home', icon: 'fa-regular fa-home' },
-  { href: '/now', label: 'Now', icon: 'fa-regular fa-clock' },
-  { href: '/archive', label: 'Archive', icon: 'fa-regular fa-box-archive' },
-  { href: '/poems', label: 'Poems', icon: 'fa-regular fa-feather' },
-  { href: '/about', label: 'About', icon: 'fa-regular fa-user' },
-  { href: '/contact', label: 'Contact', icon: 'fa-regular fa-envelope' },
+  { href: '/', label: '⌂︎ Home' },
+  { href: '/now', label: '⌚︎ Now' },
+  { href: '/archive', label: '⊞︎ Then' },
+  { href: '/poems', label: '⁂ Poems' },
+  { href: '/about', label: '♀ About' },
+  { href: '/contact', label: '✉︎ Contact' },
 ];

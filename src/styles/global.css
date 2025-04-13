@@ -6,66 +6,64 @@
 }
 
 :root {
-  /* Theme Colors */
-  --theme-bg: oklch(98% 0.005 23.1);
-  --theme-text: oklch(0% 0 0);
-  --theme-border: oklch(20% 0 0);
-  --theme-accent: oklch(60.72% 0.267 23.1);
-  --theme-accent-hover: oklch(30% 0.267 23.1);
-  --theme-secondary: oklch(60% 0.02 23.1);
-  --theme-secondary-hover: oklch(70% 0.02 23.1);
-  --theme-tertiary: oklch(80% 0.01 23.1);
+  /* Theme Colors - Balanced */
+  --theme-bg: #ffffff;
+  --theme-text: #000000;
+  --theme-border: #000000;
+  --theme-border-rgb: 0, 0, 0;
+  --theme-accent: #ff0000;
+  --theme-accent-hover: #cc0000;
+  --theme-secondary: #666666;
+  --theme-secondary-hover: #999999;
+  --theme-tertiary: #f5f5f5;
+  --underline-opacity: 0.3;
 
-  /* Typography */
+  /* Typography - Clean but readable */
   font-size: 18px;
   --font-size-small: 0.9rem;
   --font-size-large: 1.1rem;
+  --font-size-larger: 1.3rem;
+  --font-size-massive: 3rem;
+  --font-size-huge: 6rem;
 
-  /* Utopia Spacing System */
-  --space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
-  --space-2xs: clamp(0.5rem, calc(0.48rem + 0.11vw), 0.56rem);
-  --space-xs: clamp(0.75rem, calc(0.71rem + 0.19vw), 0.88rem);
-  --space-s: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
-  --space-m: clamp(1.5rem, calc(1.43rem + 0.38vw), 1.75rem);
-  --space-l: clamp(2rem, calc(1.91rem + 0.38vw), 2.25rem);
-  --space-xl: clamp(3rem, calc(2.86rem + 0.75vw), 3.5rem);
-  --space-2xl: clamp(4rem, calc(3.82rem + 0.75vw), 4.5rem);
-  --space-3xl: clamp(6rem, calc(5.73rem + 1.13vw), 6.75rem);
+  /* Spacing - Balanced */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 1rem;
+  --space-s: 1.5rem;
+  --space-m: 2rem;
+  --space-l: 3rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* Layout */
+  --max-width: 750px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --theme-bg: oklch(5% 0.005 14.62);
-    --theme-text: oklch(100% 0 0);
-    --theme-border: oklch(20% 0.02 14.62);
-    --theme-accent: oklch(65.11% 0.224 14.62);
-    --theme-accent-hover: oklch(80% 0.224 14.62);
-    --theme-secondary: oklch(60% 0.02 14.62);
-    --theme-secondary-hover: oklch(80% 0.02 14.62);
-    --theme-tertiary: oklch(30% 0.01 14.62);
-  }
-}
-
-@keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+    --theme-bg: #000000;
+    --theme-text: #ffffff;
+    --theme-border: #ffffff;
+    --theme-border-rgb: 255, 255, 255;
+    --theme-accent: #ff4d4d;
+    --theme-accent-hover: #ff6666;
+    --theme-secondary: #999999;
+    --theme-secondary-hover: #cccccc;
+    --theme-tertiary: #1a1a1a;
   }
 }
 
 body {
   font-family: 'Berkeley Mono', monospace;
   margin: 0;
-  padding: 0 1em;
+  padding: 0 1rem;
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: 400;
   color: var(--theme-text);
   width: 100%;
@@ -73,8 +71,8 @@ body {
 }
 
 main {
-  width: 800px;
-  max-width: calc(100% - 2em);
+  width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--space-l) var(--space-s);
 }
@@ -86,17 +84,49 @@ h4,
 h5,
 h6 {
   font-variation-settings: 'wght' 700;
+  margin-bottom: var(--space-s);
 }
 
 a {
-  color: var(--theme-accent);
+  color: var(--theme-text);
   text-decoration: none;
-  transition:
-    color 0.2s ease,
-    text-decoration 0.2s ease;
+  border-bottom: 1px solid rgba(var(--theme-border-rgb), var(--underline-opacity));
+  padding-bottom: 1px;
+  transition: all 0.2s ease;
 }
 
 a:hover {
-  color: var(--theme-accent-hover);
-  text-decoration: underline;
+  border-bottom: 1px solid var(--theme-border);
+}
+
+/* Utility classes */
+.border {
+  border: 1px solid var(--theme-border);
+}
+
+.background {
+  background-color: var(--theme-tertiary);
+}
+
+.padding {
+  padding: var(--space-m);
+}
+
+.margin {
+  margin: var(--space-m) 0;
+}
+
+.no-underline {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.no-underline:hover {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+small {
+  font-size: var(--font-size-small);
+  color: var(--theme-secondary);
 }

@@ -34,8 +34,7 @@ const { minimalLayout = false } = Astro.props;
       {
         !minimalLayout && (
           <p class="site-description">
-            <strong>mb bischoff</strong> makes <a href="https://lickability.com">software</a>,{' '}
-            <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
+            <strong>mb bischoff</strong> <small>(she/they)</small> makes <a href="https://lickability.com">software</a>, <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
           </p>
         )
       }
@@ -49,58 +48,72 @@ const { minimalLayout = false } = Astro.props;
   }
 
   .nav-container {
-    max-width: 800px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--space-s);
+	font-size: var(--font-size-larger);
   }
 
   .internal-links {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: var(--space-s);
-    font-size: var(--font-size-large);
     text-transform: lowercase;
   }
 
   .title-container {
     text-align: left;
-    padding-top: var(--space-xs);
   }
 
   .site-title {
-    font-size: 6.5rem;
+    font-size: var(--font-size-huge);
     line-height: 1;
+	padding-block: var(--font-size-massive);
     margin: 0;
+    color: var(--theme-accent);
+    text-align: center;
     font-weight: 900;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     text-decoration: none;
   }
 
   .site-title.minimal {
     color: var(--theme-secondary);
-    font-size: 3.5rem;
   }
 
   .site-title a {
     text-decoration: none;
     color: inherit;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .site-description {
+    text-align: center;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: var(--font-size-large);
   }
 
   .site-description a {
     color: var(--theme-accent);
     text-decoration: none;
-    font-weight: bold;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .site-description a:hover {
     color: var(--theme-secondary-hover);
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  :global(.nav-link) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  :global(.nav-link:hover) {
+    border-bottom: none;
   }
 
   :global(.nav-link.minimal) {
@@ -113,5 +126,11 @@ const { minimalLayout = false } = Astro.props;
 
   :global(.nav-link.minimal.active) {
     color: var(--theme-secondary);
+  }
+
+  .header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-s);
   }
 </style>

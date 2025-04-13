@@ -20,13 +20,17 @@ poems.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 			display: flex;
 			justify-content: space-between;
 			align-items: baseline;
-			margin-bottom: var(--space-s);
+			padding: var(--space-s) 0;
+			border-bottom: 1px solid var(--theme-border);
+		}
+
+		.poem-item:last-child {
+			border-bottom: none;
 		}
 
 		.poem-item a {
-			color: var(--theme-text);
-			text-decoration: none;
-			font-weight: bold;
+			font-size: var(--font-size-large);
+			font-weight: 600;
 		}
 
 		.poem-item a:hover {
@@ -35,14 +39,14 @@ poems.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 		.poem-date {
 			color: var(--theme-secondary);
-			font-size: 0.9em;
+			font-size: var(--font-size-small);
 		}
 	</style>
 	<PageTitle title="Poems" />
 	<ul class="poem-list">
 		{poems.map((poem) => (
 			<li class="poem-item">
-				<a href={`/poems/${poem.id}`}>{poem.data.title}</a>
+				<a href={`/poems/${poem.id}`} class="no-underline">{poem.data.title}</a>
 				<time datetime={poem.data.pubDate.toISOString()} class="poem-date">
 					<FormattedDate date={poem.data.pubDate} />
 				</time>

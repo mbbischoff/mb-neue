@@ -57,10 +57,10 @@ function estimateReadingTime(content: string) {
       }
 
       article {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         display: grid;
         grid-template-columns: 1fr auto;
-        gap: 2rem;
+        gap: 1.5rem;
         align-items: start;
         position: relative;
       }
@@ -71,13 +71,22 @@ function estimateReadingTime(content: string) {
 
       article .hero-image {
         grid-column: 2;
-        width: 300px;
-        height: 200px;
+        width: 200px;
+        height: 133px;
         object-fit: cover;
-        border-radius: 8px;
+        border-radius: 4px;
         position: relative;
         transition: transform 0.3s ease;
         transform: rotate(0deg);
+      }
+
+      article a:has(.hero-image) {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      article a:has(.hero-image):hover {
+        border-bottom: none;
       }
 
       article:nth-child(3n + 1) .hero-image:hover {
@@ -95,34 +104,37 @@ function estimateReadingTime(content: string) {
       article .post-meta {
         display: flex;
         align-items: center;
-        gap: var(--space-xs);
+        gap: var(--space-2xs);
+		font-size: var(--font-size-small);
       }
 
       article time,
       article .reading-time {
         color: var(--theme-secondary);
-        font-size: var(--font-size-small);
       }
 
       article h2 {
-        margin: 0 0 var(--space-s) 0;
+        margin: 0 0 var(--space-2xs) 0;
       }
 
       article h2 a {
         text-decoration: none;
         color: inherit;
+        border-bottom: none;
+        padding-bottom: 0;
       }
 
       article h2 a:hover {
         color: var(--theme-accent);
+        border-bottom: none;
       }
 
       article .content {
-        margin: var(--space-s) 0;
+        margin: var(--space-2xs) 0;
       }
 
       article .content :global(p) {
-        margin: var(--space-s) 0;
+        margin: var(--space-2xs) 0;
       }
 
       article .content :global(p:first-child) {
@@ -133,17 +145,28 @@ function estimateReadingTime(content: string) {
         display: flex;
         align-items: center;
         gap: var(--space-xs);
-        margin-top: var(--space-s);
+        margin-top: var(--space-2xs);
+        color: var(--theme-secondary);
+        font-size: var(--font-size-small);
+        line-height: 1.4;
+      }
+
+      article .meta em {
+        font-style: italic;
+        color: var(--theme-secondary);
       }
 
       article .read-more {
         display: inline-flex;
         align-items: center;
         color: var(--theme-accent);
+        border-bottom: none;
+        padding-bottom: 0;
       }
 
       article .read-more:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: none;
       }
     </style>
   </head>
@@ -165,9 +188,7 @@ function estimateReadingTime(content: string) {
                     >
                       <FormattedDate date={post.data.pubDate} />
                     </time>
-                    <span class="reading-time">
-                      •
-                      {readingTime} min
+                    <span class="reading-time"> • {readingTime} min
                     </span>
                   </div>
                   <h2>
@@ -179,20 +200,18 @@ function estimateReadingTime(content: string) {
                         {typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
                       </div>
                       <div class="meta">
-                        <a href={`/${post.id}`} class="read-more">
-                          Read more →
-                        </a>
+                        <em>{post.data.description}</em>
                       </div>
                     </>
                   )}
                 </div>
                 {post.data.heroImage && (
-                  <a href={`/${post.id}`}>
+                  <a href={`/${post.id}`} class="no-underline">
                     <Image
                       src={post.data.heroImage}
                       alt={post.data.title}
-                      width={300}
-                      height={200}
+                      width={200}
+                      height={133}
                       class="hero-image"
                       loading="eager"
                     />
