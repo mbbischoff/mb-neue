@@ -180,7 +180,7 @@ small {
 
 .fleuron {
   color: var(--theme-accent);
-  font-size: 1.5em;
+  font-size: var(--step-1);
   display: inline-block;
   line-height: 1;
   transform-origin: center;
@@ -194,7 +194,6 @@ small {
 }
 
 footer a {
-  font-size: 1.2em;
   color: var(--theme-text);
   text-decoration: none;
   border-bottom: 1px solid var(--theme-border);
