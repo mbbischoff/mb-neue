@@ -19,6 +19,7 @@ const poems = defineCollection({
     pubDate: z.date(),
     updatedDate: z.date().optional(),
   }),
+  extensions: ['.md', '.mdx'],
 });
 
 export const collections = {
