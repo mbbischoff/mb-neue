@@ -52,10 +52,12 @@ const { title, description, image, minimalLayout = false } = Astro.props;
     <slot name="styles" />
   </head>
   <body>
-    <Header minimalLayout={minimalLayout} />
-    <main>
-      <slot />
-    </main>
+    <div class="container">
+      <Header minimalLayout={minimalLayout} />
+      <main>
+        <slot />
+      </main>
+    </div>
     <Footer />
   </body>
 </html>
