@@ -8,8 +8,8 @@
 :root {
   /* Theme Colors - Balanced */
   /* Background colors */
-  --theme-bg: oklch(99% 0.02 23.1);
-  --theme-background-offset: oklch(97% 0.04 23.1);
+  --theme-bg: oklch(99% 0.01 23.1);
+  --theme-background-offset: oklch(97% 0.03 23.1);
   --theme-tertiary: oklch(80% 0.02 0);
 
   /* Text colors */
