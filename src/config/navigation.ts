@@ -1,14 +1,15 @@
 export interface NavItem {
   href: string;
   label: string;
-  icon: string;
+  icon?: string;
+  hideInHeader?: boolean;
 }
 
-export const navigation = [
-  { href: '/', label: 'Home' },
-  { href: '/now', label: 'Now' },
-  { href: '/archive', label: 'Archive' },
-  { href: '/poems', label: 'Poems' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+export const navigation: NavItem[] = [
+  { href: '/', label: '⌂︎ Home', hideInHeader: true },
+  { href: '/now', label: '⌚︎ Now' },
+  { href: '/archive', label: '⌛︎ Then' },
+  { href: '/poems', label: '⁂ Poems' },
+  { href: '/about', label: '♀ About' },
+  { href: '/contact', label: '✉︎ Contact' },
 ];
