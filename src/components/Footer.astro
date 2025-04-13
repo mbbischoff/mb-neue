@@ -44,15 +44,17 @@ import { SITE_TITLE, navigation } from '../config';
 
 <style>
   footer {
-	font-size: var(--font-size-small);
+    font-size: var(--font-size-small);
     padding: var(--space-l) 0;
     border-top: 0.5px solid var(--theme-tertiary);
     margin: 0;
     background-color: var(--theme-background-offset);
+    width: 100%;
   }
 
   .footer-container {
     max-width: var(--max-width);
+    width: 100%;
     margin: 0 auto;
     padding: 0 var(--space-s);
     box-sizing: border-box;
@@ -64,6 +66,7 @@ import { SITE_TITLE, navigation } from '../config';
     gap: var(--space-l);
     margin-bottom: var(--space-l);
     align-items: flex-start;
+    width: 100%;
   }
 
   .footer-links {
@@ -81,6 +84,7 @@ import { SITE_TITLE, navigation } from '../config';
     gap: var(--space-xs);
     width: fit-content;
     text-transform: lowercase;
+	white-space: nowrap;
   }
 
   @media (min-width: 768px) {
