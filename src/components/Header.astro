@@ -2,6 +2,7 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { SITE_TITLE_SHORT, navigation } from '../config';
+import { Image } from 'astro:assets';
 
 interface Props {
   hideNav?: boolean;
@@ -26,6 +27,15 @@ const { minimalLayout = false } = Astro.props;
     </nav>
 
     <div class="title-container">
+      <div class="avatar-container">
+        <Image
+          src="/images/avatar.jpg"
+          alt="mb bischoff against a colorful graffiti wall"
+          width={120}
+          height={120}
+          class="avatar"
+        />
+      </div>
       <h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
         <a href="/">{SITE_TITLE_SHORT}</a>
       </h1>
@@ -59,17 +69,36 @@ const { minimalLayout = false } = Astro.props;
     width: 100%;
     text-transform: lowercase;
     text-align: center;
+    margin-bottom: var(--space-l);
   }
 
   .title-container {
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: var(--space-m);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
 
   .site-title {
     font-size: var(--font-size-huge);
     line-height: 1;
-	padding-block: var(--font-size-massive);
-    margin: 0;
+    margin: 0 0 var(--space-m) 0;
     color: var(--theme-accent);
     text-align: center;
     font-weight: 900;
@@ -166,6 +195,7 @@ const { minimalLayout = false } = Astro.props;
     border-bottom: none;
     padding-bottom: 0;
     margin-right: var(--space-s);
+    font-weight: 600;
   }
 
   :global(.nav-link:last-child) {
@@ -191,6 +221,29 @@ const { minimalLayout = false } = Astro.props;
   @media (max-width: 600px) {
     .pronouns {
       display: none;
+    }
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-m);
+  }
+
+  .avatar:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    .avatar-container {
+      width: 80px;
+      height: 80px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
     }
   }
 </style>

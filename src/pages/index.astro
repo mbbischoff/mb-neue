@@ -45,33 +45,31 @@ function estimateReadingTime(content: string) {
         const readingTime = estimateReadingTime(post.body || '');
         return (
           <article>
-            <div class="post-content">
-              <div class="post-meta">
-                <time
-                  datetime={post.data.pubDate.toISOString()}
-                  class="flex items-center gap-1"
-                >
-                  <FormattedDate date={post.data.pubDate} />
-                </time>
-                <span class="reading-time"> • {readingTime} min
-                </span>
+            <a href={`/${post.id}`} class="post-link no-underline">
+              <div class="post-content">
+                <div class="post-meta">
+                  <time
+                    datetime={post.data.pubDate.toISOString()}
+                    class="flex items-center gap-1"
+                  >
+                    <FormattedDate date={post.data.pubDate} />
+                  </time>
+                  <span class="reading-time"> • {readingTime} min
+                  </span>
+                </div>
+                <h2>{post.data.title}</h2>
+                {post.body && (
+                  <>
+                    <div class="content">
+                      {typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
+                    </div>
+                    <div class="meta">
+                      <em>{post.data.description}</em>
+                    </div>
+                  </>
+                )}
               </div>
-              <h2>
-                <a href={`/${post.id}`}>{post.data.title}</a>
-              </h2>
-              {post.body && (
-                <>
-                  <div class="content">
-                    {typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
-                  </div>
-                  <div class="meta">
-                    <em>{post.data.description}</em>
-                  </div>
-                </>
-              )}
-            </div>
-            {post.data.heroImage && (
-              <a href={`/${post.id}`} class="no-underline">
+              {post.data.heroImage && (
                 <Image
                   src={post.data.heroImage}
                   alt={post.data.title}
@@ -80,8 +78,8 @@ function estimateReadingTime(content: string) {
                   class="hero-image"
                   loading="eager"
                 />
-              </a>
-            )}
+              )}
+            </a>
           </article>
         );
       })
@@ -97,12 +95,23 @@ function estimateReadingTime(content: string) {
     }
 
     article {
-      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .post-link {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 1.5rem;
       align-items: start;
-      position: relative;
+      text-decoration: none;
+      color: inherit;
+      padding: var(--space-2xs);
+      margin: calc(-1 * var(--space-2xs));
+      border-radius: 8px;
+    }
+
+    .post-link:hover {
+      color: var(--theme-accent);
     }
 
     article .post-content {
@@ -120,25 +129,26 @@ function estimateReadingTime(content: string) {
       transform: rotate(0deg);
     }
 
-    article a:has(.hero-image) {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    article a:has(.hero-image):hover {
-      border-bottom: none;
-    }
-
-    article:nth-child(3n + 1) .hero-image:hover {
+    article:nth-child(3n + 1) .post-link:hover .hero-image {
       transform: rotate(-2deg) scale(1.02);
     }
 
-    article:nth-child(3n + 2) .hero-image:hover {
+    article:nth-child(3n + 2) .post-link:hover .hero-image {
       transform: rotate(3deg) scale(1.02);
     }
 
-    article:nth-child(3n + 3) .hero-image:hover {
+    article:nth-child(3n + 3) .post-link:hover .hero-image {
       transform: rotate(-1deg) scale(1.02);
+    }
+
+    article h2 {
+      margin: 0 0 var(--space-2xs) 0;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    .post-link:hover h2 {
+      color: var(--theme-accent);
     }
 
     article .post-meta {
@@ -151,22 +161,6 @@ function estimateReadingTime(content: string) {
     article time,
     article .reading-time {
       color: var(--theme-secondary);
-    }
-
-    article h2 {
-      margin: 0 0 var(--space-2xs) 0;
-    }
-
-    article h2 a {
-      text-decoration: none;
-      color: inherit;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    article h2 a:hover {
-      color: var(--theme-accent);
-      border-bottom: none;
     }
 
     article .content {

@@ -9,16 +9,16 @@
   /* Theme Colors - Balanced */
   /* Background colors */
   --theme-bg: oklch(99% 0.05 23.1);
-  --theme-tertiary: oklch(96% 0.02 0);
+  --theme-tertiary: oklch(80% 0.02 0);
 
   /* Text colors */
   --theme-text: oklch(3% 0.1 0);
-  --theme-secondary: oklch(40% 0.05 0);
-  --theme-secondary-hover: oklch(60% 0.05 0);
+  --theme-secondary: oklch(35% 0.05 0);
+  --theme-secondary-hover: oklch(50% 0.05 0);
 
   /* Accent colors */
-  --theme-accent: oklch(60.72% 0.267 23.1);
-  --theme-accent-hover: oklch(55% 0.267 23.1);
+  --theme-accent: oklch(55% 0.267 23.1);
+  --theme-accent-hover: oklch(45% 0.267 23.1);
 
   /* Border colors */
   --theme-border: oklch(0.5% 0.15 0);
@@ -51,16 +51,16 @@
   :root {
     /* Background colors */
     --theme-bg: oklch(5% 0.15 14.62);
-    --theme-tertiary: oklch(15% 0.15 14.62);
+    --theme-tertiary: oklch(20% 0.15 14.62);
 
     /* Text colors */
     --theme-text: oklch(95% 0.05 14.62);
-    --theme-secondary: oklch(60% 0.1 14.62);
-    --theme-secondary-hover: oklch(80% 0.1 14.62);
+    --theme-secondary: oklch(75% 0.1 14.62);
+    --theme-secondary-hover: oklch(90% 0.1 14.62);
 
     /* Accent colors */
-    --theme-accent: oklch(75% 0.224 14.62);
-    --theme-accent-hover: oklch(85% 0.224 14.62);
+    --theme-accent: oklch(80% 0.224 14.62);
+    --theme-accent-hover: oklch(90% 0.224 14.62);
 
     /* Border colors */
     --theme-border: oklch(90% 0.05 14.62);
@@ -115,10 +115,6 @@ a:hover {
 /* Utility classes */
 .border {
   border: 1px solid var(--theme-border);
-}
-
-.background {
-  background-color: var(--theme-tertiary);
 }
 
 .padding {
