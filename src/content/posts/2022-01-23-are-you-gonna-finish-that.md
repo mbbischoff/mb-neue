@@ -6,16 +6,16 @@ description: You don’t have to complete everything. You don’t need to be in 
   someone who knows their worth and knows what they want. Letting go of one thing
   can give you space to start something new that will serve you better. And if you
   regret your decision, it’ll still be there when you’re ready to pick it up again.
+image: /uploads/Books.webp
+tags:
+- advice
+- wisdom
+- life
+- media
+categories:
+- culture
 original_jekyll:
   date: 2022-01-23 19:01:00-05:00
-  categories:
-  - culture
-  tags:
-  - advice
-  - wisdom
-  - life
-  - media
-  image: /uploads/Books.webp
   description: You don’t have to complete everything. You don’t need to be in it for
     the long haul. Quitting something doesn’t make a quitter. Instead, it makes you
     someone who knows their worth and knows what they want. Letting go of one thing

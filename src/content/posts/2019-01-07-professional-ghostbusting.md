@@ -3,17 +3,17 @@ title: Professional Ghostbusting
 pubDate: '2019-01-07'
 description: Why do people stop answering your emails at work, and how can you stop
   it?
+image: /uploads/ghostbusters.jpg
+tags:
+- work
+- email
+- advice
+categories:
+- longer
+- culture
+- tech
 original_jekyll:
   date: 2019-01-07 00:00:00-05:00
-  categories:
-  - longer
-  - culture
-  - tech
-  tags:
-  - work
-  - email
-  - advice
-  image: /uploads/ghostbusters.jpg
   description: Why do people stop answering your emails at work, and how can you stop
     it?
 ---

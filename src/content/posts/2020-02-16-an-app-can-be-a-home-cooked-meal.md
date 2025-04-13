@@ -3,22 +3,22 @@ title: An App Can be a Home-cooked Meal
 pubDate: '2020-02-16'
 description: A very smart essay from Robin Sloan about an app he made for his family,
   but also about how truly personal software and its creation is powerful.
+image: /uploads/984B5C1D-DCBF-42BC-8128-4128D7D8D424.jpeg
+tags:
+- software
+- apps
+- tech
+- code
+- media
+- family
+- essay
+- iOS
+categories:
+- tech
+- shorter
+- culture
 original_jekyll:
   date: 2020-02-16 13:23:00-05:00
-  categories:
-  - tech
-  - shorter
-  - culture
-  tags:
-  - software
-  - apps
-  - tech
-  - code
-  - media
-  - family
-  - essay
-  - iOS
-  image: /uploads/984B5C1D-DCBF-42BC-8128-4128D7D8D424.jpeg
   description: A very smart essay from Robin Sloan about an app he made for his family,
     but also about how truly personal software and its creation is powerful.
   format: link

@@ -4,21 +4,21 @@ pubDate: '2020-04-01'
 description: I wrote a new blog post over on the [Lickability blog](https://lickability.com/blog/)
   about the new tools we’re using to work from home better and some tips about _how_
   we’re using them. 🛋
+image: /uploads/oliur-_Z3cXy3rqa0-unsplash.jpg
+tags:
+- work
+- lickability
+- tools
+- software
+- tech
+- apps
+- coronavirus
+categories:
+- tech
+- culture
+- shorter
 original_jekyll:
   date: 2020-04-01 17:19:00-04:00
-  categories:
-  - tech
-  - culture
-  - shorter
-  tags:
-  - work
-  - lickability
-  - tools
-  - software
-  - tech
-  - apps
-  - coronavirus
-  image: /uploads/oliur-_Z3cXy3rqa0-unsplash.jpg
   description: I wrote a new blog post over on the [Lickability blog](https://lickability.com/blog/)
     about the new tools we’re using to work from home better and some tips about _how_
     we’re using them. 🛋

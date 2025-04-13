@@ -1,13 +1,15 @@
 ---
 title: Now Page Music
 pubDate: '2020-12-22'
+description: The now page now includes a playlist of music I’m enjoying lately called
+  Heavy Rotation. In totally unrelated news, I miss Rdio.
+tags:
+- music
+- nownownow
+categories:
+- shorter
 original_jekyll:
   date: 2020-12-22 15:48:00-05:00
-  categories:
-  - shorter
-  tags:
-  - music
-  - nownownow
   format: short
 ---
 

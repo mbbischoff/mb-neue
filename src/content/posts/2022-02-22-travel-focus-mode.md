@@ -9,18 +9,18 @@ description: Last summer, I visited Toronto to see my wife after being separated
   bags while my phone buzzes with irrelevant notifications and my heart rate skyrockets.
   So, I decided to use the trip as a test of the iOS 15 Focus feature and make travel
   less anxiety-inducing in the process.
+image: /uploads/travel-homescreen.PNG
+tags:
+- travel
+- focus modes
+- ios
+- features
+- automation
+categories:
+- tech
+- me
 original_jekyll:
   date: 2022-02-22 15:54:00-05:00
-  categories:
-  - tech
-  - me
-  tags:
-  - travel
-  - focus modes
-  - ios
-  - features
-  - automation
-  image: /uploads/travel-homescreen.PNG
   description: Last summer, I visited Toronto to see my wife after being separated
     by pandemic-related border closures for months. While preparing for the trip,
     I realized that no matter how much I travel, it’s always a little stressful and

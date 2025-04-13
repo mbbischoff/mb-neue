@@ -1,18 +1,20 @@
 ---
 title: App Builders CH 2020
 pubDate: '2020-02-10'
+description: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We’re pleased
+  to announce our 5th speaker for App Builders 2020: <a href="https://twitter.com/mb?refsrc...'
+image: /uploads/590B340D-FD58-4CD7-9681-D8F7F69B6321.jpeg
+tags:
+- talks
+- conferences
+- ios
+- tech
+- me
+categories:
+- talks
+- tech
 original_jekyll:
   date: 2020-02-10 19:04:00-05:00
-  categories:
-  - talks
-  - tech
-  tags:
-  - talks
-  - conferences
-  - ios
-  - tech
-  - me
-  image: /uploads/590B340D-FD58-4CD7-9681-D8F7F69B6321.jpeg
   format: link
   link: https://appbuilders.ch/
 ---

@@ -4,17 +4,17 @@ pubDate: '2021-12-29'
 description: 'Last year for my 30th birthday, we raised over $7,000 for charity on
   a super fun livestream. This year, we’ll once again be gathering with my pals online
   and streaming Jackbox Games to raise money for The Audre Lorde Project:'
+image: /uploads/Square.png
+tags:
+- me
+- charity
+- transgender
+- lgbtq+
+categories:
+- shorter
+- culture
 original_jekyll:
   date: 2021-12-29 14:41:00-05:00
-  categories:
-  - shorter
-  - culture
-  tags:
-  - me
-  - charity
-  - transgender
-  - lgbtq+
-  image: /uploads/Square.png
   description: 'Last year for my 30th birthday, we raised over $7,000 for charity
     on a super fun livestream. This year, we’ll once again be gathering with my pals
     online and streaming Jackbox Games to raise money for The Audre Lorde Project:'

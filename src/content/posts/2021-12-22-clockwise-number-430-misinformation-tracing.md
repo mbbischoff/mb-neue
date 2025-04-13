@@ -3,16 +3,16 @@ title: 'Clockwise #430: Misinformation Tracing'
 pubDate: '2021-12-22'
 description: 'I was thrilled to guest on episode #430 the Clockwise podcast today.
   Give it a listen and let me know what your answer would have been to my question.'
+image: /uploads/clockwise_artwork.png.jpeg
+tags:
+- podcast
+- me
+- tech
+categories:
+- tech
+- shorter
 original_jekyll:
   date: 2021-12-22 17:11:00-05:00
-  categories:
-  - tech
-  - shorter
-  tags:
-  - podcast
-  - me
-  - tech
-  image: /uploads/clockwise_artwork.png.jpeg
   description: 'I was thrilled to guest on episode #430 the Clockwise podcast today.
     Give it a listen and let me know what your answer would have been to my question.'
   format: link

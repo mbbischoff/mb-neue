@@ -3,17 +3,17 @@ title: How to Start a Real Relationship Online
 pubDate: '2020-12-10'
 description: 'If you’re curious about how to date online, or whether you should consider
   long-distance relationships, this piece by Chingy is a must-read. '
+image: /uploads/1606945867767-how-to-be-hot-how-to-date-someone-totally-onlinehf.jpeg.webp
+tags:
+- dating
+- long-distance relationships
+- kate
+- me
+categories:
+- culture
+- shorter
 original_jekyll:
   date: 2020-12-10 13:36:00-05:00
-  categories:
-  - culture
-  - shorter
-  tags:
-  - dating
-  - long-distance relationships
-  - kate
-  - me
-  image: /uploads/1606945867767-how-to-be-hot-how-to-date-someone-totally-onlinehf.jpeg.webp
   description: 'If you’re curious about how to date online, or whether you should
     consider long-distance relationships, this piece by Chingy is a must-read. '
   format: link

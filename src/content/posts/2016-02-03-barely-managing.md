@@ -3,18 +3,18 @@ title: Barely Managing
 pubDate: '2016-02-03'
 description: A talk about why you might want to step away from the keyboard and into
   leadership, and what happens when you do.
+image: /uploads/barely-managing-titlecard.jpg
+tags:
+- talks
+- management
+- philadelphia
+- cocoalove
+categories:
+- management
+- talks
+- longer
 original_jekyll:
   date: 2016-02-03 00:00:00-05:00
-  categories:
-  - management
-  - talks
-  - longer
-  tags:
-  - talks
-  - management
-  - philadelphia
-  - cocoalove
-  image: /uploads/barely-managing-titlecard.jpg
   description: A talk about why you might want to step away from the keyboard and
     into leadership, and what happens when you do.
 ---

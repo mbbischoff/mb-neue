@@ -2,16 +2,16 @@
 title: 'xkcd: Pathogen Resistance'
 pubDate: '2020-03-31'
 description: This xkcd is exactly what I needed today. Well, that, and some pasta.
+image: /uploads/pathogen_resistance.png
+tags:
+- coronavirus
+- comic
+- xkcd
+- pasta
+categories:
+- culture
 original_jekyll:
   date: 2020-03-31 09:38:00-04:00
-  categories:
-  - culture
-  tags:
-  - coronavirus
-  - comic
-  - xkcd
-  - pasta
-  image: /uploads/pathogen_resistance.png
   description: This xkcd is exactly what I needed today. Well, that, and some pasta.
   format: link
   link: https://xkcd.com/2287/

@@ -3,17 +3,17 @@ title: At the Times, a Hesitance to Hyperlink
 pubDate: '2019-10-18'
 description: Journalists at The New York Times and its own standards editor say that
   getting continually dragged by other journalists for not giving credit is embarrassing.
+tags:
+- nytimes
+- journalism
+- internet
+- hyperlinks
+categories:
+- tech
+- culture
+- shorter
 original_jekyll:
   date: 2019-10-18 11:03:00-04:00
-  categories:
-  - tech
-  - culture
-  - shorter
-  tags:
-  - nytimes
-  - journalism
-  - internet
-  - hyperlinks
   description: Journalists at The New York Times and its own standards editor say
     that getting continually dragged by other journalists for not giving credit is
     embarrassing.

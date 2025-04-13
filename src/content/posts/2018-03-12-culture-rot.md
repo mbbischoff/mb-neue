@@ -3,19 +3,19 @@ title: Culture Rot
 pubDate: '2018-03-12'
 description: A talk at the Difficult to Name reading series about the disappearing
   web and what we can do to stop it.
+image: /uploads/dtn-culture-rot.jpg
+tags:
+- '404'
+- internet
+- tech
+- talks
+categories:
+- culture
+- tech
+- talks
+- longer
 original_jekyll:
   date: 2018-03-12 00:00:00-04:00
-  categories:
-  - culture
-  - tech
-  - talks
-  - longer
-  tags:
-  - '404'
-  - internet
-  - tech
-  - talks
-  image: /uploads/dtn-culture-rot.jpg
   description: A talk at the Difficult to Name reading series about the disappearing
     web and what we can do to stop it.
   thanks: Thanks to [Michael Liberatore](https://twitter.com/mliberatore/) for shooting

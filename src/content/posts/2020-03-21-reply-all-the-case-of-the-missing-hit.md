@@ -6,23 +6,23 @@ description: After seeing this recent episode of Reply All recommended everywher
   interested in music, mysteries, obsessiveness, journalism, or the intersections
   thereof. Also, if you want more like this, go back and listen to [Mystery Show](https://gimletmedia.com/shows/mystery-show).
   RIP.
+image: /uploads/replyall.jpeg
+tags:
+- podcast
+- reply all
+- gimlet
+- mystery
+- music
+- pop
+- journalism
+- advice
+categories:
+- culture
+- tech
+- shorter
 original_jekyll:
   date: 2020-03-21 13:57:00-04:00
-  categories:
-  - culture
-  - tech
-  - shorter
-  tags:
-  - podcast
-  - reply all
-  - gimlet
-  - mystery
-  - music
-  - pop
-  - journalism
-  - advice
   short_title: The Case of the Missing Hit
-  image: /uploads/replyall.jpeg
   description: After seeing this recent episode of Reply All recommended everywhere,
     I gave it a listen, and it’s as good as everyone says it is. Queue it up if you’re
     interested in music, mysteries, obsessiveness, journalism, or the intersections

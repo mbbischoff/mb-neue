@@ -3,23 +3,23 @@ title: 5 Shortcuts I Use Daily
 pubDate: '2022-02-13'
 description: Here are 5 of those shortcuts that I use every day, with a brief explanation
   of why they save me so much time and links to download them.
+image: /uploads/shortcuts-guest.webp
+tags:
+- shortucts
+- mac
+- ios
+- Matthew Cassinelli
+- radar
+- calendar
+- wallpaper
+- slack
+- streamdeck
+categories:
+- tech
+- me
+- appearances
 original_jekyll:
   date: 2022-02-13 12:30:00-05:00
-  categories:
-  - tech
-  - me
-  - appearances
-  tags:
-  - shortucts
-  - mac
-  - ios
-  - Matthew Cassinelli
-  - radar
-  - calendar
-  - wallpaper
-  - slack
-  - streamdeck
-  image: /uploads/shortcuts-guest.webp
   description: Here are 5 of those shortcuts that I use every day, with a brief explanation
     of why they save me so much time and links to download them.
   picture:

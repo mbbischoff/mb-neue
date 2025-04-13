@@ -8,16 +8,16 @@ description: Just because you don’t know something today doesn’t mean you wo
   discoveries and sharing that journey with the people around you, at work and in
   the rest of your life. And that continuous improvement will accumulate like compound
   interest.
+image: /uploads/4f3fcb2bf4877cb863acc28fb5a4223d.jpg
+tags:
+- apple
+- learning
+- knowledge
+- advice
+categories:
+- culture
 original_jekyll:
   date: 2022-01-16 15:55:00-05:00
-  categories:
-  - culture
-  tags:
-  - apple
-  - learning
-  - knowledge
-  - advice
-  image: /uploads/4f3fcb2bf4877cb863acc28fb5a4223d.jpg
   description: Just because you don’t know something today doesn’t mean you won’t
     know it tomorrow. If you cultivate an attitude that faces the unknown with curiosity,
     sharing, and experimentation, rather than blame, fear, and intransigence, you

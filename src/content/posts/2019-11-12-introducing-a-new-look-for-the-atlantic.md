@@ -3,17 +3,17 @@ title: A New Look for The Atlantic
 pubDate: '2019-11-12'
 description: Really excited about this bold new look for one of my favorite publications,
   and honored to have gotten to work on the development of the app at Lickability.
+image: /uploads/lead_720_405.jpg
+tags:
+- atlantic
+- news
+- app
+categories:
+- tech
+- culture
+- shorter
 original_jekyll:
   date: 2019-11-12 14:58:00-05:00
-  categories:
-  - tech
-  - culture
-  - shorter
-  tags:
-  - atlantic
-  - news
-  - app
-  image: /uploads/lead_720_405.jpg
   description: Really excited about this bold new look for one of my favorite publications,
     and honored to have gotten to work on the development of the app at Lickability.
   format: link

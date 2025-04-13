@@ -10,25 +10,25 @@ description: I was first introduced to the phrase “thought technology” by Me
   technologies in the sense that, like a hammer or a pencil, they can be used to solve
   problems. Sometimes having the *right* thought at the right time is all you need
   to move forward, break through, or get unstuck.
+image: /uploads/keep-moving.png
+tags:
+- merlin mann
+- john roderick
+- psychology
+- improvosation
+- brian eno
+- peter schmidt
+- cbt
+- andy matushack
+- roam
+- obsidian
+- tiago forte
+- nick milo
+categories:
+- culture
+- tech
 original_jekyll:
   date: 2021-08-06 18:36:00-04:00
-  categories:
-  - culture
-  - tech
-  tags:
-  - merlin mann
-  - john roderick
-  - psychology
-  - improvosation
-  - brian eno
-  - peter schmidt
-  - cbt
-  - andy matushack
-  - roam
-  - obsidian
-  - tiago forte
-  - nick milo
-  image: /uploads/keep-moving.png
   description: I was first introduced to the phrase “thought technology” by Merlin
     Mann and John Roderick on their long-running podcast Roderick on the Line. A thought
     technology isn’t quite the same as a belief or a philosophy, and it’s more than

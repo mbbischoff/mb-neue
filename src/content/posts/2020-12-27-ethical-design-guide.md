@@ -4,19 +4,19 @@ pubDate: '2020-12-27'
 description: Sarah L. Fossheim just released this wonderful collection of resources
   on how to make digital products more inclusive. It covers topics from accessibility,
   to race, to gender. I’ll be bookmarking this and referring to it often.
+image: /uploads/EqMluJNW4AECHZy.jpeg
+tags:
+- ethics
+- design
+- resources
+- list
+- accessibility
+categories:
+- tech
+- culture
+- shorter
 original_jekyll:
   date: 2020-12-27 10:17:00-05:00
-  categories:
-  - tech
-  - culture
-  - shorter
-  tags:
-  - ethics
-  - design
-  - resources
-  - list
-  - accessibility
-  image: /uploads/EqMluJNW4AECHZy.jpeg
   description: Sarah L. Fossheim just released this wonderful collection of resources
     on how to make digital products more inclusive. It covers topics from accessibility,
     to race, to gender. I’ll be bookmarking this and referring to it often.

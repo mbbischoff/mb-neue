@@ -5,16 +5,16 @@ description: 'Running up against a paper cut bug feels a little bit like getting
   physical one: not the end of the world, but certainly unpleasant. These types of
   tiny annoyances accrete over time, especially when no one is paying attention to
   them.'
+image: /uploads/nick-fewings-SG9Ycz2uqGs-unsplash.jpg
+tags:
+- software
+- bugs
+- engineering
+- list
+categories:
+- tech
 original_jekyll:
   date: 2022-01-30 17:48:00-05:00
-  categories:
-  - tech
-  tags:
-  - software
-  - bugs
-  - engineering
-  - list
-  image: /uploads/nick-fewings-SG9Ycz2uqGs-unsplash.jpg
   description: 'Running up against a paper cut bug feels a little bit like getting
     a physical one: not the end of the world, but certainly unpleasant. These types
     of tiny annoyances accrete over time, especially when no one is paying attention

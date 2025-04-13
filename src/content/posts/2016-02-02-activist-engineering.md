@@ -5,20 +5,20 @@ description: You’ve been there. You’re sitting in a meeting and your boss, a
   manager, or an executive is talking about Q2 goals. They’re laying out a roadmap
   of the features that are going to be “coming down the pike”. All of a sudden you
   see it.
+image: /uploads/engineer-ring.jpg
+tags:
+- activism
+- programming
+- work
+- tech
+- code
+- politics
+categories:
+- longer
+- tech
+- culture
 original_jekyll:
   date: 2016-02-02 00:00:00-05:00
-  categories:
-  - longer
-  - tech
-  - culture
-  tags:
-  - activism
-  - programming
-  - work
-  - tech
-  - code
-  - politics
-  image: /uploads/engineer-ring.jpg
   description: You’ve been there. You’re sitting in a meeting and your boss, a product
     manager, or an executive is talking about Q2 goals. They’re laying out a roadmap
     of the features that are going to be “coming down the pike”. All of a sudden you

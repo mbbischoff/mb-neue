@@ -3,16 +3,16 @@ title: Impossible Ideas
 pubDate: '2019-01-15'
 description: The talk I show to every software engineer who says it’s impossible to
   build something.
+image: /uploads/cleese.jpg
+tags:
+- creativity
+- talks
+- ideas
+categories:
+- culture
+- longer
 original_jekyll:
   date: 2019-01-15 00:00:00-05:00
-  categories:
-  - culture
-  - longer
-  tags:
-  - creativity
-  - talks
-  - ideas
-  image: /uploads/cleese.jpg
   description: The talk I show to every software engineer who says it’s impossible
     to build something.
 ---

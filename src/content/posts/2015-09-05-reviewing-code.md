@@ -1,17 +1,19 @@
 ---
 title: 'Reviewing Code: A Checklist'
 pubDate: '2015-09-05'
+description: You’ve been there. A 10,000 line pull request lands in your email and
+  you don’t even know where to begin. No description provided.
+tags:
+- code
+- code review
+- programming
+- work
+- advice
+categories:
+- longer
+- tech
 original_jekyll:
   date: 2015-09-05 00:00:00-04:00
-  categories:
-  - longer
-  - tech
-  tags:
-  - code
-  - code review
-  - programming
-  - work
-  - advice
 ---
 
 You’ve been there. A 10,000 line [pull request](https://help.github.com/articles/using-pull-requests/) lands in your email and you don’t even know where to begin. _No description provided._

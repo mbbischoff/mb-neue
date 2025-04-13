@@ -7,20 +7,20 @@ description: 'What does it take to build software that’s truly usable for as m
   This morning, I’m giving a talk on this topic called Apps for All: Making Software
   Accessible at App Builders CH 2020. The presentation focuses on improving the accessibility
   of the software we build.'
+image: /uploads/Apps%20for%20All.png
+tags:
+- accessibility
+- ios
+- universal design
+- design
+- app builders
+categories:
+- tech
+- talks
+- culture
+- longer
 original_jekyll:
   date: 2020-05-11 09:00:00-04:00
-  categories:
-  - tech
-  - talks
-  - culture
-  - longer
-  tags:
-  - accessibility
-  - ios
-  - universal design
-  - design
-  - app builders
-  image: /uploads/Apps%20for%20All.png
   description: 'What does it take to build software that’s truly usable for as many
     people as possible?
 

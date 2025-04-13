@@ -1,16 +1,17 @@
 ---
 title: Making Magic
 pubDate: '2024-06-02'
+description: <div class="top-margin"> <iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/what-makes-the-magic-wand-so-magic/id1749090563?i=10006572725...
+image: /uploads/makingmagic.jpg
+tags:
+- podcast
+- sex
+- Kate Sloan
+- me
+categories:
+- shorter
 original_jekyll:
   date: 2024-06-02 11:50:00-04:00
-  categories:
-  - shorter
-  tags:
-  - podcast
-  - sex
-  - Kate Sloan
-  - me
-  image: /uploads/makingmagic.jpg
   format: link
   link: https://makingmagicseries.com/
   picture:

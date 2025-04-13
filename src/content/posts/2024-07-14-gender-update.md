@@ -1,15 +1,17 @@
 ---
 title: Gender Update
 pubDate: '2024-07-14'
+description: 🏳️‍⚧️ Today marks 5 years since I came out as trans on the internet.
+  Time for a little ✨ gender update ✨.
+image: /uploads/Gender%20Update-cbdbb0.png
+tags:
+- gender
+- trans
+- me
+categories:
+- shorter
 original_jekyll:
   date: 2024-07-14 13:30:00-04:00
-  categories:
-  - shorter
-  tags:
-  - gender
-  - trans
-  - me
-  image: /uploads/Gender%20Update-cbdbb0.png
   format: short
   picture:
     png_image: /uploads/Gender%20Update.png

@@ -1,13 +1,16 @@
 ---
 title: The Best of Times
 pubDate: '2013-10-05'
+description: A month ago, on September 4<sup>th</sup>, I finished my last day as a
+  senior iOS engineer at The New York Times. Two years there taught me a lot about
+  building...
+tags:
+- me
+- nytimes
+categories:
+- longer
 original_jekyll:
   date: 2013-10-05 00:00:00-04:00
-  categories:
-  - longer
-  tags:
-  - me
-  - nytimes
 ---
 
 ![The New York Times Building](/uploads/nytimes_building.jpg)

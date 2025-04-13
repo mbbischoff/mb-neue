@@ -3,21 +3,21 @@ title: How to Treat Ex-Employees
 pubDate: '2019-02-24'
 description: Many managers think a lot about how they treat their team, but few have
   a philosophy about those that leave it.
+image: /uploads/firepit.jpg
+tags:
+- work
+- hiring
+- firing
+- management
+categories:
+- tech
+- culture
+- management
+- longer
 original_jekyll:
   date: 2019-02-24 00:00:00-05:00
-  categories:
-  - tech
-  - culture
-  - management
-  - longer
-  tags:
-  - work
-  - hiring
-  - firing
-  - management
   description: Many managers think a lot about how they treat their team, but few
     have a philosophy about those that leave it.
-  image: /uploads/firepit.jpg
   thanks: Thanks to [Soroush Khanlou](https://twitter.com/khanlou), [Kate Sloan](https://twitter.com/girly_juice),
     & [Rachel Viniar](https://twitter.com/crystallized) for their feedback on early
     drafts.

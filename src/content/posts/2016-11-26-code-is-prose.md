@@ -3,16 +3,16 @@ title: Code is Prose
 pubDate: '2016-11-26'
 description: Great code reads like great prose. It is succinct, expressive, and clear
   the first time you read it.
+image: /uploads/gates-reading.jpg
+tags:
+- code
+- writing
+- tech
+categories:
+- tech
+- longer
 original_jekyll:
   date: 2016-11-26 00:00:00-05:00
-  categories:
-  - tech
-  - longer
-  tags:
-  - code
-  - writing
-  - tech
-  image: /uploads/gates-reading.jpg
   description: Great code reads like great prose. It is succinct, expressive, and
     clear the first time you read it.
   thanks: Thanks to [Soroush Khanlou](http://khanlou.com), [Kenny Ackerson](https://twitter.com/pearapps),

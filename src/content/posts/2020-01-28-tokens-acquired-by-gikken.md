@@ -1,18 +1,21 @@
 ---
 title: Tokens Acquired by Gikken
 pubDate: '2020-01-28'
+description: '> Of course, we didn''t purchase it to shut down or leave unchanged,
+  so we''re planning a major makeover – Tokens 2. >  > Most importantly, Tokens will
+  finally st...'
+image: /uploads/B44B1E9D-DA56-40AE-93BE-78BD7226475D.png
+tags:
+- ios
+- programming
+- app
+- app store
+- apple
+categories:
+- tech
+- shorter
 original_jekyll:
   date: 2020-01-28 10:59:00-05:00
-  categories:
-  - tech
-  - shorter
-  tags:
-  - ios
-  - programming
-  - app
-  - app store
-  - apple
-  image: /uploads/B44B1E9D-DA56-40AE-93BE-78BD7226475D.png
   format: link
   link: https://blog.gikken.co/we-acquired-tokens/
 ---

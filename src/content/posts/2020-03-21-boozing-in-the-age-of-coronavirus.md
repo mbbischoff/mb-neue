@@ -4,17 +4,17 @@ pubDate: '2020-03-21'
 description: “We could survive a month and a half on delivery,” said Nicholas Ruiz,
   general manager at Patent Pending. “We’re just trying to be a little beam of light
   for some people.”
+image: /uploads/dante-delivery.jpg
+tags:
+- cocktails
+- coronavirus
+- food service
+- new york
+categories:
+- culture
+- shorter
 original_jekyll:
   date: 2020-03-21 15:03:00-04:00
-  categories:
-  - culture
-  - shorter
-  tags:
-  - cocktails
-  - coronavirus
-  - food service
-  - new york
-  image: /uploads/dante-delivery.jpg
   description: “We could survive a month and a half on delivery,” said Nicholas Ruiz,
     general manager at Patent Pending. “We’re just trying to be a little beam of light
     for some people.”

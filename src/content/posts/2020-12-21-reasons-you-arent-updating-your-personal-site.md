@@ -5,15 +5,15 @@ description: Lovin makes some great points in this piece about ways to make that
   on yourself by maintaining an ongoing list of ideas, turning conversations you’re
   having on social media into articles, and making the process of publishing as seamless
   as possible.
+tags:
+- tech
+- release notes
+categories:
+- writing
+- website
+- blog
 original_jekyll:
   date: 2020-12-21 09:20:00-05:00
-  categories:
-  - writing
-  - website
-  - blog
-  tags:
-  - tech
-  - release notes
   description: Lovin makes some great points in this piece about ways to make that
     easier on yourself by maintaining an ongoing list of ideas, turning conversations
     you’re having on social media into articles, and making the process of publishing

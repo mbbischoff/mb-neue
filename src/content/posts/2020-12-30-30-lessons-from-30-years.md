@@ -7,17 +7,17 @@ description: I turned 30 years old today so I spent some time this afternoon ref
   feels fitting considering how useful and applicable they’ve been for me. Each one
   of them has helped me during critical moments in my life so far. I hope you find
   even just one of them helpful in yours. See you tonight. ❤️
+image: /uploads/30-c9d5e0.png
+tags:
+- me
+- lessons
+- life
+- advice
+categories:
+- culture
+- longer
 original_jekyll:
   date: 2020-12-30 13:58:00-05:00
-  categories:
-  - culture
-  - longer
-  tags:
-  - me
-  - lessons
-  - life
-  - advice
-  image: /uploads/30-c9d5e0.png
   description: I turned 30 years old today so I spent some time this afternoon reflecting
     and collecting 30 lessons I’ve learned in my time on earth so far. Merlin and
     Roderick sometimes call these types of lessons "thought technologies" and that

@@ -7,19 +7,19 @@ description: 'A very persuasive essay from Maciej Cegłowski, the founder of Pin
   that everyone do the same. It’s also worth reading [Ben Thompson’s take](https://stratechery.com/2020/unmasking-twitter/)
   and checking out these [simple mask-making instructions](https://ragmask.com) from
   Loren Brichter.  '
+image: /uploads/debonair_mask_man.jpg
+tags:
+- masks
+- coronavirus
+- Maciej Cegłowski
+- Loren Britchter
+- Ben Thompson
+- cdc
+categories:
+- culture
+- shorter
 original_jekyll:
   date: 2020-04-05 09:35:00-04:00
-  categories:
-  - culture
-  - shorter
-  tags:
-  - masks
-  - coronavirus
-  - Maciej Cegłowski
-  - Loren Britchter
-  - Ben Thompson
-  - cdc
-  image: /uploads/debonair_mask_man.jpg
   description: 'A very persuasive essay from Maciej Cegłowski, the founder of Pinboard,
     about the whys and hows of wearing masks in public. I started wearing one yesterday
     for the limited time I was outside, and the medical community seems to now be

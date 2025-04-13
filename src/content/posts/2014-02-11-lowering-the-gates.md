@@ -1,17 +1,19 @@
 ---
 title: Lowering the Gates
 pubDate: '2014-02-11'
+description: <figure> <img src="/uploads/nytimesbuildingatnight.jpg" alt="The New
+  York Times Building at night" /> <figcaption>Photo courtesy of <a href="http://www.flickr.c...
+tags:
+- nytimes
+- tech
+- paywall
+- strategy
+categories:
+- tech
+- culture
+- longer
 original_jekyll:
   date: 2014-02-11 00:00:00-05:00
-  categories:
-  - tech
-  - culture
-  - longer
-  tags:
-  - nytimes
-  - tech
-  - paywall
-  - strategy
 ---
 
 <figure>

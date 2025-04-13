@@ -1,14 +1,17 @@
 ---
 title: Once More With Feeling
 pubDate: '2014-12-01'
+description: For years now this website has merely pointed people to my profiles on
+  other websites and social media services. It wasn’t always that way. In the past,
+  it hous...
+tags:
+- me
+- website
+- meta
+categories:
+- longer
 original_jekyll:
   date: 2014-12-01 00:00:00-05:00
-  categories:
-  - longer
-  tags:
-  - me
-  - website
-  - meta
 ---
 
 For years now this website has merely pointed people to my profiles on other websites and social media services. It wasn’t always that way. In the past, it housed my blog, a podcast I hosted, and even a photoblog at one point. Remember those?

@@ -1,15 +1,18 @@
 ---
 title: Things You’re Allowed to Do
 pubDate: '2022-01-24'
+description: '> This is a list of things you’re allowed to do that you thought you
+  couldn’t, or didn’t even know you could. > > I haven’t tried everything on this
+  list, mainl...'
+tags:
+- list
+- advice
+- time
+- money
+categories:
+- culture
 original_jekyll:
   date: 2022-01-24 19:11:00-05:00
-  categories:
-  - culture
-  tags:
-  - list
-  - advice
-  - time
-  - money
   format: link
   link: https://milan.cvitkovic.net/writing/things_youre_allowed_to_do/
 ---

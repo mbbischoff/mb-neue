@@ -5,15 +5,15 @@ description: "I’ve been a fan of beestung magazine, a quarterly publication th
   \ poetry by nonbinary writers since I discovered it a few years ago. This week,\
   \ they published issue 12 on the theme of trans futures, guest edited by Cavar.\
   \ \n"
+image: /uploads/beestung.png
+tags:
+- poetry
+- me
+categories:
+- shorter
+- culture
 original_jekyll:
   date: 2022-08-24 18:31:00-04:00
-  categories:
-  - shorter
-  - culture
-  tags:
-  - poetry
-  - me
-  image: /uploads/beestung.png
   description: "I’ve been a fan of beestung magazine, a quarterly publication that\
     \ published poetry by nonbinary writers since I discovered it a few years ago.\
     \ This week, they published issue 12 on the theme of trans futures, guest edited\
