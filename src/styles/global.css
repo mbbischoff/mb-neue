@@ -10,7 +10,7 @@
 :root {
   /* Theme Colors - Balanced */
   /* Background colors */
-  --theme-bg: oklch(99% 0.01 23.1);
+  --theme-bg: oklch(99% 0.04 23.1);
   --theme-background-offset: oklch(97% 0.03 23.1);
   --theme-tertiary: oklch(80% 0.02 0);
 
@@ -189,11 +189,14 @@ small {
 .site-title a:hover {
   color: var(--theme-accent);
 }
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  100% { transform: scale(2.0); }
+}
 
 @keyframes heartBeat {
-  0% { transform: scale(3); }
-  50% { transform: scale(3.3); }
-  100% { transform: scale(3); }
+  0%, 100% { transform: scale(2.0); }
+  50% { transform: scale(1.5); }
 }
 
 .fleuron {
@@ -202,16 +205,17 @@ small {
   display: inline-block;
   line-height: 1;
   transform-origin: center;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  animation: none;
 }
 
 .fleuron:hover {
-  transform: scale(3);
-  animation: heartBeat 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s infinite;
-  cursor: pointer;
+  animation: 
+    scaleUp 0.2s forwards,
+    heartBeat 1s 0.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-footer a {
+a {
   color: var(--theme-text);
   text-decoration: none;
   border-bottom: 1px solid var(--theme-border);
