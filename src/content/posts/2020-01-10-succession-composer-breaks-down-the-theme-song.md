@@ -1,8 +1,6 @@
 ---
 title: Succession Composer Breaks Down the Show’s Score
 pubDate: '2020-01-10'
-description: <div class="video-wrapper"><iframe loading="lazy" title="Succession Composer
-  Breaks Down the Show’s Score" width="560" height="315" src="https://www.youtube.com...
 image: /uploads/succession-theme-britell.jpg
 tags:
 - sucession

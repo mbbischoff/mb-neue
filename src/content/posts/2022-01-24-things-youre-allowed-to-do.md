@@ -1,9 +1,6 @@
 ---
 title: Things You’re Allowed to Do
 pubDate: '2022-01-24'
-description: '> This is a list of things you’re allowed to do that you thought you
-  couldn’t, or didn’t even know you could. > > I haven’t tried everything on this
-  list, mainl...'
 tags:
 - list
 - advice

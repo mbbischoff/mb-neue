@@ -1,8 +1,6 @@
 ---
 title: Don’t Go to College
 pubDate: '2013-07-27'
-description: <figure> <img src="/uploads/njitflag.jpg" alt="NJIT College Flag" />
-  <figcaption>Photo courtesy of <a href="http://www.flickr.com/photos/whartz/1808430037/">Wil...
 original_jekyll:
   date: 2013-07-27 00:00:00-04:00
 ---

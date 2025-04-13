@@ -1,8 +1,6 @@
 ---
 title: John Mulaney & Colbert on Anxiety
 pubDate: '2020-01-28'
-description: <div class="video-wrapper"> <iframe loading="lazy" title="John Mulaney
-  & Colbert on Anxiety" width="560" height="315" src="https://www.youtube.com/embed/zGf6CGB...
 image: /uploads/john-mulaney-stephen-colbert.jpg
 tags:
 - john mulaney

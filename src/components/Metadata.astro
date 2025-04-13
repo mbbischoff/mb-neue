@@ -1,0 +1,28 @@
+---
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+  date: Date;
+  readingTime?: number;
+  place?: string;
+}
+
+const { date, readingTime, place } = Astro.props;
+---
+
+<style>
+  .metadata {
+    font-family: var(--font-family-mono);
+    font-size: var(--step--2);
+    color: var(--theme-secondary);
+    margin-bottom: var(--space-3xs);
+  }
+</style>
+
+<div class="metadata">
+  <span class="flex items-center gap-1">
+    <FormattedDate date={date} />
+  </span>
+  {place && <span> • {place}</span>}
+  {readingTime && <span class="reading-time"> • {readingTime} min</span>}
+</div> 

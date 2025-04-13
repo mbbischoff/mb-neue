@@ -1,9 +1,6 @@
 ---
 title: Tokens Acquired by Gikken
 pubDate: '2020-01-28'
-description: '> Of course, we didn''t purchase it to shut down or leave unchanged,
-  so we''re planning a major makeover – Tokens 2. >  > Most importantly, Tokens will
-  finally st...'
 image: /uploads/B44B1E9D-DA56-40AE-93BE-78BD7226475D.png
 tags:
 - ios

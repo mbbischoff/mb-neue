@@ -1,9 +1,6 @@
 ---
 title: Once More With Feeling
 pubDate: '2014-12-01'
-description: For years now this website has merely pointed people to my profiles on
-  other websites and social media services. It wasn’t always that way. In the past,
-  it hous...
 tags:
 - me
 - website

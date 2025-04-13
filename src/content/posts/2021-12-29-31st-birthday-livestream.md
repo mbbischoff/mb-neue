@@ -1,5 +1,5 @@
 ---
-title: 31<sup>st</sup> Birthday Livestream
+title: 31st Birthday Livestream
 pubDate: '2021-12-29'
 description: 'Last year for my 30th birthday, we raised over $7,000 for charity on
   a super fun livestream. This year, we’ll once again be gathering with my pals online

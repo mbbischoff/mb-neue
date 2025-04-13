@@ -1,9 +1,6 @@
 ---
 title: Soft Launch
 pubDate: '2019-10-10'
-description: I’ve soft-launched a new version of this website designed by my pal Robyn
-  Kanner and developed by Martin Giannakopoulos. If you’re reading this in RSS and
-  haven...
 tags:
 - website
 - design

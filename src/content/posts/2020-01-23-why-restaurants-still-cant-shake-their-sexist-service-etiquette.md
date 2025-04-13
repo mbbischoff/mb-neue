@@ -1,9 +1,6 @@
 ---
 title: Why Restaurants Still Can’t Shake Their Sexist Service Etiquette
 pubDate: '2020-01-23'
-description: '> Alcoholism, religious leanings, gender-nonconforming identities, BDSM
-  relationships: All of these factors can mean that snap decisions made by servers
-  can mak...'
 image: /uploads/Genderedfood-1280x533.jpg
 tags:
 - restaurants

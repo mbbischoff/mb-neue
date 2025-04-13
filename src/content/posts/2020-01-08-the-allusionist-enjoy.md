@@ -1,8 +1,6 @@
 ---
 title: 'The Allusionist: Enjoy'
 pubDate: '2020-01-08'
-description: '<iframe loading="lazy" title="The Allusionist: Enjoy" scrolling="no"
-  src="https://play.prx.org/e?uf=http:%2F%2Ffeeds.theallusionist.org%2FAllusionist&ge=prx1951...'
 image: /uploads/enjoy.jpg
 tags:
 - podcast

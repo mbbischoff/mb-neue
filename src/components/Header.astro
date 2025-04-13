@@ -12,7 +12,7 @@ interface Props {
 const { minimalLayout = false } = Astro.props;
 ---
 
-<header role="banner">
+<header role="banner" class="mono">
   <div class="header-container">
     <nav class="internal-links" aria-label="Main navigation">
       {navigation.filter(item => !item.hideInHeader).map(item => (

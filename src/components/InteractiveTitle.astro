@@ -9,17 +9,19 @@ const { minimalLayout = false, title } = Astro.props;
 ---
 
 <div class="title-container" id="title-container">
-  <h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
-    <a href="/">{title}</a>
-  </h1>
+  <div class="title-inner">
+    <h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
+      <a href="/">{title}</a>
+    </h1>
 
-  {
-    !minimalLayout && (
-      <p class="site-description">
-        <strong>mb <span class="last-name">bischoff</span></strong> <small class="pronouns">(she/they)</small> makes <a href="https://lickability.com">software</a>, <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
-      </p>
-    )
-  }
+    {
+      !minimalLayout && (
+        <p class="site-description">
+          <strong>mb <span class="last-name">bischoff</span></strong> <small class="pronouns">(she/they)</small> makes <a href="https://lickability.com">software</a>, <a href="/archive">sentences</a>, & <a href="https://absolutelycrushed.com">sounds</a>.
+        </p>
+      )
+    }
+  </div>
 </div>
 
 <script>
@@ -89,7 +91,7 @@ const { minimalLayout = false, title } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0, var(--space-m);
+    padding: 0;
     transition: none;
     width: 100vw;
     position: relative;
@@ -97,6 +99,14 @@ const { minimalLayout = false, title } = Astro.props;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+  }
+
+  /* Inner container to constrain content width */
+  .title-inner {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-m);
   }
 
   /* Base title styling with Recursive font */

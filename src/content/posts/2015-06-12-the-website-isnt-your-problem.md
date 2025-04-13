@@ -1,9 +1,6 @@
 ---
 title: The Website Isn’t Your Problem
 pubDate: '2015-06-12'
-description: Inside The New York Times Building next week, it’s going to get harder
-  to do your job. Clifford Levy, a Pulitzer prize winning journalist, and former coworker
-  t...
 tags:
 - nytimes
 - website

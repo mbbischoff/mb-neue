@@ -1,9 +1,6 @@
 ---
 title: The Idea Guy
 pubDate: '2015-07-25'
-description: A few years ago I was tasked with helping to recruit interns for The
-  New York Times iOS team[^1]. I traveled around to top-tier engineering programs
-  at universi...
 tags:
 - work
 - advice
