@@ -20,15 +20,18 @@ const { minimalLayout = false } = Astro.props;
 				))}
 			</nav>
 		)}
-		<div class="title-container">
-			<h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
-				<a href="/">{SITE_TITLE_SHORT}</a>
-			</h1>
+	</div>
+	<div class="border-container">
+		<div class="nav-container">
+			<div class="title-container">
+				<h1 class={`site-title ${minimalLayout ? 'minimal' : ''}`}>
+					<a href="/">{SITE_TITLE_SHORT}</a>
+				</h1>
 
-			{!minimalLayout && (
-			<p class="site-description"><strong>mb bischoff</strong> <small>(she/they)</small> makes <a href="https://lickability.com"><i class="fas fa-mobile-alt"></i> apps</a>, <a href="/archive"><i class="fas fa-pen"></i> posts</a>, & <a href="https://absolutelycrushed.com"><i class="fas fa-microphone"></i> podcasts</a>.</p>
-			)}
-
+				{!minimalLayout && (
+				<p class="site-description"><strong>mb bischoff</strong> makes <a href="https://lickability.com"><i class="fas fa-mobile-alt"></i> apps</a>, <a href="/archive"><i class="fas fa-pen"></i> posts</a>, & <a href="https://absolutelycrushed.com"><i class="fas fa-microphone"></i> podcasts</a>.</p>
+				)}
+			</div>
 		</div>
 	</div>
 </header>
@@ -44,6 +47,20 @@ const { minimalLayout = false } = Astro.props;
 		padding: 0 var(--space-s);
 	}
 
+	.border-container {
+		border-top: 1px solid var(--theme-tertiary);
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+
+	.border-container .nav-container {
+		padding: 0 var(--space-s);
+	}
+
 	.internal-links {
 		display: flex;
 		justify-content: space-between;
@@ -54,6 +71,7 @@ const { minimalLayout = false } = Astro.props;
 
 	.title-container {
 		text-align: left;
+		padding-top: var(--space-xs);
 	}
 
 	.site-title {
