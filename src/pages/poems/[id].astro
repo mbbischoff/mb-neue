@@ -30,15 +30,25 @@ const { poem } = Astro.props;
 <style>
   .poem-description {
     color: var(--theme-secondary);
-    font-size: var(--font-size-sm);
+    font-size: var(--step--1);
     font-style: italic;
   }
 
   .poem-content {
     white-space: pre-wrap;
-    font-size: var(--font-size-lg);
     line-height: var(--line-height-relaxed);
     overflow-x: auto;
+  }
+
+  h1 {
+    font-size: var(--step-2);
+    margin-bottom: var(--space-l);
+    margin-top: 0;
+  }
+
+  time {
+    font-size: var(--step--1);
+    color: var(--theme-secondary);
   }
 </style>
 
