@@ -59,9 +59,10 @@ import { SITE_TITLE, navigation } from '../config';
 
   .footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-l);
     margin-bottom: var(--space-l);
+    align-items: flex-start;
   }
 
   .footer-links {
@@ -70,39 +71,22 @@ import { SITE_TITLE, navigation } from '../config';
 
   .social-links {
     flex: 1;
-    display: flex;
-    justify-content: flex-end;
   }
 
   .footer-links nav,
   .social-links nav {
     display: grid;
-    grid-template-columns: repeat(2, minmax(80px, auto));
-    gap: var(--space-3xs);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs);
     width: fit-content;
     text-transform: lowercase;
   }
 
-  @media (min-width: 480px) {
-    .footer-links nav,
-    .social-links nav {
-      gap: var(--space-2xs);
-    }
-  }
-
-  @media (min-width: 640px) {
-    .footer-links nav,
-    .social-links nav {
-      gap: var(--space-xs);
-    }
-  }
-
   @media (min-width: 768px) {
-    .footer-links nav,
-    .social-links nav {
-      grid-template-columns: repeat(2, auto);
-      row-gap: var(--space-s);
-      column-gap: var(--space-l);
+    .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
     }
   }
 
