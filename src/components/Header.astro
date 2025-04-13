@@ -185,7 +185,20 @@ const { minimalLayout = false } = Astro.props;
     color: var(--theme-secondary);
   }
 
+  .pronouns {
+    font-size: 0.7em;
+  }
+
   @media (max-width: 600px) {
+    .site-description {
+      white-space: normal;
+    }
+    .pronouns {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
     .pronouns {
       display: none;
     }
