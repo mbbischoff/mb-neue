@@ -34,17 +34,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				width: 800px;
 				max-width: calc(100% - 2em);
 				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+				padding: var(--space-l) var(--space-s);
+				color: var(--theme-text);
 			}
 			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
+				margin-bottom: var(--space-l);
+			}
+			.title time {
+				color: var(--theme-secondary);
+				display: block;
+				margin-bottom: 0.5rem;
+				font-size: 0.9em;
 			}
 			.title h1 {
-				margin: 0 0 0.5em 0;
+				margin: 0;
+				font-size: 2.5rem;
+				font-variation-settings: 'wght' 900;
 			}
 			.date {
 				margin-bottom: 0.5em;
@@ -163,15 +168,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article class="prose">
 				<div class="title">
-					<h1>{title}</h1>
-					<div class="date">
+					<time datetime={pubDate.toISOString()}>
 						<FormattedDate date={pubDate} />
-					</div>
-					{updatedDate && (
-						<div class="updated">
-							Updated: <FormattedDate date={updatedDate} />
-						</div>
-					)}
+					</time>
+					<h1>{title}</h1>
 				</div>
 				<slot />
 			</article>

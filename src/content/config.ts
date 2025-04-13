@@ -11,6 +11,19 @@ const posts = defineCollection({
   }),
 });
 
+const poems = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.date(),
+    updatedDate: z.date().optional(),
+  }),
+});
+
 export const collections = {
   posts,
-}; 
+  poems,
+} as const;
+
+export type Collections = typeof collections; 

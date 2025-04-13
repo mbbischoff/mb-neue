@@ -43,64 +43,68 @@ function estimateReadingTime(content: string) {
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			main {
-				width: 800px;
-				max-width: calc(100% - 2em);
-				margin: 0 auto;
-				padding: var(--space-l) var(--space-s);
-			}
-			ul {
+			.posts {
 				list-style: none;
 				padding: 0;
 				margin: 0;
 			}
-			li {
+
+			article {
 				margin-bottom: 4rem;
 			}
-			li time {
+
+			article .post-meta {
+				display: flex;
+				align-items: center;
+				gap: var(--space-xs);
+				margin-bottom: var(--space-s);
+			}
+
+			article time,
+			article .reading-time {
 				color: var(--theme-secondary);
-				display: block;
-				margin-bottom: 0.5rem;
-				font-size: 0.9em;
+				font-size: var(--font-size-small);
 			}
-			li h2 {
-				margin: 0 0 0.5rem 0;
+
+			article h2 {
+				margin: 0 0 var(--space-s) 0;
 			}
-			li h2 a {
+
+			article h2 a {
 				text-decoration: none;
 				color: inherit;
 			}
-			li h2 a:hover {
+
+			article h2 a:hover {
 				color: var(--theme-accent);
 			}
-			li .content {
-				margin: 1rem 0 0 0;
+
+			article .content {
+				margin: var(--space-s) 0;
 			}
-			li .content :global(p) {
-				margin: 1rem 0;
+
+			article .content :global(p) {
+				margin: var(--space-s) 0;
 			}
-			li .content :global(p:first-child) {
+
+			article .content :global(p:first-child) {
 				margin-top: 0;
 			}
-			li .meta {
+
+			article .meta {
 				display: flex;
 				align-items: center;
-				gap: var(--space-s);
+				gap: var(--space-xs);
 				margin-top: var(--space-s);
 			}
-			li .reading-time {
-				color: rgb(var(--gray));
-				font-size: 0.9em;
-			}
-			li .read-more {
+
+			article .read-more {
 				display: inline-flex;
 				align-items: center;
-				gap: var(--space-2xs);
 				color: var(--theme-accent);
-				text-decoration: none;
-				font-weight: bold;
 			}
-			li .read-more:hover {
+
+			article .read-more:hover {
 				text-decoration: underline;
 			}
 		</style>
@@ -108,15 +112,22 @@ function estimateReadingTime(content: string) {
 	<body>
 		<Header />
 		<main>
-			<ul>
+			<div class="posts">
 				{posts.map(async (post) => {
 					const Preview = await getPostPreview(post);
 					const readingTime = estimateReadingTime(post.body || '');
 					return (
-						<li>
-							<time datetime={post.data.pubDate.toISOString()}>
-								<FormattedDate date={post.data.pubDate} />
-							</time>
+						<article>
+							<div class="post-meta">
+								<time datetime={post.data.pubDate.toISOString()} class="flex items-center gap-1">
+									<i class="fas fa-calendar"></i>
+									<FormattedDate date={post.data.pubDate} />
+								</time>
+								<span class="reading-time">
+									<i class="fas fa-clock"></i>
+									{readingTime} min
+								</span>
+							</div>
 							<h2>
 								<a href={`/${post.id}`}>{post.data.title}</a>
 							</h2>
@@ -126,17 +137,16 @@ function estimateReadingTime(content: string) {
 										{typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
 									</div>
 									<div class="meta">
-										<span class="reading-time">{readingTime} min read</span>
 										<a href={`/${post.id}`} class="read-more">
 											Read more <i class="fas fa-arrow-right"></i>
 										</a>
 									</div>
 								</>
 							)}
-						</li>
+						</article>
 					);
 				})}
-			</ul>
+			</div>
 		</main>
 		<Footer />
 	</body>

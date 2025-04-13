@@ -1,0 +1,101 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+import PageTitle from '../components/PageTitle.astro';
+
+const poems = await getCollection('poems');
+
+// Group poems by year
+const poemsByYear = poems.reduce((acc, poem) => {
+	const year = poem.data.pubDate.getFullYear();
+	if (!acc[year]) {
+		acc[year] = [];
+	}
+	acc[year].push(poem);
+	return acc;
+}, {} as Record<number, typeof poems>);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Poems - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<style>
+			.poems {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			article {
+				margin-bottom: 4rem;
+			}
+
+			article .poem-meta {
+				display: flex;
+				align-items: center;
+				gap: var(--space-xs);
+				margin-bottom: var(--space-s);
+			}
+
+			article time {
+				color: var(--theme-secondary);
+				font-size: var(--font-size-small);
+			}
+
+			article h2 {
+				margin: 0 0 var(--space-s) 0;
+			}
+
+			article h2 a {
+				text-decoration: none;
+				color: inherit;
+			}
+
+			article h2 a:hover {
+				color: var(--theme-accent);
+			}
+
+			article .content {
+				margin: var(--space-s) 0;
+				white-space: pre-line;
+			}
+
+			article .content :global(p) {
+				margin: var(--space-s) 0;
+			}
+
+			article .content :global(p:first-child) {
+				margin-top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<PageTitle title="Poems" />
+			<div class="poems">
+				{poems.map((poem) => (
+					<article>
+						<div class="poem-meta">
+							<time datetime={poem.data.pubDate.toISOString()}>
+								<FormattedDate date={poem.data.pubDate} />
+							</time>
+						</div>
+						<h2>
+							<a href={`/poems/${poem.id}`}>{poem.data.title}</a>
+						</h2>
+						<div class="content">
+							{poem.body}
+						</div>
+					</article>
+				))}
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html> 

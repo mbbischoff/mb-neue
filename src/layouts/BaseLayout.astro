@@ -17,18 +17,12 @@ const { title, description = '' } = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
 	<body>
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
+		<div id="page-container">
+			<Header />
+			<main>
+				<slot />
+			</main>
+			<Footer />
+		</div>
 	</body>
 </html>
-
-<style>
-	main {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: var(--space-l) var(--space-s);
-	}
-</style> 

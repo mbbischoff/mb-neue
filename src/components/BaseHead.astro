@@ -2,7 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE, SITE_TITLE_SHORT } from '../config';
 
 interface Props {
 	title: string;
@@ -35,7 +35,7 @@ const { title, description, image = '' } = Astro.props;
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
+<title>{title} ••• {SITE_TITLE}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 

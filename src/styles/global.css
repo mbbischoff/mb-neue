@@ -8,10 +8,17 @@
 
 :root {
 	/* Theme Colors */
-	--theme-accent: #0ea5e9;
-	--theme-accent-hover: #0284c7;
-	--theme-secondary: #64748b;
-	--theme-secondary-hover: #475569;
+	--theme-bg: #ffffff;
+	--theme-text: black;
+	--theme-border: black;
+	--theme-accent: red;
+	--theme-accent-hover: black;
+	--theme-secondary: gray;
+	--theme-secondary-hover: lightgray;
+	--dot-color: rgba(0, 0, 0, 0.1);
+
+	/* Typography */
+	--font-size-small: 0.8em;
 
 	/* Utopia Spacing System */
 	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
@@ -25,6 +32,30 @@
 	--space-3xl: clamp(6rem, calc(5.73rem + 1.13vw), 6.75rem);
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--theme-bg: #000000;
+		--theme-text: #ffffff;
+		--theme-border: #1f2937;
+		--theme-accent: #fb7185;
+		--theme-accent-hover: #f43f5e;
+		--theme-secondary: #22d3ee;
+		--theme-secondary-hover: #06b6d4;
+		--dot-color: rgba(251, 113, 133, 0.1);
+	}
+}
+
+@keyframes fadeInScale {
+	0% {
+		opacity: 0;
+		transform: scale(0.98);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 body {
 	font-family: 'Berkeley Mono', monospace;
 	margin: 0;
@@ -32,9 +63,19 @@ body {
 	text-align: left;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	font-size: 16px;
-	line-height: 1.5;
-	font-variation-settings: 'wght' 400;
+	font-size: 18px;
+	line-height: 1.6;
+	font-weight: 400;
+	color: var(--theme-text);
+	width: calc(100% - 2em);
+	background: var(--theme-bg);
+}
+
+main {
+	width: 800px;
+	max-width: calc(100% - 2em);
+	margin: 0 auto;
+	padding: var(--space-l) var(--space-s);
 }
 
 h1, h2, h3, h4, h5, h6 {
