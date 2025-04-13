@@ -70,7 +70,7 @@ const { minimalLayout = false } = Astro.props;
   }
 
   .site-title {
-    font-size: var(--font-size-huge);
+    font-size: var(--step-5);
     line-height: 1;
     margin: 0 0 var(--space-m) 0;
     color: var(--theme-accent);
@@ -107,7 +107,7 @@ const { minimalLayout = false } = Astro.props;
   }
 
   .site-title.minimal {
-    color: var(--theme-secondary);
+    color: var(--theme-text);
   }
 
   .site-title.minimal a:hover {
@@ -117,11 +117,8 @@ const { minimalLayout = false } = Astro.props;
   .site-description {
     text-align: center;
     margin-bottom: var(--space-s);
-    font-size: clamp(0.8rem, 2vw, var(--font-size-large));
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+    font-size: var(--step--0);
+	text-wrap: balance;
   }
 
   .first-name {
@@ -185,24 +182,6 @@ const { minimalLayout = false } = Astro.props;
     color: var(--theme-secondary);
   }
 
-  .pronouns {
-    font-size: 0.7em;
-  }
-
-  @media (max-width: 600px) {
-    .site-description {
-      white-space: normal;
-    }
-    .pronouns {
-      display: none;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .pronouns {
-      display: none;
-    }
-  }
 
   .title-row {
     display: flex;
