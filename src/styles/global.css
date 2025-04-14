@@ -113,6 +113,17 @@ body {
   background: var(--theme-bg);
 }
 
+blockquote {
+  margin: var(--space-xs) 0;
+  padding: var(--space-3xs) var(--space-s);
+  border-left: 2px solid var(--theme-accent);
+  background-color: var(--theme-background-offset);
+  border-radius: 12px;
+  font-style: italic;
+  color: var(--theme-secondary);
+  line-height: 1.5;
+}
+
 .container {
   padding: 0 1rem;
 }
