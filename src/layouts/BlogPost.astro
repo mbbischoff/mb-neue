@@ -106,11 +106,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     .content :global(li) {
       margin-bottom: 0.5em;
     }
-    .content :global(blockquote) {
-      margin: 1.5em 0;
-      padding: 0.5em 1em;
-      border-left: 0.25em solid rgb(var(--gray));
-      background-color: rgb(var(--gray-light));
+ 
+
+    .content :global(blockquote p) {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .content :global(blockquote p:last-child) {
+      margin-bottom: 0;
     }
     .content :global(code) {
       background-color: rgb(var(--gray-light));
