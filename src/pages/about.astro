@@ -2,11 +2,78 @@
 import BaseHead from '../components/BaseHead.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageTitle from '../components/PageTitle.astro';
+import Image from '../components/Image.astro';
 ---
 
 <BaseLayout title="About">
   <article class="wrapper">
+
+
     <PageTitle title="About" />
-    <p>This is the about page.</p>
+
+    <div style="float: right; padding-left: var(--space-s);">
+      <Image
+        src="../public/images/avatar.jpg"
+        alt="Photo of mb bischoff looking at their phone waring a leather jacket in a park"
+        class="profile-image"
+        width={128}
+        loading="eager"
+        style="border-radius: 50%;"
+      />
+    </div>
+
+    
+
+    <p>
+      <strong class="full-name">mb bischoff</strong> <small class="text-secondary">(she/they)</small> is a designer & developer in New York City.<sup>1</sup> She is the co-founder & CEO of <a href="https://lickability.com">Lickability</a>, a software studio known for making apps for clients like The Atlantic, Mastodon, and The New Yorker.
+    </p>
+
+    <p>
+      mb began blogging and podcasting in 2003 and got their start in tech as IT Director of <a href="https://www.podcastpeople.com/">PodcastPeople</a> at age 13. After high school, they studied human-computer interaction at the <a href="https://www.njit.edu/">New Jersey Institute of Technology</a>, before <a href="https://matthewbischoff.com/don-t-go-to-college/">dropping out</a> to join the mobile team at <a href="https://www.nytimes.com/">The New York Times</a>. She worked at <a href="https://www.tumblr.com/">Tumblr</a> during its heyday, as an engineer, engineering manager, and product manager.
+    </p>
+
+    <p>
+      All the while, mb and their business partners were working to grow Lickability from a side project into the <a href="https://lickability.com/about">ten-person team</a> it is today. In 2015, mb went full-time at the company, and since then, she's worn multiple hats as a product manager, software engineer, sales lead, and token extrovert.
+    </p>
+
+    <p>
+      mb is an acclaimed speaker, giving <a href="https://matthewbischoff.com/category/talks/">talks</a> at conferences around the globe focused on the intersections of technology and culture. They write about these and other topics <a href="https://mbbischoff.com">here</a> and on the <a href="https://lickability.com/blog/">company blog</a>.
+    </p>
+
+    <p>
+      In their spare time, mb enjoys crafting classic cocktails, seeing live theatre, and editing Wikipedia. She's proudly bisexual, trans, & nonbinary. Oh yeah, and <a href="https://www.j-archive.com/showgame.php?game_id=3342">they were on Jeopardy!</a>
+    </p>
+
+    <h2>Work</h2>
+
+    <h3>Apps</h3>
+    <!-- TODO: Add apps list -->
+
+    <h3>Talks</h3>
+    <!-- TODO: Add talks list -->
+
+    <h2>Appearances</h2>
+
+    <h3>Podcasts</h3>
+    <!-- TODO: Add podcasts list -->
+
+    <h3>Press</h3>
+    <!-- TODO: Add press list -->
+
+    <h2>Elsewhere</h2>
+
+    <p>You can <a href="/contact">contact mb here</a> or find them online in all of these places:</p>
+
+    <!-- TODO: Add social links list -->
+
+    <h2>Colophon</h2>
+
+    <ul>
+      <li>Published with <a href="https://astro.build">Astro</a>, hosted on <a href="https://github.com/mbbischoff/mbbischoff.com">GitHub</a>, and deployed via <a href="https://pages.github.com">Pages</a>.</li>
+      <li>Type is set in <a href="https://rsms.me/inter/">Inter</a>, <a href="https://recursive.design/">Recursive</a>, & <a href="https://berkeleygraphics.com/typefaces/berkeley-mono/">Berkeley Mono</a>.</li>
+      <li>Photos by Ashe of <a href="https://www.roseglass.pictures">Rose Glass Photography</a>.</li>
+    </ul>
+
+    <p class="text-secondary"><small><sup>1</sup> Formerly known as Matthew Bischoff.</small></p>
   </article>
 </BaseLayout>

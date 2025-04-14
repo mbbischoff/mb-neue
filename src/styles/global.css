@@ -235,10 +235,6 @@ ul {
   margin-block: var(--space-s);
 }
 
-li {
-  margin-block: 0.75em;
-}
-
 .mono {
   font-family: var(--font-family-mono);
 }
@@ -266,4 +262,9 @@ ol li {
   padding: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
