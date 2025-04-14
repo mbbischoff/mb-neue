@@ -114,7 +114,7 @@ function sanitizeHtml(html: string) {
     }
 
     .post-link:hover {
-      color: var(--theme-accent);
+      color: inherit;
     }
 
     article .post-content {
@@ -146,8 +146,11 @@ function sanitizeHtml(html: string) {
 
     article h2 {
       margin: 0 0 var(--space-2xs) 0;
-      color: inherit;
       transition: color 0.2s ease;
+      color: var(--theme-text);
+    }
+
+    article h2:hover {
       color: var(--theme-accent);
     }
 
