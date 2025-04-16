@@ -29,8 +29,10 @@ const postsByYear = posts.reduce(
 
   <PageTitle title="Archive" />
   {
-    Object.entries(postsByYear).map(([year, yearPosts]) => (
-      <PostList posts={yearPosts} year={year} />
-    ))
+    Object.entries(postsByYear)
+      .sort((a, b) => Number(b[0]) - Number(a[0])) // Sort years in descending order
+      .map(([year, yearPosts]) => (
+        <PostList posts={yearPosts} year={year} />
+      ))
   }
 </BaseLayout>
