@@ -3,7 +3,7 @@ title: Gender Update
 pubDate: '2024-07-14'
 description: Today marks 5 years since I came out as trans on the internet.
   Time for a little ✨ gender update ✨.
-image: /uploads/Gender%20Update-cbdbb0.png
+image: /images/Gender%20Update-cbdbb0.png
 tags:
 - gender
 - trans
@@ -14,7 +14,7 @@ original_jekyll:
   date: 2024-07-14 13:30:00-04:00
   format: short
   picture:
-    png_image: /uploads/Gender%20Update.png
+    png_image: /images/Gender%20Update.png
     width: 1170
     height: 2556
     alt: "A version history screenshot that looks like the App Store.\n\n33.5 (now)\n\
@@ -36,4 +36,4 @@ original_jekyll:
 
 💖 Check the release notes for all the details!
 
-![Gender Update.png](/uploads/Gender%20Update.png)
+![Gender Update.png](/images/Gender%20Update.png)

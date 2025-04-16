@@ -1,7 +1,7 @@
 ---
 title: John Mulaney & Colbert on Anxiety
 pubDate: '2020-01-28'
-image: /uploads/john-mulaney-stephen-colbert.jpg
+image: /images/john-mulaney-stephen-colbert.jpg
 tags:
 - john mulaney
 - stephen colber

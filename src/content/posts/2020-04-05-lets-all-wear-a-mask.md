@@ -7,7 +7,7 @@ description: 'A very persuasive essay from Maciej Cegłowski, the founder of Pin
   that everyone do the same. It’s also worth reading [Ben Thompson’s take](https://stratechery.com/2020/unmasking-twitter/)
   and checking out these [simple mask-making instructions](https://ragmask.com) from
   Loren Brichter.  '
-image: /uploads/debonair_mask_man.jpg
+image: /images/debonair_mask_man.jpg
 tags:
 - masks
 - coronavirus

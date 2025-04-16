@@ -9,7 +9,7 @@ description: Last summer, I visited Toronto to see my wife after being separated
   bags while my phone buzzes with irrelevant notifications and my heart rate skyrockets.
   So, I decided to use the trip as a test of the iOS 15 Focus feature and make travel
   less anxiety-inducing in the process.
-image: /uploads/travel-homescreen.PNG
+image: /images/travel-homescreen.PNG
 tags:
 - travel
 - focus modes
@@ -30,7 +30,7 @@ original_jekyll:
     rate skyrockets. So, I decided to use the trip as a test of the iOS 15 Focus feature
     and make travel less anxiety-inducing in the process.
   picture:
-    png_image: /uploads/travel-homescreen.PNG
+    png_image: /images/travel-homescreen.PNG
 ---
 
 Last summer, I visited Toronto to see [my wife](https://twitter.com/girly_juice) after being separated by pandemic-related border closures for months. While preparing for the trip, I realized that no matter how much I travel, it’s always a little stressful and now moreso with the addition of necessary safety measures like testing and vaccine checks. Add the difficulties of quickly finding boarding passes, managing delays, and tracking bags while my phone buzzes with irrelevant notifications and my heart rate skyrockets. So, I decided to use the trip as a test of the [iOS 15 Focus feature](https://support.apple.com/en-us/HT212608) and make travel less anxiety-inducing in the process.
@@ -47,7 +47,7 @@ I found that this automation made the process of international air travel a lot 
 
 *[Set up in Settings → Focus](https://support.apple.com/en-us/HT212608)*
 
-![Travel Focus Settings Screenshot](/uploads/travel-focus.PNG)
+![Travel Focus Settings Screenshot](/images/travel-focus.PNG)
 
 🔴 **Allowed Notifications**: Messages from friends, family, Find My, Kindle, Flighty, App in The Air, Uber, and any time-sensitive notifications  
 ⛔️ **Focus Status**: Off. I don’t need to telegraph to the whole world that I’m unavailable because I still check other notifications, just less frequently  
@@ -59,7 +59,7 @@ I found that this automation made the process of international air travel a lot 
 
 *[Create and hide a home screen](https://support.apple.com/en-me/HT211345) via the page dots while in editing mode*
 
-![Travel Home Screen Screenshot](/uploads/travel-homescreen.PNG)
+![Travel Home Screen Screenshot](/images/travel-homescreen.PNG)
 
 I include widgets from:
 
@@ -74,7 +74,7 @@ I include widgets from:
 
 *Set up in the [Apple Watch app](https://support.apple.com/guide/watch/faces-and-features-apde9218b440/watchos) or on your watch, then [use Shortcuts automation](https://appleinsider.com/articles/20/09/28/how-to-automatically-change-apple-watch-faces-at-certain-times-or-places) to change to it when in the Travel focus*
 
-![Apple Watch Lock Screen Screenshot](/uploads/watch.PNG){: .center}
+![Apple Watch Lock Screen Screenshot](/images/watch.PNG){: .center}
 
 The watch displays what I need to glance at most while in line or moving around the airport. I use the Infograph Modular face to pack a lot of info on screen at once.
 

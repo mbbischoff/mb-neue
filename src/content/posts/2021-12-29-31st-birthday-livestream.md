@@ -4,7 +4,7 @@ pubDate: '2021-12-29'
 description: 'Last year for my 30th birthday, we raised over $7,000 for charity on
   a super fun livestream. This year, we’ll once again be gathering with my pals online
   and streaming Jackbox Games to raise money for The Audre Lorde Project:'
-image: /uploads/Square.png
+image: /images/Square.png
 tags:
 - me
 - charity
@@ -19,7 +19,7 @@ original_jekyll:
     on a super fun livestream. This year, we’ll once again be gathering with my pals
     online and streaming Jackbox Games to raise money for The Audre Lorde Project:'
   picture:
-    png_image: /uploads/Square.png
+    png_image: /images/Square.png
     width: 1080
     height: 1080
     alt: '@mb''s charity livestream poster'

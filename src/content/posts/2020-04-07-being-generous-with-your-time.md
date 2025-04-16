@@ -4,7 +4,7 @@ pubDate: '2020-04-07'
 description: If you’re in tech and wanna talk to one of the kindest, smartest folks
   I know, you can [sign up for his office hours here](https://calendly.com/brianmichel/open-office-hours).
   I know I just did.
-image: /uploads/119caf7986dfcbbdd4e060bbd21c4359_400x400.jpeg
+image: /images/119caf7986dfcbbdd4e060bbd21c4359_400x400.jpeg
 tags:
 - tech
 - management

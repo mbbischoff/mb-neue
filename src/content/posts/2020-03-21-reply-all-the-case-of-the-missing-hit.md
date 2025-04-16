@@ -6,7 +6,7 @@ description: After seeing this recent episode of Reply All recommended everywher
   interested in music, mysteries, obsessiveness, journalism, or the intersections
   thereof. Also, if you want more like this, go back and listen to [Mystery Show](https://gimletmedia.com/shows/mystery-show).
   RIP.
-image: /uploads/replyall.jpeg
+image: /images/replyall.jpeg
 tags:
 - podcast
 - reply all

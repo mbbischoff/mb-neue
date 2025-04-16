@@ -3,7 +3,7 @@ title: Professional Ghostbusting
 pubDate: '2019-01-07'
 description: Why do people stop answering your emails at work, and how can you stop
   it?
-image: /uploads/ghostbusters.jpg
+image: /images/ghostbusters.jpg
 tags:
 - work
 - email
@@ -18,7 +18,7 @@ original_jekyll:
     it?
 ---
 
-![Ghostbusters](/uploads/ghostbusters.jpg)
+![Ghostbusters](/images/ghostbusters.jpg)
 
 It’s scary how much email I get at work. Despite [Slack](https://slack.com "Slack")’s best efforts, much of the business world still “runs on email.” In 2019, the inboxes in my life are brimming with messages from new leads, existing clients, potential vendors, folks trying to network or ask for advice, and lots of transactional bullshit: newsletters, password resets, and spam. I’m sure your inboxes feel just as overwhelming. So it’s no surprise that folks (me included) sometimes get behind on responding to their email.
 

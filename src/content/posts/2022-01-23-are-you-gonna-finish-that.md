@@ -6,7 +6,7 @@ description: You don’t have to complete everything. You don’t need to be in 
   someone who knows their worth and knows what they want. Letting go of one thing
   can give you space to start something new that will serve you better. And if you
   regret your decision, it’ll still be there when you’re ready to pick it up again.
-image: /uploads/Books.webp
+image: /images/Books.webp
 tags:
 - advice
 - wisdom

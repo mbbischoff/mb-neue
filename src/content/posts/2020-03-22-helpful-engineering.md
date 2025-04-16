@@ -3,7 +3,7 @@ title: Helpful Engineering
 pubDate: '2020-03-22'
 description: Helpful Engineering is designing, sourcing and executing projects to
   help people suffering from the COVID-19 crisis worldwide.
-image: /uploads/cropped-HelpfulEngineering_logo_color_rgb_500px.png
+image: /images/cropped-HelpfulEngineering_logo_color_rgb_500px.png
 tags:
 - coronavirus
 - engineering

@@ -7,7 +7,7 @@ description: I turned 30 years old today so I spent some time this afternoon ref
   feels fitting considering how useful and applicable they’ve been for me. Each one
   of them has helped me during critical moments in my life so far. I hope you find
   even just one of them helpful in yours. See you tonight. ❤️
-image: /uploads/30-c9d5e0.png
+image: /images/30-c9d5e0.png
 tags:
 - me
 - lessons

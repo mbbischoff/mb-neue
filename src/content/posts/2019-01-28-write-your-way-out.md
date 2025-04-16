@@ -3,7 +3,7 @@ title: Write Your Way Out
 pubDate: '2019-01-28'
 description: A talk I gave at Release Notes 2016 about writing and how important it
   is for programmers, product managers, and owners of software companies.
-image: /uploads/release-notes-2016.jpg
+image: /images/release-notes-2016.jpg
 tags:
 - talks
 - writing

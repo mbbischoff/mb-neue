@@ -3,7 +3,7 @@ title: Scorecard Beta
 pubDate: '2020-01-17'
 description: Hey! Do you love playing board games and tabletop games? Do you want
   to help beta test a new iOS app from Lickability and send us your feedback?
-image: /uploads/scorecard.jpeg
+image: /images/scorecard.jpeg
 tags:
 - scorecard
 - lickability

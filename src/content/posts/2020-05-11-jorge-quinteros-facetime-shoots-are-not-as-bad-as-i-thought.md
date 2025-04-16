@@ -3,7 +3,7 @@ title: 'FaceTime Shoots Are Not as Bad as I Thought'
 pubDate: '2020-05-11'
 description: Absolutely gorgeous portraiture from my friend Jorge, shot entirely over
   FaceTime. Another perfect example of constraints breeding creativity.
-image: /uploads/1589198711-95660-cassie-facetime-1jpg.jpg
+image: /images/1589198711-95660-cassie-facetime-1jpg.jpg
 tags:
 - photography
 - coronavirus

@@ -3,7 +3,7 @@ title: Code is Prose
 pubDate: '2016-11-26'
 description: Great code reads like great prose. It is succinct, expressive, and clear
   the first time you read it.
-image: /uploads/gates-reading.jpg
+image: /images/gates-reading.jpg
 tags:
 - code
 - writing

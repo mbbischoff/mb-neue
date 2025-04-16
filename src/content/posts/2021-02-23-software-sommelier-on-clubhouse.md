@@ -9,7 +9,7 @@ description: 'A few years ago, I let folks on Twitter ask for software recommend
   This Friday at 3 PM ET, I’m experimenting with a version of the same thing on Clubhouse.
   Co-hosted by my friend and colleague, Jillian Meehan. It’ll be be a fun, nerdy time
   and we’d love to hear you there.'
-image: /uploads/Screen%20Shot%202021-02-23%20at%2012.21.27%20PM.png
+image: /images/Screen%20Shot%202021-02-23%20at%2012.21.27%20PM.png
 tags:
 - me
 - clubhouse

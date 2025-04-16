@@ -6,7 +6,7 @@ description: I’m not much of a gamer, but I am a nerd about the creative proce
   where he is chronicleing the creation of a game called _Perils of the Overworld_.
   Consider subscribing if you’re nerdy about maps, game making, typography, sound
   design, or interactive fiction. 🗺
-image: /uploads/elfreth.png
+image: /images/elfreth.png
 tags:
 - robin sloan
 - games

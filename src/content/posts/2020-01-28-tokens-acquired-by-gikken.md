@@ -1,7 +1,7 @@
 ---
 title: Tokens Acquired by Gikken
 pubDate: '2020-01-28'
-image: /uploads/B44B1E9D-DA56-40AE-93BE-78BD7226475D.png
+image: /images/B44B1E9D-DA56-40AE-93BE-78BD7226475D.png
 tags:
 - ios
 - programming

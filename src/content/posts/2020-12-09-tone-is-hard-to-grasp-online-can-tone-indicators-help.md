@@ -3,7 +3,7 @@ title: Tone Is Hard to Grasp Online. Can Tone Indicators Help?
 pubDate: '2020-12-09'
 description: We all struggle to communicate on the internet. Now, young people are
   leading a sincere effort to clear things up.
-image: /uploads/09toneindicators-promo-superJumbo.jpg.webp
+image: /images/09toneindicators-promo-superJumbo.jpg.webp
 tags:
 - tone indicators
 - language

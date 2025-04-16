@@ -1,7 +1,7 @@
 ---
 title: Why Restaurants Still Can’t Shake Their Sexist Service Etiquette
 pubDate: '2020-01-23'
-image: /uploads/Genderedfood-1280x533.jpg
+image: /images/Genderedfood-1280x533.jpg
 tags:
 - restaurants
 - food service

@@ -2,7 +2,7 @@
 title: The Pinching Hand Emoji Is A Lot
 pubDate: '2019-11-11'
 description: When did Emojipedia get woke?
-image: /uploads/36391D3B-2265-40C0-ADFD-52F0F29B54ED.jpeg
+image: /images/36391D3B-2265-40C0-ADFD-52F0F29B54ED.jpeg
 tags:
 - emoji
 - gender

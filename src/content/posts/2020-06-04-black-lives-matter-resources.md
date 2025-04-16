@@ -5,7 +5,7 @@ description: Things are changing. People around the country and the globe are *f
   recognizing what black people have been telling us forever, that white supremacy
   and police violence are endemic in our culture. If you’re having a hard time figuring
   out what to do right now, Jillian Meehan put together this list of places to start.
-image: /uploads/Black_Lives_Matter_logo.svg.png
+image: /images/Black_Lives_Matter_logo.svg.png
 tags:
 - racism
 - blacklivesmatter

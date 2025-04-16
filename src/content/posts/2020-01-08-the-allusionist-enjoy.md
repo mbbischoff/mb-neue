@@ -1,7 +1,7 @@
 ---
 title: 'The Allusionist: Enjoy'
 pubDate: '2020-01-08'
-image: /uploads/enjoy.jpg
+image: /images/enjoy.jpg
 tags:
 - podcast
 - language

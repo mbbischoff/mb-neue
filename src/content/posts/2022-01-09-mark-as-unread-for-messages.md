@@ -5,7 +5,7 @@ description: For decades, email apps like Gmail, Outlook, and Apple Mail have al
   included a button to mark a message or thread as “unread”. But why? The software
   knows the message has been read; why is it allowing the user to override that truth
   and rewrite history?
-image: /uploads/apple-messages-100798860-orig-1.jpg.webp
+image: /images/apple-messages-100798860-orig-1.jpg.webp
 tags:
 - imessage
 - apple

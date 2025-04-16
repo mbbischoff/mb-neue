@@ -1,7 +1,7 @@
 ---
 title: App Builders CH 2020
 pubDate: '2020-02-10'
-image: /uploads/590B340D-FD58-4CD7-9681-D8F7F69B6321.jpeg
+image: /images/590B340D-FD58-4CD7-9681-D8F7F69B6321.jpeg
 tags:
 - talks
 - conferences

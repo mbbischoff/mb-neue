@@ -8,7 +8,7 @@ description: Just because you don’t know something today doesn’t mean you wo
   discoveries and sharing that journey with the people around you, at work and in
   the rest of your life. And that continuous improvement will accumulate like compound
   interest.
-image: /uploads/4f3fcb2bf4877cb863acc28fb5a4223d.jpg
+image: /images/4f3fcb2bf4877cb863acc28fb5a4223d.jpg
 tags:
 - apple
 - learning

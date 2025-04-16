@@ -5,7 +5,7 @@ description: 'Whether you need some context on yesterday’s Supreme Court cases
   hope for the future, or a reminder that trans people are people: go listen to the
   latest episode of one of my new favorite podcasts, Gender Reveal, hosted by Tuck
   Woodstock.'
-image: /uploads/gender-reveal.jpeg
+image: /images/gender-reveal.jpeg
 tags:
 - gender
 - transgender

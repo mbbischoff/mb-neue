@@ -7,7 +7,7 @@ description: So it’s no wonder I haven’t seen many slide decks while working
   and designers in the room (or the Zoom, as the case may be). But earlier in my career
   as a builder, I used decks to great effect, and you know what? I miss them. In 2022,
   I’m bringing back the deck.
-image: /uploads/release-notes-2016-196b9b.jpg
+image: /images/release-notes-2016-196b9b.jpg
 tags:
 - nytimes
 - keynote

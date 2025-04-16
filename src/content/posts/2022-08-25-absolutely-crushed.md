@@ -4,7 +4,7 @@ pubDate: '2022-08-25'
 description: Imagine you’re at a sleepover with your closest friends talking about
   that hot person they have a crush on and lightly teasing them about it while figuring
   out what makes their crush so attractive.
-image: /uploads/Crushed%202%20Square.jpg
+image: /images/Crushed%202%20Square.jpg
 tags:
 - podcast
 - crush

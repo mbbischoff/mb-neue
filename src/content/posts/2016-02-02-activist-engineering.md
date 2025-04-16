@@ -5,7 +5,7 @@ description: You’ve been there. You’re sitting in a meeting and your boss, a
   manager, or an executive is talking about Q2 goals. They’re laying out a roadmap
   of the features that are going to be “coming down the pike”. All of a sudden you
   see it.
-image: /uploads/engineer-ring.jpg
+image: /images/engineer-ring.jpg
 tags:
 - activism
 - programming

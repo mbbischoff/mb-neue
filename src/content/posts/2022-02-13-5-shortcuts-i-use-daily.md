@@ -3,7 +3,7 @@ title: 5 Shortcuts I Use Daily
 pubDate: '2022-02-13'
 description: Here are 5 of those shortcuts that I use every day, with a brief explanation
   of why they save me so much time and links to download them.
-image: /uploads/shortcuts-guest.webp
+image: /images/shortcuts-guest.webp
 tags:
 - shortucts
 - mac

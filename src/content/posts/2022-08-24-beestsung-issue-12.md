@@ -5,7 +5,7 @@ description: "I’ve been a fan of beestung magazine, a quarterly publication th
   \ poetry by nonbinary writers since I discovered it a few years ago. This week,\
   \ they published issue 12 on the theme of trans futures, guest edited by Cavar.\
   \ \n"
-image: /uploads/beestung.png
+image: /images/beestung.png
 tags:
 - poetry
 - me
@@ -21,7 +21,7 @@ original_jekyll:
   format: link
   link: https://beestungmag.com/issues/
   picture:
-    png_image: /uploads/beestung.png
+    png_image: /images/beestung.png
     width: 1104 
     height: 1130
     alt: A screenshot of the beenstung website

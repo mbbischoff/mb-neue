@@ -6,7 +6,7 @@ description: 'The latest episode of 99% Invisible details the history of and hop
   many other axes of accessibility, Susan Stryker and the other members of a project
   called Stalled! have recently won a major victory in the International Building
   Code that will allow for better bathrooms for *everyone*. In her words: '
-image: /uploads/20180318ULAxonLights.jpg
+image: /images/20180318ULAxonLights.jpg
 tags:
 - gender
 - transgender

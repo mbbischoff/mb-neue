@@ -10,7 +10,7 @@ description: I was first introduced to the phrase “thought technology” by Me
   technologies in the sense that, like a hammer or a pencil, they can be used to solve
   problems. Sometimes having the *right* thought at the right time is all you need
   to move forward, break through, or get unstuck.
-image: /uploads/keep-moving.png
+image: /images/keep-moving.png
 tags:
 - merlin mann
 - john roderick
@@ -40,7 +40,7 @@ original_jekyll:
     you need to move forward, break through, or get unstuck.
   picture:
     webp_image: /uploads/keep-moving.webp
-    png_image: /uploads/keep-moving.png
+    png_image: /images/keep-moving.png
     width: 1024
     height: 1024
     alt: Keep moving & get out of the way.

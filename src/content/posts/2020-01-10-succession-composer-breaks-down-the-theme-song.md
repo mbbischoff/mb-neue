@@ -1,7 +1,7 @@
 ---
 title: Succession Composer Breaks Down the Show’s Score
 pubDate: '2020-01-10'
-image: /uploads/succession-theme-britell.jpg
+image: /images/succession-theme-britell.jpg
 tags:
 - sucession
 - tv

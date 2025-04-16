@@ -4,7 +4,7 @@ pubDate: '2020-03-21'
 description: “We could survive a month and a half on delivery,” said Nicholas Ruiz,
   general manager at Patent Pending. “We’re just trying to be a little beam of light
   for some people.”
-image: /uploads/dante-delivery.jpg
+image: /images/dante-delivery.jpg
 tags:
 - cocktails
 - coronavirus

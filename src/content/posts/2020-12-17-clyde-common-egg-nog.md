@@ -8,7 +8,7 @@ description: 'For the last few years, every time the holidays roll around, I mak
   a batch. 🎁
 
   '
-image: /uploads/Article-Clyde-Common-Jeffrey-Morgenthaler-Tequila-Sherry-Egg-Nog-Holiday-Cocktail-Recipe.jpg
+image: /images/Article-Clyde-Common-Jeffrey-Morgenthaler-Tequila-Sherry-Egg-Nog-Holiday-Cocktail-Recipe.jpg
 tags:
 - cocktails
 - egg nog

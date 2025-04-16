@@ -5,7 +5,7 @@ description: 'I’m an extrovert, and lately it’s felt so good to be able to s
   meet people again that I want to do a lot more of that in the next few months.
 
   '
-image: /uploads/Screen%20Shot%202021-06-14%20at%2012.03.21%20PM.png
+image: /images/Screen%20Shot%202021-06-14%20at%2012.03.21%20PM.png
 tags:
 - new york
 - me

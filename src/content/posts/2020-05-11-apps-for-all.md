@@ -7,7 +7,7 @@ description: 'What does it take to build software that’s truly usable for as m
   This morning, I’m giving a talk on this topic called Apps for All: Making Software
   Accessible at App Builders CH 2020. The presentation focuses on improving the accessibility
   of the software we build.'
-image: /uploads/Apps%20for%20All.png
+image: /images/Apps%20for%20All.png
 tags:
 - accessibility
 - ios
@@ -45,7 +45,7 @@ This talk relies a lot on audio, video, and demos, but [here are the slides](htt
 
 [Felizia Bernutz](https://twitter.com/felibe444) also posted these incredible [sketchnotes](https://en.wikipedia.org/wiki/Sketchnoting) from the talk.
 
-![Apps for All Sketchnotes](/uploads/appbuilders-apps-for-all.jpg)
+![Apps for All Sketchnotes](/images/appbuilders-apps-for-all.jpg)
 
 ## Resources
 

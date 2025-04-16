@@ -1,7 +1,7 @@
 ---
 title: Making Magic
 pubDate: '2024-06-02'
-image: /uploads/makingmagic.jpg
+image: /images/makingmagic.jpg
 tags:
 - podcast
 - sex

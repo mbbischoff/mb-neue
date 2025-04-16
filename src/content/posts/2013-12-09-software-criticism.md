@@ -12,7 +12,7 @@ original_jekyll:
   date: 2013-12-09 00:00:00-05:00
 ---
 
-![Critica](/uploads/critica.jpg)
+![Critica](/images/critica.jpg)
 
 > Criticism may not be agreeable, but it is necessary. It fulfills the same function as pain in the human body. It calls attention to an unhealthy state of things.
 > <footer><cite>Winston Churchill</cite></footer>

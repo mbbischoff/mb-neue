@@ -7,7 +7,7 @@ description: As I [mentioned the other day](https://matthewbischoff.com/app-crit
   from [Andrew Cote](https://twitter.com/andrewthecope). In this [video](https://www.youtube.com/watch?v=7UN1TR5SfvY),
   I walk through the app as a brand new user and point out some potential areas for
   improvement in the app’s UX and UI.
-image: /uploads/230x0w.png
+image: /images/230x0w.png
 tags:
 - video
 - app critique
