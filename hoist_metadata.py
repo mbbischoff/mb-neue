@@ -68,41 +68,18 @@ def process_post(post_path):
         print(f"Warning: No original_jekyll data found in {post_path}")
         original_jekyll = {}
     
-    # Copy remaining original Jekyll data
-    remaining_jekyll = original_jekyll.copy()
+    # Hoist all values from original_jekyll to top level
+    for key, value in original_jekyll.items():
+        # Skip if key already exists at top level
+        if key not in updated_frontmatter:
+            updated_frontmatter[key] = value
     
-    # Handle description (required field)
+    # Handle description (required field) if not already set
     if 'description' not in updated_frontmatter:
-        if 'description' in original_jekyll:
-            updated_frontmatter['description'] = original_jekyll['description']
-            remaining_jekyll.pop('description', None)
-        elif 'excerpt' in original_jekyll:
-            updated_frontmatter['description'] = original_jekyll['excerpt']
-            remaining_jekyll.pop('excerpt', None)
-        else:
-            # Extract from content as fallback
-            updated_frontmatter['description'] = extract_first_paragraph(post_content)
+        # Extract from content as fallback
+        updated_frontmatter['description'] = extract_first_paragraph(post_content)
     
-    # Handle image field
-    if 'image' in original_jekyll:
-        updated_frontmatter['image'] = original_jekyll['image']
-        remaining_jekyll.pop('image', None)
-    elif 'picture' in original_jekyll and 'png_image' in original_jekyll['picture']:
-        updated_frontmatter['image'] = original_jekyll['picture']['png_image']
-        # Keep picture data for reference
-    
-    # Handle tags
-    if 'tags' in original_jekyll:
-        updated_frontmatter['tags'] = original_jekyll['tags']
-        remaining_jekyll.pop('tags', None)
-    
-    # Handle categories
-    if 'categories' in original_jekyll:
-        updated_frontmatter['categories'] = original_jekyll['categories']
-        remaining_jekyll.pop('categories', None)
-    
-    # Keep the rest of the original_jekyll data
-    updated_frontmatter['original_jekyll'] = remaining_jekyll
+    # Note: We don't keep original_jekyll anymore
     
     # Generate new frontmatter text
     updated_frontmatter_text = yaml.dump(
