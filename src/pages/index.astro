@@ -6,7 +6,8 @@ import { FormattedDate } from '../components/FormattedDate.astro';
 import { render } from 'astro:content';
 import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
-import { readingTime } from '../utils/readingTime';
+import { calculateReadingTime } from '../utils/readingTime';
+import { sanitizeHtml } from '../utils/sanitizeHtml';
 import Metadata from '../components/Metadata.astro';
 
 const posts = (await getCollection('posts')).sort(
@@ -31,18 +32,6 @@ async function getPostPreview(post: any) {
     return preview;
   }
 }
-
-function estimateReadingTime(content: string) {
-  const wordsPerMinute = 200;
-  const words = content.trim().split(/\s+/).length;
-  const minutes = Math.ceil(words / wordsPerMinute);
-  return minutes;
-}
-
-function sanitizeHtml(html: string) {
-  // Remove any content that looks like HTML, including incomplete tags
-  return html.replace(/<[^>]*/g, '');
-}
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -50,7 +39,6 @@ function sanitizeHtml(html: string) {
     {
       posts.map(async post => {
         const Preview = await getPostPreview(post);
-        const readingTime = estimateReadingTime(post.body || '');
         return (
           <article>
             <a href={`/${post.id}`} class="post-link no-underline">
@@ -58,7 +46,7 @@ function sanitizeHtml(html: string) {
                 
                   <Metadata 
                     date={post.data.pubDate} 
-                    readingTime={Math.ceil((post.body?.length ?? 0) / 1000)}
+                    readingTime={calculateReadingTime(post.body || '')}
                   />
                 <h2>{post.data.title}</h2>
                 {post.body && (
