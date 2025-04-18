@@ -1,8 +1,9 @@
 ---
 title: App Definition
 pubDate: '2013-07-26'
-original_jekyll:
-  date: 2013-07-26 00:00:00-04:00
+date: 2013-07-26 00:00:00-04:00
+description: <figure> <img src="/uploads/appstorebanner.jpg" alt="App Store Banner"
+  /> <figcaption>Photo courtesy of <a href="http://www.flickr.com/photos/cristianobetta/290...
 ---
 
 <figure>
