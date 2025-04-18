@@ -21,7 +21,7 @@ const { minimalLayout = false } = Astro.props;
           class={`nav-link ${minimalLayout ? 'minimal' : ''}`}
           aria-current={Astro.url.pathname === item.href ? 'page' : undefined}
         >
-          {item.label}
+          {item.icon && <i class={item.icon}></i>} {item.label}
         </HeaderLink>
       ))}
     </nav>
@@ -63,5 +63,10 @@ const { minimalLayout = false } = Astro.props;
     align-items: center;
     justify-content: center;
     gap: var(--space-m);
+  }
+
+  .nav-link i {
+    width: 1em;
+    margin-right: var(--space-3xs);
   }
 </style>

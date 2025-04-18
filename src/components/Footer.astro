@@ -1,10 +1,11 @@
 ---
 import { SITE_TITLE, navigation } from '../config';
+import { socialLinks } from '../data/social';
 ---
 
 <footer role="contentinfo">
   <div class="footer-container">
-    <div class="footer-content">
+    <div class="footer-nav">
       <div class="footer-links">
         <nav aria-label="Footer navigation">
           {
@@ -13,7 +14,8 @@ import { SITE_TITLE, navigation } from '../config';
                 href={item.href}
                 aria-current={Astro.url.pathname === item.href ? 'page' : undefined}
               >
-                {item.label}
+                {item.icon && <i class={`${item.icon} icon-width`}></i>}
+                <span>{item.label}</span>
               </a>
             ))
           }
@@ -21,12 +23,18 @@ import { SITE_TITLE, navigation } from '../config';
       </div>
       <div class="social-links">
         <nav aria-label="Social links">
-          <a href="https://twitter.com/yourusername" rel="me" target="_blank" aria-label="X (Twitter)">𝕏 twitter</a>
-          <a href="https://bsky.app/profile/yourusername" rel="me" target="_blank" aria-label="Bluesky"><span style="font-family: Webdings;">☁</span> bluesky</a>
-          <a href="https://mastodon.social/@yourusername" rel="me" target="_blank" aria-label="Mastodon"><span style="font-family: Webdings;">]</span> mastodon</a>
-          <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram"><span style="font-family: Webdings;">µ</span> instagram</a>
-          <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><span style="font-family: Webdings;">ö</span> github</a>
-          <a href="https://letterboxd.com/yourusername" target="_blank" aria-label="Letterboxd"><span style="font-family: Webdings;">¸</span> letterboxd</a>
+          {
+            socialLinks.map(link => (
+              <a
+                href={link.href}
+                rel={link.rel}
+                target={link.target}
+                aria-label={link.ariaLabel}
+              >
+                 <i class={`${link.icon} icon-width`}></i> {link.label}
+              </a>
+            ))
+          }
         </nav>
       </div>
     </div>
@@ -61,13 +69,14 @@ footer {
     box-sizing: border-box;
 }
 
-.footer-content {
+.footer-nav {
     display: flex;
     flex-direction: column;
     gap: var(--space-l);
     margin-bottom: var(--space-xl);
     align-items: center;
     width: 100%;
+    font-size: var(--step--1);
 }
 
 .footer-links,
@@ -114,7 +123,6 @@ footer {
 }
 
 .footer-text a {
-    font-size: inherit;
     transition: color 0.2s ease-in-out;
 }
 
@@ -132,8 +140,13 @@ footer {
     padding-bottom: 0;
 }
 
+.footer-links i,
+.social-links i {
+    margin-right: var(--space-3xs);
+}
+
 @media (min-width: 768px) {
-    .footer-content {
+    .footer-nav {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;

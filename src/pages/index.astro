@@ -2,20 +2,36 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
-import { FormattedDate } from '../components/FormattedDate.astro';
 import { render } from 'astro:content';
 import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import { calculateReadingTime } from '../utils/readingTime';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
 import Metadata from '../components/Metadata.astro';
+import type { CollectionEntry } from 'astro:content';
+import type { z } from 'astro:content';
+
+type PostData = z.infer<typeof collections.posts.schema>;
+
+interface Post {
+  id: string;
+  body?: string;
+  data: {
+    title: string;
+    pubDate: Date;
+    description: string;
+    updatedDate?: Date;
+    heroImage?: string;
+    format: 'post' | 'short' | 'link';
+  };
+}
 
 const posts = (await getCollection('posts')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-async function getPostPreview(post: any) {
-  const content = post.body;
+async function getPostPreview(post: CollectionEntry<'posts'>) {
+  const content = post.body || '';
   const readMoreIndex = content.indexOf('<!-- more -->');
   const preview = readMoreIndex === -1 ? content : content.slice(0, readMoreIndex);
 
@@ -37,26 +53,27 @@ async function getPostPreview(post: any) {
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="posts">
     {
-      posts.map(async post => {
+      posts.map(async (post) => {
         const Preview = await getPostPreview(post);
+        const format = (post.data as { format?: string }).format || 'post';
         return (
           <article>
             <a href={`/${post.id}`} class="post-link no-underline">
               <div class="post-content">
-                
-                  <Metadata 
-                    date={post.data.pubDate} 
-                    readingTime={calculateReadingTime(post.body || '')}
-                  />
+                <Metadata 
+                  date={post.data.pubDate} 
+                  readingTime={calculateReadingTime(post.body || '')}
+                />
                 <h2>{post.data.title}</h2>
                 {post.body && (
                   <>
-                    <div class="content">
-                      {typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
-                    </div>
-                    <div class="description">
-                      {post.data.description ? sanitizeHtml(post.data.description) : ''}
-                    </div>
+                    {!['short', 'link'].includes(format) && (
+                      <>
+                        <div class="content">
+                          {typeof Preview === 'function' ? <Preview /> : <div set:html={Preview} />}
+                        </div>
+                      </>
+                    )}
                   </>
                 )}
               </div>

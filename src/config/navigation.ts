@@ -6,10 +6,10 @@ export interface NavItem {
 }
 
 export const navigation: NavItem[] = [
-  { href: '/', label: '⌂︎ Home', hideInHeader: true },
-  { href: '/now', label: '⌚︎ Now' },
-  { href: '/archive', label: '⌛︎ Then' },
-  { href: '/poems', label: '⁂ Poems' },
-  { href: '/about', label: '♀ About' },
-  { href: '/contact', label: '✉︎ Contact' },
+  { href: '/', label: 'Home', icon: 'fas fa-home', hideInHeader: true },
+  { href: '/now', label: 'Now', icon: 'fas fa-clock' },
+  { href: '/archive', label: 'Then', icon: 'fas fa-hourglass-end' },
+  { href: '/poems', label: 'Poems', icon: 'fas fa-pen-fancy' },
+  { href: '/about', label: 'About', icon: 'fas fa-venus' },
+  { href: '/contact', label: 'Contact', icon: 'fas fa-hand-peace' },
 ];
