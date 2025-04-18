@@ -18,16 +18,13 @@ categories:
 - tech
 - me
 - appearances
-original_jekyll:
-  date: 2022-02-13 12:30:00-05:00
-  description: Here are 5 of those shortcuts that I use every day, with a brief explanation
-    of why they save me so much time and links to download them.
-  picture:
-    webp_image: /uploads/shortcuts-guest.webp
-    width: 1200
-    height: 675
-    alt: Shortcuts for Mac from a designer & developer's perspective (feat. Matthew
-      Bischoff)
+date: 2022-02-13 12:30:00-05:00
+picture:
+  webp_image: /uploads/shortcuts-guest.webp
+  width: 1200
+  height: 675
+  alt: Shortcuts for Mac from a designer & developer's perspective (feat. Matthew
+    Bischoff)
 ---
 
 {% include youtube.html id="6SBwagMm0jA" %}

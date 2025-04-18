@@ -18,16 +18,9 @@ tags:
 categories:
 - culture
 - shorter
-original_jekyll:
-  date: 2020-04-05 09:35:00-04:00
-  description: 'A very persuasive essay from Maciej Cegłowski, the founder of Pinboard,
-    about the whys and hows of wearing masks in public. I started wearing one yesterday
-    for the limited time I was outside, and the medical community seems to now be
-    recommending that everyone do the same. It’s also worth reading [Ben Thompson’s
-    take](https://stratechery.com/2020/unmasking-twitter/) and checking out these
-    [simple mask-making instructions](https://ragmask.com) from Loren Brichter.  '
-  format: link
-  link: https://idlewords.com/2020/04/let_s_all_wear_a_mask.htm
+date: 2020-04-05 09:35:00-04:00
+format: link
+link: https://idlewords.com/2020/04/let_s_all_wear_a_mask.htm
 ---
 
 > On Friday, the Centers for Disease Control [recommended that every American wear a face covering](https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover.html) when in public. Masks will be the hot, bold look for summer.

@@ -16,18 +16,9 @@ tags:
 categories:
 - tech
 - culture
-original_jekyll:
-  date: 2021-02-23 12:17:00-05:00
-  description: 'A few years ago, I let folks on Twitter ask for software recommendationsfor
-    any problem they need solved with an app. People loved it and I loved helping
-    people find the perfect software solutions to their quandaries.
-
-
-    This Friday at 3 PM ET, I’m experimenting with a version of the same thing on
-    Clubhouse. Co-hosted by my friend and colleague, Jillian Meehan. It’ll be be a
-    fun, nerdy time and we’d love to hear you there.'
-  format: link
-  link: https://www.joinclubhouse.com/event/M4GE3BrR
+date: 2021-02-23 12:17:00-05:00
+format: link
+link: https://www.joinclubhouse.com/event/M4GE3BrR
 ---
 
 A few years ago, I let folks on Twitter [ask for software recommendations](https://twitter.com/mb/status/893848739437305856) for any problem they need solved with an app. People loved it and I loved helping people find the perfect software solutions to their quandaries.

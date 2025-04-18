@@ -8,10 +8,12 @@ tags:
 - money
 categories:
 - culture
-original_jekyll:
-  date: 2022-01-24 19:11:00-05:00
-  format: link
-  link: https://milan.cvitkovic.net/writing/things_youre_allowed_to_do/
+date: 2022-01-24 19:11:00-05:00
+format: link
+link: https://milan.cvitkovic.net/writing/things_youre_allowed_to_do/
+description: '> This is a list of things you’re allowed to do that you thought you
+  couldn’t, or didn’t even know you could. > > I haven’t tried everything on this
+  list, mainl...'
 ---
 
 > This is a list of things you’re allowed to do that you thought you couldn’t, or didn’t even know you could.

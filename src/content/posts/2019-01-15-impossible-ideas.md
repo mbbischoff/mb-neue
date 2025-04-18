@@ -1,7 +1,8 @@
 ---
 title: Impossible Ideas
 pubDate: '2019-01-15'
-description: Why software engineers should embrace creative thinking and stop dismissing ideas as impossible.
+description: Why software engineers should embrace creative thinking and stop dismissing
+  ideas as impossible.
 image: /images/cleese.jpg
 tags:
 - creativity
@@ -10,9 +11,7 @@ tags:
 categories:
 - culture
 - longer
-original_jekyll:
-  date: 2019-01-15 00:00:00-05:00
-  description: Why software engineers should embrace creative thinking and stop dismissing ideas as impossible.
+date: 2019-01-15 00:00:00-05:00
 ---
 
 ![John Cleese](/images/cleese.jpg)

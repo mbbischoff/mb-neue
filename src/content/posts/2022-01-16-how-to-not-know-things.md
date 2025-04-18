@@ -16,15 +16,7 @@ tags:
 - advice
 categories:
 - culture
-original_jekyll:
-  date: 2022-01-16 15:55:00-05:00
-  description: Just because you don’t know something today doesn’t mean you won’t
-    know it tomorrow. If you cultivate an attitude that faces the unknown with curiosity,
-    sharing, and experimentation, rather than blame, fear, and intransigence, you
-    might just get a bit smarter every day. You’ll learn much more by remaining open
-    to new discoveries and sharing that journey with the people around you, at work
-    and in the rest of your life. And that continuous improvement will accumulate
-    like compound interest.
+date: 2022-01-16 15:55:00-05:00
 ---
 
 In May 2010, I was offered a job at the [Apple Store at the King of Prussia Mall](https://www.apple.com/retail/kingofprussia/), one of the biggest shopping destinations in the United States. It was my first and only retail job, and in my three months working there, I became the top-selling salesperson (or as Apple called it, “Specialist”) on the sales floor (or as Apple called it, “The Red Zone”). I did this by sharing my passion, knowledge, and care with every customer. But I also did it by Googling a lot, by installing lots of apps for customers to check that they’d work, and by getting a little better every day.

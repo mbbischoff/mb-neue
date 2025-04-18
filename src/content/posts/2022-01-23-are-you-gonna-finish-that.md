@@ -14,19 +14,13 @@ tags:
 - media
 categories:
 - culture
-original_jekyll:
-  date: 2022-01-23 19:01:00-05:00
-  description: You don’t have to complete everything. You don’t need to be in it for
-    the long haul. Quitting something doesn’t make a quitter. Instead, it makes you
-    someone who knows their worth and knows what they want. Letting go of one thing
-    can give you space to start something new that will serve you better. And if you
-    regret your decision, it’ll still be there when you’re ready to pick it up again.
-  picture:
-    webp_image: /uploads/Books.webp
-    jpeg_image: /uploads/Books.jpg
-    width: 2048
-    height: 1356
-    alt: Stack of Books
+date: 2022-01-23 19:01:00-05:00
+picture:
+  webp_image: /uploads/Books.webp
+  jpeg_image: /uploads/Books.jpg
+  width: 2048
+  height: 1356
+  alt: Stack of Books
 ---
 
 {% include picture.html %}

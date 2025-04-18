@@ -8,8 +8,10 @@ categories:
 - tech
 - culture
 - longer
-original_jekyll:
-  date: 2013-12-09 00:00:00-05:00
+date: 2013-12-09 00:00:00-05:00
+description: '> Criticism may not be agreeable, but it is necessary. It fulfills the
+  same function as pain in the human body. It calls attention to an unhealthy state
+  of thin...'
 ---
 
 ![Critica](/images/critica.jpg)

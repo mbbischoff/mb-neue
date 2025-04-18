@@ -6,8 +6,10 @@ tags:
 - nytimes
 categories:
 - longer
-original_jekyll:
-  date: 2013-10-05 00:00:00-04:00
+date: 2013-10-05 00:00:00-04:00
+description: A month ago, on September 4<sup>th</sup>, I finished my last day as a
+  senior iOS engineer at The New York Times. Two years there taught me a lot about
+  building...
 ---
 
 ![The New York Times Building](/images/nytimes_building.jpg)

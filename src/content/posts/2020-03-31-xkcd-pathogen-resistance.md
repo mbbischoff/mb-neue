@@ -10,11 +10,9 @@ tags:
 - pasta
 categories:
 - culture
-original_jekyll:
-  date: 2020-03-31 09:38:00-04:00
-  description: This xkcd is exactly what I needed today. Well, that, and some pasta.
-  format: link
-  link: https://xkcd.com/2287/
+date: 2020-03-31 09:38:00-04:00
+format: link
+link: https://xkcd.com/2287/
 ---
 
 ![We're not not trapped in here with the coronavirus. The coronavirus is trapped in here with us.](/images/pathogen_resistance.png){:.lazyload}

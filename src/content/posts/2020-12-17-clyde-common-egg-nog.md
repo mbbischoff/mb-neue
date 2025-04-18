@@ -18,15 +18,7 @@ tags:
 categories:
 - culture
 - shorter
-original_jekyll:
-  date: 2020-12-17 10:16:00-05:00
-  description: 'For the last few years, every time the holidays roll around, I make
-    a big batch of Jeffrey Morgenthaler’s Clyde Common Egg Nog for my family and friends.
-    Since I won’t be seeing them this year due to the pandemic, I made a video showing
-    everyone how to make it. Enjoy! And let me know what you think if you end up making
-    a batch. 🎁
-
-    '
+date: 2020-12-17 10:16:00-05:00
 ---
 
 {% include youtube.html id="9T-cRosrXCc" %}

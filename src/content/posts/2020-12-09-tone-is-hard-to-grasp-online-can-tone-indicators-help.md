@@ -12,13 +12,10 @@ tags:
 categories:
 - tech
 - culture
-original_jekyll:
-  date: 2020-12-09 12:53:00-05:00
-  short_title: Can Tone Indicators Help?
-  description: We all struggle to communicate on the internet. Now, young people are
-    leading a sincere effort to clear things up.
-  format: link
-  link: https://www.nytimes.com/2020/12/09/style/tone-indicators-online.html
+date: 2020-12-09 12:53:00-05:00
+short_title: Can Tone Indicators Help?
+format: link
+link: https://www.nytimes.com/2020/12/09/style/tone-indicators-online.html
 ---
 
 > Tone indicators are most popular within some Twitter and Tumblr communities of young people with overlapping interests in identity representation, anime and K-pop fandom, twee aesthetics, and sensitivity toward mental health and gender issues. It’s a milieu where inclusivity is considered a paramount virtue. These people use and like tone indicators because they want to help others have better experiences online.

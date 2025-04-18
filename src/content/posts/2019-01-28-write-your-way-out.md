@@ -12,10 +12,7 @@ tags:
 categories:
 - talks
 - longer
-original_jekyll:
-  date: 2019-01-28 00:00:00-05:00
-  description: A talk I gave at Release Notes 2016 about writing and how important
-    it is for programmers, product managers, and owners of software companies.
+date: 2019-01-28 00:00:00-05:00
 ---
 
 <figure>

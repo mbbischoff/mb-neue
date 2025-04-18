@@ -10,8 +10,9 @@ categories:
 - tech
 - culture
 - longer
-original_jekyll:
-  date: 2014-02-11 00:00:00-05:00
+date: 2014-02-11 00:00:00-05:00
+description: <figure> <img src="/uploads/nytimesbuildingatnight.jpg" alt="The New
+  York Times Building at night" /> <figcaption>Photo courtesy of <a href="http://www.flickr.c...
 ---
 
 <figure>

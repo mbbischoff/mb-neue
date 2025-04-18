@@ -12,14 +12,9 @@ categories:
 - writing
 - website
 - blog
-original_jekyll:
-  date: 2020-12-21 09:20:00-05:00
-  description: Lovin makes some great points in this piece about ways to make that
-    easier on yourself by maintaining an ongoing list of ideas, turning conversations
-    you’re having on social media into articles, and making the process of publishing
-    as seamless as possible.
-  format: link
-  link: https://overthought.ghost.io/reasons-you-arent-updating-your-personal-site/
+date: 2020-12-21 09:20:00-05:00
+format: link
+link: https://overthought.ghost.io/reasons-you-arent-updating-your-personal-site/
 ---
 
 <blockquote>

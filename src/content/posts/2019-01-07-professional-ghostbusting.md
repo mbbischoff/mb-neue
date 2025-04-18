@@ -12,10 +12,7 @@ categories:
 - longer
 - culture
 - tech
-original_jekyll:
-  date: 2019-01-07 00:00:00-05:00
-  description: Why do people stop answering your emails at work, and how can you stop
-    it?
+date: 2019-01-07 00:00:00-05:00
 ---
 
 ![Ghostbusters](/images/ghostbusters.jpg)

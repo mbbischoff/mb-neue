@@ -27,23 +27,13 @@ tags:
 categories:
 - culture
 - tech
-original_jekyll:
-  date: 2021-08-06 18:36:00-04:00
-  description: I was first introduced to the phrase “thought technology” by Merlin
-    Mann and John Roderick on their long-running podcast Roderick on the Line. A thought
-    technology isn’t quite the same as a belief or a philosophy, and it’s more than
-    just a simple lesson. “Keep moving & get out of the way” is an example from their
-    first ever episode about how to best traverse a city. Thought technologies like
-    this one are *ways of thinking* about particular problems or situations. They’re
-    technologies in the sense that, like a hammer or a pencil, they can be used to
-    solve problems. Sometimes having the *right* thought at the right time is all
-    you need to move forward, break through, or get unstuck.
-  picture:
-    webp_image: /uploads/keep-moving.webp
-    png_image: /images/keep-moving.png
-    width: 1024
-    height: 1024
-    alt: Keep moving & get out of the way.
+date: 2021-08-06 18:36:00-04:00
+picture:
+  webp_image: /uploads/keep-moving.webp
+  png_image: /images/keep-moving.png
+  width: 1024
+  height: 1024
+  alt: Keep moving & get out of the way.
 ---
 
 {% include picture.html %}

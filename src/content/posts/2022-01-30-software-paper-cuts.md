@@ -13,16 +13,11 @@ tags:
 - list
 categories:
 - tech
-original_jekyll:
-  date: 2022-01-30 17:48:00-05:00
-  description: 'Running up against a paper cut bug feels a little bit like getting
-    a physical one: not the end of the world, but certainly unpleasant. These types
-    of tiny annoyances accrete over time, especially when no one is paying attention
-    to them.'
-  picture:
-    width: 1800
-    height: 1200
-    alt: The word ouch written on a pink background
+date: 2022-01-30 17:48:00-05:00
+picture:
+  width: 1800
+  height: 1200
+  alt: The word ouch written on a pink background
 ---
 
 {% include picture.html %}

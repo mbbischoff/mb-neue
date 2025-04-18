@@ -12,12 +12,8 @@ tags:
 - me
 categories:
 - shorter
-original_jekyll:
-  date: 2020-12-31 13:34:00-05:00
-  description: Thanks to everyone who dropped by the stream last night and donated
-    to Trans Lifeline. Thanks to the generosity of 108 of you, we raised $5,575 to
-    help trans people in need. Best birthday ever.
-  format: short
+date: 2020-12-31 13:34:00-05:00
+format: short
 ---
 
 Thanks to everyone who dropped by [the livestream](https://www.twitch.tv/videos/855939189) last night and donated to Trans Lifeline. Thanks to the generosity of 108 of you, **[we raised $6,963

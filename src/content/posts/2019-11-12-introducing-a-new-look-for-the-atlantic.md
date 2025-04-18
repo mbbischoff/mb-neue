@@ -12,12 +12,9 @@ categories:
 - tech
 - culture
 - shorter
-original_jekyll:
-  date: 2019-11-12 14:58:00-05:00
-  description: Really excited about this bold new look for one of my favorite publications,
-    and honored to have gotten to work on the development of the app at Lickability.
-  format: link
-  link: https://www.theatlantic.com/news/archive/2019/11/introducing-new-look-atlantic/601762/
+date: 2019-11-12 14:58:00-05:00
+format: link
+link: https://www.theatlantic.com/news/archive/2019/11/introducing-new-look-atlantic/601762/
 ---
 
 ![The Atlantic app](/images/lead_720_405.jpg)

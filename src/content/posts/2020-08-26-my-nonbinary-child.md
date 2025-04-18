@@ -13,14 +13,9 @@ tags:
 - anthropology
 categories:
 - culture
-original_jekyll:
-  date: 2020-08-26 12:49:00-04:00
-  description: If you’re a parent or thinking of becoming one, read this essay about
-    my friend Sarah (they/them) and how their mom who’s an anthropologist responded
-    when they came out to her as agender. I was already crying five sentences into
-    this piece, but the conclusion is what really got me.
-  format: link
-  link: https://www.sapiens.org/biology/nonbinary/
+date: 2020-08-26 12:49:00-04:00
+format: link
+link: https://www.sapiens.org/biology/nonbinary/
 ---
 
 If you’re a parent or thinking of becoming one, read this essay about my friend Sarah <small>(they/them)</small> and how their mom, who’s an anthropologist, responded when they came out to her as agender. I was already crying five sentences into this piece, but the conclusion is what really got me.

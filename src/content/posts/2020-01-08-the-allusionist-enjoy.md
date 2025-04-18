@@ -8,10 +8,11 @@ tags:
 categories:
 - culture
 - shorter
-original_jekyll:
-  date: 2020-01-08 13:51:00-05:00
-  format: link
-  link: https://www.theallusionist.org/allusionist/enjoy
+date: 2020-01-08 13:51:00-05:00
+format: link
+link: https://www.theallusionist.org/allusionist/enjoy
+description: '<iframe loading="lazy" title="The Allusionist: Enjoy" scrolling="no"
+  src="https://play.prx.org/e?uf=http:%2F%2Ffeeds.theallusionist.org%2FAllusionist&ge=prx1951...'
 ---
 
 <iframe loading="lazy" title="The Allusionist: Enjoy" scrolling="no" src="https://play.prx.org/e?uf=http:%2F%2Ffeeds.theallusionist.org%2FAllusionist&ge=prx_195_12c20bab-7dc1-4891-ab88-3db135d4e9ad&wmode=opaque" height="200" width="100%"></iframe>

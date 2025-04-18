@@ -11,10 +11,12 @@ tags:
 categories:
 - tech
 - shorter
-original_jekyll:
-  date: 2020-01-28 10:59:00-05:00
-  format: link
-  link: https://blog.gikken.co/we-acquired-tokens/
+date: 2020-01-28 10:59:00-05:00
+format: link
+link: https://blog.gikken.co/we-acquired-tokens/
+description: '> Of course, we didn''t purchase it to shut down or leave unchanged,
+  so we''re planning a major makeover – Tokens 2. >  > Most importantly, Tokens will
+  finally st...'
 ---
 
 > Of course, we didn't purchase it to shut down or leave unchanged, so we're planning a major makeover – Tokens 2.

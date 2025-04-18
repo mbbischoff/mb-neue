@@ -13,10 +13,12 @@ categories:
 - tech
 - management
 - shorter
-original_jekyll:
-  date: 2020-01-15 15:30:00-05:00
-  format: link
-  link: https://lickability.com/blog/a-lawyer-and-an-accountant/
+date: 2020-01-15 15:30:00-05:00
+format: link
+link: https://lickability.com/blog/a-lawyer-and-an-accountant/
+description: '> Your job as a founder or CEO is to run your company and make your
+  customers happy, not to do every little thing by yourself. Work with the pros who
+  will save...'
 ---
 
 > Your job as a founder or CEO is to run your company and make your customers happy, not to do every little thing by yourself. Work with the pros who will save you time and make you money. Hire a lawyer, hire an accountant, and (if you’ve got room in the budget) get some help with your operations. Trust me, you’ll be glad you did.

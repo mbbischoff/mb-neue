@@ -9,8 +9,10 @@ categories:
 - tech
 - management
 - longer
-original_jekyll:
-  date: 2015-06-12 00:00:00-04:00
+date: 2015-06-12 00:00:00-04:00
+description: Inside The New York Times Building next week, it’s going to get harder
+  to do your job. Clifford Levy, a Pulitzer prize winning journalist, and former coworker
+  t...
 ---
 
 Inside The New York Times Building next week, it’s going to get harder to do your job. Clifford Levy, a Pulitzer prize winning journalist, and former coworker tweeted that the way to get this company thinking mobile first, is to block the website. Wait, what?

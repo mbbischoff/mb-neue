@@ -12,19 +12,14 @@ tags:
 categories:
 - shorter
 - culture
-original_jekyll:
-  date: 2022-08-24 18:31:00-04:00
-  description: "I’ve been a fan of beestung magazine, a quarterly publication that\
-    \ published poetry by nonbinary writers since I discovered it a few years ago.\
-    \ This week, they published issue 12 on the theme of trans futures, guest edited\
-    \ by Cavar. \n"
-  format: link
-  link: https://beestungmag.com/issues/
-  picture:
-    png_image: /images/beestung.png
-    width: 1104 
-    height: 1130
-    alt: A screenshot of the beenstung website
+date: 2022-08-24 18:31:00-04:00
+format: link
+link: https://beestungmag.com/issues/
+picture:
+  png_image: /images/beestung.png
+  width: 1104 
+  height: 1130
+  alt: A screenshot of the beenstung website
 ---
 
 I’ve been a fan of [beestung magazine](https://beestungmag.com), a quarterly publication publishing poetry by nonbinary writers since I discovered it a few years ago. This week, they published Issue 12 on the theme of trans futures, guest edited by [Cavar](https://www.cavar.club/). 

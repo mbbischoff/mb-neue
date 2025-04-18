@@ -11,10 +11,11 @@ tags:
 categories:
 - shorter
 - culture
-original_jekyll:
-  date: 2020-01-28 10:38:00-05:00
-  format: short
-  link: https://www.youtube.com/watch?v=zGf6CGBbWFU
+date: 2020-01-28 10:38:00-05:00
+format: short
+link: https://www.youtube.com/watch?v=zGf6CGBbWFU
+description: <div class="video-wrapper"> <iframe loading="lazy" title="John Mulaney
+  & Colbert on Anxiety" width="560" height="315" src="https://www.youtube.com/embed/zGf6CGB...
 ---
 
 <div class="video-wrapper">

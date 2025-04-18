@@ -11,18 +11,14 @@ tags:
 - me
 categories:
 - culture
-original_jekyll:
-  date: 2022-08-25 15:04:00-04:00
-  description: Imagine you’re at a sleepover with your closest friends talking about
-    that hot person they have a crush on and lightly teasing them about it while figuring
-    out what makes their crush so attractive.
-  format: link
-  link: https://absolutelycrushed.com
-  picture:
-    jpeg_image: /uploads/Crushed%202%20Square.jpg
-    width: 3000
-    height: 3000
-    alt: Absolutely Crushed album art
+date: 2022-08-25 15:04:00-04:00
+format: link
+link: https://absolutelycrushed.com
+picture:
+  jpeg_image: /uploads/Crushed%202%20Square.jpg
+  width: 3000
+  height: 3000
+  alt: Absolutely Crushed album art
 ---
 
 {% include picture.html %}

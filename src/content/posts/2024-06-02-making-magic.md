@@ -9,19 +9,19 @@ tags:
 - me
 categories:
 - shorter
-original_jekyll:
-  date: 2024-06-02 11:50:00-04:00
-  format: link
-  link: https://makingmagicseries.com/
-  picture:
-    webp_image: /uploads/makingmagic.webp
-    jpeg_image: /uploads/makingmagic.jpg
-    alt: The album art for Making Magic. An illustration of a Hitachi Magic Wand,
-      an electric personal massager, floating in a vibrant blue and pink sky with
-      clouds. The cord of the massager is coiled around, with sparkles and stars scattered
-      around. The words “Making Magic” are prominently displayed at the bottom in
-      bold pink and white letters.
-  via: '[Kate Sloan](https://katesloan.com)'
+date: 2024-06-02 11:50:00-04:00
+format: link
+link: https://makingmagicseries.com/
+picture:
+  webp_image: /uploads/makingmagic.webp
+  jpeg_image: /uploads/makingmagic.jpg
+  alt: The album art for Making Magic. An illustration of a Hitachi Magic Wand, an
+    electric personal massager, floating in a vibrant blue and pink sky with clouds.
+    The cord of the massager is coiled around, with sparkles and stars scattered around.
+    The words “Making Magic” are prominently displayed at the bottom in bold pink
+    and white letters.
+via: '[Kate Sloan](https://katesloan.com)'
+description: <div class="top-margin"> <iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/what-makes-the-magic-wand-so-magic/id1749090563?i=10006572725...
 ---
 
 <div class="top-margin">

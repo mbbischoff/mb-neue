@@ -13,13 +13,9 @@ tags:
 categories:
 - tech
 - management
-original_jekyll:
-  date: 2020-04-07 10:35:00-04:00
-  description: If you’re in tech and wanna talk to one of the kindest, smartest folks
-    I know, you can [sign up for his office hours here](https://calendly.com/brianmichel/open-office-hours).
-    I know I just did.
-  format: link
-  link: https://www.foureyes.me/post/generous-with-time/
+date: 2020-04-07 10:35:00-04:00
+format: link
+link: https://www.foureyes.me/post/generous-with-time/
 ---
 
 > There is no gate keeping, no screening, just a calendar form. I just show up to whatever appointments folks booked on my calendar with hopefully a little context of what they’d like to discuss. I don’t think I’m some industry pundit, but I do recognize that anyone who has been doing roughly the same thing for 10 years might be able to provide advice for someone earlier on in their career. Also, it just feels like the right thing to do to try to give back to folks in this very small way.

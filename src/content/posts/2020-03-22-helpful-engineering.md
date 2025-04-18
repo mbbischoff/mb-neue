@@ -13,12 +13,9 @@ categories:
 - tech
 - culture
 - shorter
-original_jekyll:
-  date: 2020-03-22 11:49:00-04:00
-  description: Helpful Engineering is designing, sourcing and executing projects to
-    help people suffering from the COVID-19 crisis worldwide.
-  format: link
-  link: https://www.helpfulengineering.org
+date: 2020-03-22 11:49:00-04:00
+format: link
+link: https://www.helpfulengineering.org
 ---
 
 > Helpful Engineering is designing, sourcing and executing projects to help people suffering from the COVID-19 crisis worldwide.

@@ -11,15 +11,12 @@ tags:
 categories:
 - tech
 - shorter
-original_jekyll:
-  date: 2021-12-22 17:11:00-05:00
-  description: 'I was thrilled to guest on episode #430 the Clockwise podcast today.
-    Give it a listen and let me know what your answer would have been to my question.'
-  format: link
-  link: https://www.relay.fm/clockwise/430
-  audio:
-    title: 'Clockwise #430: Misinformation Tracing'
-    link: https://www.podtrac.com/pts/redirect.mp3/traffic.libsyn.com/secure/clockwiserelay/clockwise430.mp3
+date: 2021-12-22 17:11:00-05:00
+format: link
+link: https://www.relay.fm/clockwise/430
+audio:
+  title: 'Clockwise #430: Misinformation Tracing'
+  link: https://www.podtrac.com/pts/redirect.mp3/traffic.libsyn.com/secure/clockwiserelay/clockwise430.mp3
 ---
 
 {% include audio.html %}

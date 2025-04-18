@@ -10,10 +10,11 @@ tags:
 categories:
 - shorter
 - culture
-original_jekyll:
-  date: 2020-01-10 16:21:00-05:00
-  format: link
-  link: https://www.youtube.com/watch?v=X0WzqanwlG0
+date: 2020-01-10 16:21:00-05:00
+format: link
+link: https://www.youtube.com/watch?v=X0WzqanwlG0
+description: <div class="video-wrapper"><iframe loading="lazy" title="Succession Composer
+  Breaks Down the Show’s Score" width="560" height="315" src="https://www.youtube.com...
 ---
 
 <div class="video-wrapper"><iframe loading="lazy" title="Succession Composer Breaks Down the Show’s Score" width="560" height="315" src="https://www.youtube.com/embed/X0WzqanwlG0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>

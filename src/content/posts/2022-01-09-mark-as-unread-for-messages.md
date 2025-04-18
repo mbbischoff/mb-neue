@@ -14,12 +14,7 @@ tags:
 - design
 categories:
 - tech
-original_jekyll:
-  date: 2022-01-09 13:39:00-05:00
-  description: For decades, email apps like Gmail, Outlook, and Apple Mail have all
-    included a button to mark a message or thread as “unread”. But why? The software
-    knows the message has been read; why is it allowing the user to override that
-    truth and rewrite history?
+date: 2022-01-09 13:39:00-05:00
 ---
 
 For decades, email apps like Gmail, Outlook, and Apple Mail have all included a button to mark a message or thread as “unread”. But why? The software knows the message *has* been read; why is it allowing the user to override that truth and rewrite history?

@@ -17,15 +17,9 @@ tags:
 categories:
 - shorter
 - culture
-original_jekyll:
-  date: 2020-09-09 09:11:00-04:00
-  description: 'The latest episode of 99% Invisible details the history of and hopeful
-    future for bathroom design. With a focus on the needs of trans and nonbinary and
-    many other axes of accessibility, Susan Stryker and the other members of a project
-    called Stalled! have recently won a major victory in the International Building
-    Code that will allow for better bathrooms for *everyone*. In her words: '
-  format: link
-  link: https://99percentinvisible.org/episode/where-do-we-go-from-here/
+date: 2020-09-09 09:11:00-04:00
+format: link
+link: https://99percentinvisible.org/episode/where-do-we-go-from-here/
 ---
 
 The latest episode of [99% Invisible](https://99percentinvisible.org) details the history of and hopeful future for bathroom design. With a focus on the needs of trans and nonbinary people, Susan Stryker and the other members of a project called [Stalled!](https://www.stalled.online) have recently won a major victory in the International Building Code that will allow for better bathrooms for *everyone*. In her words:

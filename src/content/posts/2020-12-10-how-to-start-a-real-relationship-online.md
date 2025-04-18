@@ -12,12 +12,9 @@ tags:
 categories:
 - culture
 - shorter
-original_jekyll:
-  date: 2020-12-10 13:36:00-05:00
-  description: 'If you’re curious about how to date online, or whether you should
-    consider long-distance relationships, this piece by Chingy is a must-read. '
-  format: link
-  link: https://www.vice.com/en/article/akdkda/how-to-start-romantic-relationship-online-long-distance
+date: 2020-12-10 13:36:00-05:00
+format: link
+link: https://www.vice.com/en/article/akdkda/how-to-start-romantic-relationship-online-long-distance
 ---
 
 > For Sloan and her partner, the answer became clear after the two spent a couple months together at the beginning of the pandemic because of COVID-related travel restrictions—and they decided to choose both. “I knew this was the person I wanted to marry, and I wanted that so strongly that the odd circumstances didn’t even bother me.” said Sloan. Though they're still living in different countries now, the two were wed in a small ceremony in Madison Square Park this November. 

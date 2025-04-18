@@ -16,14 +16,7 @@ tags:
 categories:
 - culture
 - longer
-original_jekyll:
-  date: 2020-12-30 13:58:00-05:00
-  description: I turned 30 years old today so I spent some time this afternoon reflecting
-    and collecting 30 lessons I’ve learned in my time on earth so far. Merlin and
-    Roderick sometimes call these types of lessons "thought technologies" and that
-    certainly feels fitting considering how useful and applicable they’ve been for
-    me. Each one of them has helped me during critical moments in my life so far.
-    I hope you find even just one of them helpful in yours. See you tonight. ❤️
+date: 2020-12-30 13:58:00-05:00
 ---
 
 I turned 30 years old [today](https://twitter.com/mb/status/1344146214296678400) so I spent some time this afternoon reflecting and collecting 30 lessons I’ve learned in my time on earth so far and (as best as I could remember) where I learned them from. 
